@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MapSection from '../../components/MapSection.astro';
+import { teamMembers, profileContent } from '../../data/team';
+import type { GetStaticPaths } from 'astro';
+
+const profileMembers = teamMembers.filter(m => m.profilePage);
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const members = teamMembers.filter(m => m.profilePage);
+  return members.map((m) => ({
+    params: { slug: m.slug },
+    props: { member: m },
+  }));
+};
+
+const { member } = Astro.props;
+const profile = profileContent[member.slug];
+---
+
+<BaseLayout title={`${member.name} - ProDenta Battersea`} description={`${member.name}, ${member.role} at ProDenta Battersea.`}>
+  <main class="section-padding">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 items-start">
+        <img
+          src={profile?.image || member.image}
+          alt={member.name}
+          class="rounded-2xl shadow-soft w-full object-cover aspect-[3/4]"
+        >
+        <div>
+          <h1 class="text-hero font-display font-bold uppercase tracking-wider text-primary mb-2">{member.name}</h1>
+          <h2 class="text-xl font-display font-semibold text-accent mb-6">{member.role}</h2>
+          {(profile?.bio || member.bio).map((p) => (
+            <p class="text-text-primary leading-relaxed mb-4">{p}</p>
+          ))}
+          {member.expertise && (
+            <div class="mt-6">
+              <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Areas of Expertise</h3>
+              <div class="flex flex-wrap gap-2">
+                {member.expertise.map((e) => (
+                  <span class="bg-bg-blue text-primary text-sm px-4 py-1.5 rounded-full font-medium">{e}</span>
+                ))}
+              </div>
+            </div>
+          )}
+          <a href="/team" class="inline-block mt-8 text-primary font-semibold hover:text-secondary transition-colors">&larr; Back to Team</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <MapSection />
+</BaseLayout>

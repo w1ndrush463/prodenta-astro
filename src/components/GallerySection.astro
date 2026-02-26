@@ -1,0 +1,29 @@
+---
+interface GalleryItem {
+  image: string;
+  caption: string;
+}
+
+interface Props {
+  title: string;
+  intro?: string;
+  items: GalleryItem[];
+}
+
+const { title, intro, items } = Astro.props;
+---
+
+<section class="section-padding">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">{title}</h2>
+    {intro && <p class="text-text-secondary text-center mb-12 max-w-2xl mx-auto">{intro}</p>}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {items.map((item) => (
+        <div class="rounded-xl overflow-hidden shadow-soft">
+          <img src={item.image} alt={item.caption} class="w-full aspect-[4/3] object-cover" loading="lazy">
+          <p class="p-4 text-center font-display font-semibold text-sm uppercase tracking-wider text-primary">{item.caption}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

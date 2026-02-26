@@ -1,0 +1,39 @@
+---
+import { site } from '../data/site';
+---
+
+<div class="fixed inset-0 bg-white z-[10000] translate-x-full transition-transform duration-300 mobile-menu-overlay" id="mobileMenu">
+  <div class="flex items-center justify-between px-4 py-4 border-b border-border-light">
+    <button class="text-primary text-2xl" onclick="toggleMobileMenu()">&larr;</button>
+    <span class="font-display font-semibold uppercase tracking-wider text-primary">Menu</span>
+    <div class="w-8"></div>
+  </div>
+  <div class="flex flex-col p-6 gap-4">
+    <a href="/treatments" class="text-lg font-display font-semibold uppercase tracking-wider text-primary hover:text-secondary transition-colors">Dental Treatments</a>
+    <a href="/facial-aesthetics-treatments" class="text-lg font-display font-semibold uppercase tracking-wider text-primary hover:text-secondary transition-colors">Facial Aesthetics</a>
+    <a href="/team" class="text-lg font-display font-semibold uppercase tracking-wider text-primary hover:text-secondary transition-colors">Team</a>
+    <a href="/contact" class="text-lg font-display font-semibold uppercase tracking-wider text-primary hover:text-secondary transition-colors">Contact</a>
+    <div class="flex flex-col gap-3 mt-6">
+      <a href="/contact#appointment" class="cta-button text-center">Book Now</a>
+      <a href={site.phoneHref} class="cta-button cta-outline text-center">Call Us</a>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburger = document.querySelector('.hamburger-menu');
+    const body = document.body;
+
+    mobileMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    body.classList.toggle('menu-open');
+  }
+</script>
+
+<style>
+  .mobile-menu-overlay.active {
+    transform: translateX(0);
+  }
+</style>

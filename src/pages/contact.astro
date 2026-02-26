@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContactForm from '../components/ContactForm.astro';
+import FAQSection from '../components/FAQSection.astro';
+import MapSection from '../components/MapSection.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout title="Contact Us - ProDenta Battersea" description="Get in touch with ProDenta Battersea. Book an appointment or request a free consultation. Call 0207 223 2244.">
+
+  <HeroSection
+    title="Get In Touch"
+    subtitle="We're here to help with all your dental and aesthetic needs. Book an appointment or request a free consultation today."
+    image="/images/contact-hero.jpg"
+    imageAlt="Contact ProDenta"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Contact Us' },
+    ]}
+  />
+
+  <main>
+    <!-- Quick Contact Cards -->
+    <section class="section-padding bg-bg-alt">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-soft p-6 text-center">
+          <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Call Us</h3>
+          <a href={site.phoneHref} class="text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.phone}</a>
+          <p class="text-sm text-text-secondary mt-2">Mon-Thu: 8am-8pm / Wed-Fri: 8am-6pm / Sat: 9am-3pm</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-soft p-6 text-center">
+          <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">WhatsApp Us</h3>
+          <a href={site.whatsappHref} class="text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.whatsapp}</a>
+          <p class="text-sm text-text-secondary mt-2">Quick responses during business hours</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-soft p-6 text-center">
+          <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Email Us</h3>
+          <a href={site.emailHref} class="text-xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.email}</a>
+          <p class="text-sm text-text-secondary mt-2">We'll respond within 24 hours</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Forms -->
+    <section id="appointment" class="section-padding">
+      <div class="max-w-3xl mx-auto">
+        <ContactForm formType="both" />
+      </div>
+    </section>
+
+    <!-- Practice Information -->
+    <section class="section-padding bg-bg-alt">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div>
+          <img src="/images/practice.webp" alt="ProDenta Practice" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]">
+        </div>
+        <div>
+          <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-6">Visit Our Battersea Practice</h2>
+          <p class="text-text-primary mb-6">Located in the heart of Battersea on St. John's Hill, our modern practice offers a warm, welcoming environment for all your dental and facial aesthetic needs.</p>
+
+          <div class="mb-6">
+            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Address</h3>
+            <p class="text-text-secondary">{site.name}<br>{site.address.line1}<br>{site.address.area}, {site.address.city}<br>{site.address.postcode}</p>
+          </div>
+
+          <div class="mb-6">
+            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Opening Hours</h3>
+            <p class="text-text-secondary">Monday, Tuesday, Thursday: 8am - 8pm</p>
+            <p class="text-text-secondary">Wednesday, Friday: 8am - 6pm</p>
+            <p class="text-text-secondary">Saturday: 9am - 3pm</p>
+            <p class="text-text-secondary">Sunday: Closed</p>
+            <p class="text-text-secondary mt-1">Outside hours appointments available by arrangement</p>
+          </div>
+
+          <div>
+            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Getting Here</h3>
+            <p class="text-text-secondary"><strong>By Train:</strong> 10-minute walk from Clapham Junction or Wandsworth Town stations</p>
+            <p class="text-text-secondary"><strong>By Bus:</strong> Routes 35, 37, 39, 87, 156, 170, 337 stop nearby</p>
+            <p class="text-text-secondary"><strong>By Car:</strong> Limited street parking available on St. John's Hill and surrounding streets</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="relative">
+          <iframe
+            src={site.mapEmbed}
+            width="100%"
+            height="500"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            title="ProDenta location map"
+          ></iframe>
+          <div class="absolute bottom-4 left-4 bg-white rounded-xl shadow-deep p-6 max-w-sm">
+            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Find Us</h3>
+            <p class="text-sm text-text-secondary mb-4">{site.name}, 227 St. John's Hill, {site.address.area}, {site.address.city} {site.address.postcode}</p>
+            <div class="flex gap-3">
+              <a href={site.mapsDirections} target="_blank" class="cta-button text-xs py-2 px-4">Get Directions</a>
+              <a href={site.phoneHref} class="cta-button cta-outline text-xs py-2 px-4">Call Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <FAQSection
+      title="Frequently Asked Questions"
+      faqs={[
+        { question: 'How do I book an appointment?', answer: 'You can book through our online booking system, call us at 0207 223 2244, WhatsApp us at 07407 422 443, or fill out the contact form above. For existing patients, our instant booking system allows you to schedule appointments directly. New patients can request a free consultation to discuss their needs with our team.' },
+        { question: 'Do you accept new patients?', answer: 'Yes, we\'re always happy to welcome new patients to ProDenta. We recommend booking a New Patient Consultation where we\'ll conduct a comprehensive examination, discuss your dental history, and create a personalised treatment plan. This initial appointment allows us to understand your needs and establish the foundation for your ongoing dental care.' },
+        { question: 'What are your opening hours?', answer: 'We\'re open Monday, Tuesday, and Thursday from 8am to 8pm, Wednesday and Friday from 8am to 6pm, and Saturday from 9am to 3pm. We understand that dental care needs to fit around busy schedules, so we also offer appointments outside these hours by arrangement. Simply let us know when booking if you need an appointment outside our standard hours.' },
+        { question: 'Do you offer emergency appointments?', answer: 'Yes, we provide emergency dental appointments for urgent situations. If you\'re experiencing severe pain, swelling, trauma to your teeth, or any other dental emergency, call us immediately on 0207 223 2244. We\'ll do our best to see you the same day. For out-of-hours emergencies, leave a message and we\'ll get back to you as soon as possible.' },
+        { question: 'Is parking available near the practice?', answer: 'There is on-street parking available on surrounding streets, including some free parking zones. The nearest car park is NCP Clapham Junction, approximately a 10-minute walk from our practice. We\'re also easily accessible by public transport - Clapham Junction station is nearby, with excellent bus connections along St. John\'s Hill.' },
+        { question: 'Do you offer payment plans and finance options?', answer: 'Yes, we offer flexible payment options to make dental care more affordable. This includes 0% finance plans for larger treatments and membership plans (ProDenta Care and ProDenta Plus) that provide discounted treatments and routine care. During your consultation, we\'ll discuss all payment options available to you and help you find the best solution for your budget.' },
+      ]}
+    />
+  </main>
+</BaseLayout>

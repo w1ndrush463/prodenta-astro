@@ -1,0 +1,53 @@
+---
+interface Benefit {
+  strong: string;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  benefits: Benefit[];
+  backgroundImage?: string;
+  theme?: 'dental' | 'aesthetics';
+}
+
+const { title, benefits, backgroundImage = '/images/consultation-background.jpg', theme = 'dental' } = Astro.props;
+
+const isDental = theme === 'dental';
+---
+
+{isDental ? (
+  <!-- Dental: light background, no overlay image -->
+  <section class="section-padding bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-8">{title}</h2>
+      <ul class="space-y-4">
+        {benefits.map((benefit) => (
+          <li class="flex items-start gap-3">
+            <span class="text-primary mt-1 text-lg">&#10003;</span>
+            <p class="text-gray-700"><strong class="text-primary">{benefit.strong}:</strong> {benefit.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+) : (
+  <!-- Aesthetics: dark overlay with background image -->
+  <section class="relative py-20 px-4 md:px-8 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={backgroundImage} alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-primary/85"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto">
+      <h2 class="text-section font-display font-bold uppercase tracking-wider text-accent-light mb-8">{title}</h2>
+      <ul class="space-y-4">
+        {benefits.map((benefit) => (
+          <li class="flex items-start gap-3">
+            <span class="text-accent-light mt-1 text-lg">&#10003;</span>
+            <p class="text-white/90"><strong class="text-accent-light">{benefit.strong}:</strong> {benefit.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}

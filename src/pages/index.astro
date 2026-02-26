@@ -1,0 +1,279 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import HeroCards from '../components/HeroCards.astro';
+import ContentSection from '../components/ContentSection.astro';
+import DarkOverlay from '../components/DarkOverlay.astro';
+import ConsultationCTA from '../components/ConsultationCTA.astro';
+import MapSection from '../components/MapSection.astro';
+---
+
+<BaseLayout title="Private Dentist Battersea - ProDenta" description="ProDenta: award-winning private dentist in Battersea. Cosmetic dentistry, Invisalign, teeth whitening & dental implants. Book your appointment today.">
+
+  <HeroSection
+    title="Private Dental Practice in Battersea"
+    subtitle="Award-winning dental care and advanced aesthetic treatments. New patients welcome."
+    image="/images/hero-practice.jpg"
+    imageAlt="ProDenta Practice"
+    buttons={[
+      { label: 'Book Appointment', href: '/contact#appointment' },
+      { label: 'Free Consultation', href: '/contact#consultation', outline: true },
+    ]}
+  />
+
+  <HeroCards cards={[
+    { title: 'Expert Team', description: 'Award-winning professionals and specialists' },
+    { title: 'Flexible Payments', description: 'Payment plans and membership options' },
+    { title: 'Convenient Hours', description: 'Evening and weekend appointments available' },
+  ]} />
+
+  <main>
+    <!-- Welcome Section -->
+    <ContentSection
+      title="Welcome to ProDenta Battersea"
+      content={[
+        'Welcome to ProDenta, a boutique private dental practice in Battersea, London. We are situated on St John\'s Hill, opposite the St John\'s Therapy Centre and just a 10 minute walk from both Clapham Junction and Wandsworth Town Overground stations.',
+        'We are a team who want to keep you, your family and friends healthy and happy. It is important to us that all our patients are treated in a family-friendly, cheerful environment with a focus on patient care and communication.',
+        'Our emphasis is on prevention which is why we aim to work closely with our patients so they understand how dental disease occurs and how best to reduce risk of having problems.',
+      ]}
+      image="/images/practice-interior.jpg"
+      imageAlt="ProDenta Practice Interior"
+      imagePosition="left"
+    />
+
+    <!-- New Patient Offer -->
+    <section class="section-padding bg-bg-blue">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-8">New Patient Offer</h2>
+        <div class="bg-white rounded-2xl shadow-soft p-8 md:p-12">
+          <h3 class="font-display font-semibold uppercase tracking-wider text-lg text-primary mb-4">Full Examination & Hygiene Clean</h3>
+          <div class="text-4xl font-display font-bold text-primary mb-4">Only £195</div>
+          <p class="text-text-secondary mb-8">Comprehensive dental examination with professional hygiene clean. Perfect for new patients to start their journey with ProDenta.</p>
+          <a href="/contact#appointment" class="cta-button">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dental Treatments Section -->
+    <section class="section-padding">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-12">Dental Treatments</h2>
+
+        <!-- Straighten -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:[&>*:first-child]:order-2">
+          <div>
+            <div class="mb-4"><img src="/icons/Straighten.svg" alt="Straighten" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Straighten</h3>
+            <p class="text-text-primary mb-6">Transform your smile with modern orthodontic solutions that fit your lifestyle.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a href="/dental/orthodontics" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/orthodontics-thumb.jpg" alt="Orthodontics" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Orthodontics</h4><p class="text-xs text-text-secondary">Comprehensive teeth straightening</p></div>
+              </a>
+              <a href="/dental/clear-braces" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/clear-braces-thumb.jpg" alt="Clear Braces" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Invisalign & Clear Aligners</h4><p class="text-xs text-text-secondary">Invisible teeth straightening</p></div>
+              </a>
+              <a href="/dental/fixed-braces" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/fixed-braces-thumb.jpg" alt="Fixed Braces" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Fixed Braces</h4><p class="text-xs text-text-secondary">Traditional orthodontic treatment</p></div>
+              </a>
+            </div>
+          </div>
+          <div><img src="/images/straighten-category.jpg" alt="Straighten Teeth" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+        </div>
+
+        <!-- Enhance -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div><img src="/images/enhance-category.jpg" alt="Enhance Smile" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+          <div>
+            <div class="mb-4"><img src="/icons/Sparkle.svg" alt="Enhance" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Enhance</h3>
+            <p class="text-text-primary mb-6">Cosmetic dentistry to perfect your smile and boost your confidence.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a href="/dental/composite-bonding" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/bonding-thumb.jpg" alt="Composite Bonding" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Composite Bonding</h4><p class="text-xs text-text-secondary">Natural-looking smile enhancement</p></div>
+              </a>
+              <a href="/dental/teeth-whitening" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/whitening-thumb.jpg" alt="Teeth Whitening" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Teeth Whitening</h4><p class="text-xs text-text-secondary">Professional whitening treatments</p></div>
+              </a>
+              <a href="/dental/veneers" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/veneers-thumb.jpg" alt="Veneers" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Veneers</h4><p class="text-xs text-text-secondary">Perfect smile transformation</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repair -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:[&>*:first-child]:order-2">
+          <div>
+            <div class="mb-4"><img src="/icons/Repair.svg" alt="Repair" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Repair</h3>
+            <p class="text-text-primary mb-6">Fix dental issues quickly and effectively with modern restorative treatments.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a href="/dental/fillings" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/fillings-thumb.jpg" alt="Fillings" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Fillings</h4><p class="text-xs text-text-secondary">Natural-looking tooth restoration</p></div>
+              </a>
+              <a href="/dental/root-canal" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/root-canal-thumb.jpg" alt="Root Canal" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Root Canal Treatment</h4><p class="text-xs text-text-secondary">Save damaged or infected teeth</p></div>
+              </a>
+            </div>
+          </div>
+          <div><img src="/images/repair-category.jpg" alt="Repair Teeth" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+        </div>
+
+        <!-- Restore -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div><img src="/images/restore-category.jpg" alt="Restore Teeth" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+          <div>
+            <div class="mb-4"><img src="/icons/Crown.svg" alt="Restore" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Restore</h3>
+            <p class="text-text-primary mb-6">Replace missing or damaged teeth with permanent solutions.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a href="/dental/crowns" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/crowns-thumb.jpg" alt="Crowns" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Crowns</h4><p class="text-xs text-text-secondary">Durable tooth restoration</p></div>
+              </a>
+              <a href="/dental/dentures" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/dentures-thumb.jpg" alt="Dentures" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Dentures</h4><p class="text-xs text-text-secondary">Natural-looking tooth replacement</p></div>
+              </a>
+              <a href="/dental/dental-implants" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/implants-thumb.jpg" alt="Dental Implants" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Dental Implants</h4><p class="text-xs text-text-secondary">Permanent tooth replacement</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maintain -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:[&>*:first-child]:order-2">
+          <div>
+            <div class="mb-4"><img src="/icons/Protection.svg" alt="Maintain" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Maintain</h3>
+            <p class="text-text-primary mb-6">Preventive care to keep your smile healthy and beautiful.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a href="/dental/new-patients" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/new-patient-thumb.jpg" alt="New Patients" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">New Patient Appointments</h4><p class="text-xs text-text-secondary">Comprehensive assessment</p></div>
+              </a>
+              <a href="/dental/check-ups" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/checkup-thumb.jpg" alt="Check-ups" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Routine Check-ups</h4><p class="text-xs text-text-secondary">Regular preventive care</p></div>
+              </a>
+              <a href="/dental/hygiene" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/hygiene-thumb.jpg" alt="Dental Hygiene" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Dental Hygiene</h4><p class="text-xs text-text-secondary">Professional cleaning</p></div>
+              </a>
+            </div>
+          </div>
+          <div><img src="/images/maintain-category.jpg" alt="Maintain Health" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facial Aesthetics Section -->
+    <section class="section-padding bg-bg-alt">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-12">Facial Aesthetics & Skin Health</h2>
+
+        <!-- Enhance (Aesthetics) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+          <div><img src="/images/aesthetics-enhance.jpg" alt="Facial Enhancement" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+          <div>
+            <div class="mb-4"><img src="/icons/SVG/19.svg" alt="Enhance" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Enhance</h3>
+            <p class="text-text-primary mb-6">Advanced treatments to enhance your natural features and restore youthful appearance.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a href="/aesthetics/wrinkle-reduction" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/wrinkle-thumb.jpg" alt="Wrinkle Reduction" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Wrinkle Reduction</h4><p class="text-xs text-text-secondary">Smooth away fine lines</p></div>
+              </a>
+              <a href="/aesthetics/dermal-fillers" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/fillers-thumb.jpg" alt="Dermal Fillers" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Dermal Fillers</h4><p class="text-xs text-text-secondary">Restore volume and contour</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maintain (Aesthetics) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:[&>*:first-child]:order-2">
+          <div>
+            <div class="mb-4"><img src="/icons/SVG/21.svg" alt="Maintain" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Maintain</h3>
+            <p class="text-text-primary mb-6">Maintain your skin health and appearance with innovative treatments.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a href="/aesthetics/profhilo" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/profhilo-thumb.jpg" alt="Profhilo" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Profhilo</h4><p class="text-xs text-text-secondary">Skin hydration and remodeling</p></div>
+              </a>
+              <a href="/aesthetics/sunekos" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/sunekos-thumb.jpg" alt="Sunekos" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Sunekos</h4><p class="text-xs text-text-secondary">Skin regeneration treatment</p></div>
+              </a>
+              <a href="/aesthetics/chemical-peels" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/peels-thumb.jpg" alt="Chemical Peels" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Chemical Peels</h4><p class="text-xs text-text-secondary">Rejuvenate and refresh skin</p></div>
+              </a>
+            </div>
+          </div>
+          <div><img src="/images/aesthetics-maintain.jpg" alt="Skin Maintenance" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+        </div>
+
+        <!-- Restore (Aesthetics) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div><img src="/images/aesthetics-restore.jpg" alt="Skin Restoration" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]"></div>
+          <div>
+            <div class="mb-4"><img src="/icons/SVG/55.svg" alt="Restore" class="w-12 h-12"></div>
+            <h3 class="text-2xl font-display font-bold uppercase tracking-wider text-primary mb-3">Restore</h3>
+            <p class="text-text-primary mb-6">Restore skin health, vitality, and youthful appearance.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a href="/aesthetics/microneedling" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/microneedling-thumb.jpg" alt="Microneedling" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Microneedling</h4><p class="text-xs text-text-secondary">Collagen induction therapy</p></div>
+              </a>
+              <a href="/aesthetics/hair-loss-treatment" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/hair-loss-thumb.jpg" alt="Hair Loss Treatment" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Hair Loss Treatment</h4><p class="text-xs text-text-secondary">Advanced hair restoration solutions</p></div>
+              </a>
+              <a href="/aesthetics/skincare-consultations" class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all hover:-translate-y-1">
+                <img src="/images/skincare-thumb.jpg" alt="Skincare" class="w-full aspect-[4/3] object-cover">
+                <div class="p-3"><h4 class="font-display font-semibold text-xs uppercase tracking-wider text-primary">Skincare Consultations</h4><p class="text-xs text-text-secondary">Personalized treatment plans</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <DarkOverlay
+      title="Why Choose ProDenta?"
+      theme="aesthetics"
+      backgroundImage="/images/practice-team.jpg"
+      benefits={[
+        { strong: 'Award-Winning Team', text: 'Experienced professionals and specialists dedicated to your care' },
+        { strong: 'Patient-Centered Care', text: 'Family-friendly environment with focus on communication' },
+        { strong: 'Prevention First', text: 'We work closely with patients to prevent dental problems' },
+        { strong: 'Specialist Network', text: 'Comprehensive database of specialists for immediate referral' },
+        { strong: 'Flexible Appointments', text: 'Evening, weekend and out-of-hours appointments available' },
+        { strong: 'Payment Options', text: 'Flexible payment plans and membership options' },
+      ]}
+    />
+
+    <ConsultationCTA
+      title="Ready to Start Your Journey?"
+      description="Book your appointment today and experience exceptional dental care in the heart of Battersea. Our team is ready to welcome you and help you achieve the smile you deserve."
+      image="/images/consultation-woman.jpg"
+      buttonText="Book Appointment"
+      buttonHref="/contact#appointment"
+    />
+  </main>
+
+  <MapSection />
+</BaseLayout>

@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CategoryNav from '../components/CategoryNav.astro';
+import TreatmentCard from '../components/TreatmentCard.astro';
+import ConsultationCTA from '../components/ConsultationCTA.astro';
+---
+
+<BaseLayout title="Dental Treatments Battersea - ProDenta" description="Comprehensive dental care from routine check-ups to advanced cosmetic and restorative treatments at ProDenta Battersea.">
+
+  <HeroSection
+    title="Dental Treatments"
+    subtitle="Comprehensive dental care from routine check-ups to advanced cosmetic and restorative treatments."
+    image="/images/dental-treatments-hero.jpg"
+    imageAlt="Dental Treatments"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Dental Treatments' },
+    ]}
+  />
+
+  <CategoryNav categories={[
+    { label: 'Straighten', href: '#straighten' },
+    { label: 'Enhance', href: '#enhance' },
+    { label: 'Maintain', href: '#maintain' },
+    { label: 'Restore', href: '#restore' },
+  ]} />
+
+  <main>
+    <!-- Straighten -->
+    <section id="straighten" class="section-padding">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-2">Straighten</h2>
+        <p class="text-text-secondary mb-8">Achieve a perfectly aligned smile with modern orthodontic treatments</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <TreatmentCard title="Invisalign & Clear Aligners" description="Discreet, removable aligners for straight teeth" image="/images/invisalign-card.jpg" href="/dental/clear-braces" />
+          <TreatmentCard title="Orthodontics" description="Comprehensive orthodontic solutions for all ages" image="/images/orthodontics-card.jpg" href="/dental/orthodontics" />
+          <TreatmentCard title="Fixed Braces" description="Traditional and modern fixed braces systems" image="/images/fixed-braces-card.jpg" href="/dental/fixed-braces" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhance -->
+    <section id="enhance" class="section-padding bg-bg-alt">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-2">Enhance</h2>
+        <p class="text-text-secondary mb-8">Transform your smile with cosmetic dentistry</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <TreatmentCard title="Teeth Whitening" description="Professional whitening for a brighter smile" image="/images/teeth-whitening-card.jpg" href="/dental/teeth-whitening" />
+          <TreatmentCard title="Composite Bonding" description="Repair chips and reshape teeth with composite resin" image="/images/composite-bonding-card.jpg" href="/dental/composite-bonding" />
+          <TreatmentCard title="Veneers" description="Porcelain veneers for a perfect smile" image="/images/veneers-card.jpg" href="/dental/veneers" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Maintain -->
+    <section id="maintain" class="section-padding">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-2">Maintain</h2>
+        <p class="text-text-secondary mb-8">Keep your smile healthy with preventative care</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <TreatmentCard title="Routine Check-ups" description="Regular examinations and preventative care" image="/images/checkups-card.jpg" href="/dental/check-ups" />
+          <TreatmentCard title="Dental Hygiene" description="Professional cleaning and gum care" image="/images/hygiene-card.jpg" href="/dental/hygiene" />
+          <TreatmentCard title="New Patients" description="Comprehensive first appointment and assessment" image="/images/new-patients-card.jpg" href="/dental/new-patients" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Restore -->
+    <section id="restore" class="section-padding bg-bg-alt">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-2">Restore</h2>
+        <p class="text-text-secondary mb-8">Repair and replace damaged or missing teeth</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <TreatmentCard title="Dental Implants" description="Permanent tooth replacement solution" image="/images/implants-card.jpg" href="/dental/dental-implants" />
+          <TreatmentCard title="Crowns" description="Restore damaged teeth with custom crowns" image="/images/crowns-card.jpg" href="/dental/crowns" />
+          <TreatmentCard title="Dentures" description="Full and partial dentures for missing teeth" image="/images/dentures-card.jpg" href="/dental/dentures" />
+          <TreatmentCard title="Root Canal Treatment" description="Save infected teeth with endodontic therapy" image="/images/root-canal-card.jpg" href="/dental/root-canal" />
+        </div>
+      </div>
+    </section>
+
+    <ConsultationCTA
+      title="Ready to Transform Your Smile?"
+      description="Book a consultation to discuss your dental needs and treatment options."
+      buttonText="Book Consultation"
+    />
+  </main>
+</BaseLayout>

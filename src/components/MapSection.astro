@@ -1,0 +1,37 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="bg-bg-alt">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
+    <div class="p-8 md:p-12 flex flex-col justify-center">
+      <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-6">Find Us In Battersea</h2>
+      <div class="mb-6">
+        <p class="font-semibold text-primary">{site.name}</p>
+        <p class="text-text-secondary">227 St. John's Hill</p>
+        <p class="text-text-secondary">{site.address.area}, {site.address.city}</p>
+        <p class="text-text-secondary">{site.address.postcode}</p>
+        <p class="mt-2"><strong class="text-primary">Telephone:</strong> <a href={site.phoneHref} class="text-primary hover:text-secondary transition-colors">{site.phone}</a></p>
+        <p><strong class="text-primary">WhatsApp:</strong> <a href={site.whatsappHref} class="text-primary hover:text-secondary transition-colors">{site.whatsapp}</a></p>
+      </div>
+      <div>
+        <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Opening Hours</h3>
+        {site.hours.map((h) => (
+          <p class="text-text-secondary text-sm">{h.days}: {h.times}</p>
+        ))}
+        <p class="text-text-secondary text-sm">{site.hoursNote}</p>
+      </div>
+    </div>
+    <div class="min-h-[400px]">
+      <iframe
+        src={site.mapEmbed}
+        width="100%"
+        height="100%"
+        style="border:0; min-height: 400px;"
+        allowfullscreen
+        loading="lazy"
+        title="ProDenta location map"
+      ></iframe>
+    </div>
+  </div>
+</section>

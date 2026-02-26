@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CategoryNav from '../components/CategoryNav.astro';
+import TreatmentCard from '../components/TreatmentCard.astro';
+import ConsultationCTA from '../components/ConsultationCTA.astro';
+---
+
+<BaseLayout title="Facial Aesthetics & Skin Care - ProDenta Battersea" description="Expert aesthetic treatments to enhance your natural beauty, maintain youthful skin, and restore radiance at ProDenta Battersea.">
+
+  <HeroSection
+    title="Facial Aesthetics & Skin Care Treatments"
+    subtitle="Expert aesthetic treatments to enhance your natural beauty, maintain youthful skin, and restore radiance."
+    image="/images/facial-aesthetics-hero.jpg"
+    imageAlt="Facial Aesthetics"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Facial Aesthetics & Skin Care' },
+    ]}
+    theme="dark"
+  />
+
+  <CategoryNav categories={[
+    { label: 'Enhance', href: '#enhance' },
+    { label: 'Maintain', href: '#maintain' },
+    { label: 'Restore', href: '#restore' },
+  ]} />
+
+  <main>
+    <!-- Enhance -->
+    <section id="enhance" class="section-padding">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-2">Enhance</h2>
+        <p class="text-text-secondary mb-8">Refine your features and smooth away signs of ageing</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <TreatmentCard title="Wrinkle Reduction" description="Smooth fine lines for refreshed, natural appearance" image="/images/wrinkle-reduction-card.jpg" href="/aesthetics/wrinkle-reduction" />
+          <TreatmentCard title="Dermal Fillers" description="Restore volume and enhance facial contours" image="/images/dermal-fillers-card.jpg" href="/aesthetics/dermal-fillers" />
+          <TreatmentCard title="Aqualyx" description="Non-surgical fat dissolving treatment" image="/images/aqualyx-card.jpg" href="/aesthetics/aqualyx" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Maintain -->
+    <section id="maintain" class="section-padding bg-bg-alt">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-2">Maintain</h2>
+        <p class="text-text-secondary mb-8">Preserve skin health and youthful vitality</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <TreatmentCard title="Profhilo" description="Bio-remodelling for skin firmness and hydration" image="/images/profhilo-card.jpg" href="/aesthetics/profhilo" />
+          <TreatmentCard title="Sunekos" description="Amino acid complex for skin regeneration" image="/images/sunekos-card.jpg" href="/aesthetics/sunekos" />
+          <TreatmentCard title="The Perfect Peel" description="Advanced chemical peel for skin transformation" image="/images/perfect-peel-card.jpg" href="/aesthetics/perfect-peel" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Restore -->
+    <section id="restore" class="section-padding">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-2">Restore</h2>
+        <p class="text-text-secondary mb-8">Renew and regenerate skin health</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <TreatmentCard title="Microneedling" description="Collagen induction to improve scars and texture" image="/images/microneedling-card.jpg" href="/aesthetics/microneedling" />
+          <TreatmentCard title="Chemical Peels" description="Customised peel solutions for your skin" image="/images/chemical-peels-card.jpg" href="/aesthetics/chemical-peels" />
+          <TreatmentCard title="Mesotherapy" description="Vitamin microinjections for revitalisation" image="/images/mesotherapy-card.jpg" href="/aesthetics/mesotherapy" />
+          <TreatmentCard title="Hair Loss Treatment" description="Minoxidil and microneedling for hair restoration" image="/images/hair-loss-card.jpg" href="/aesthetics/hair-loss-treatment" />
+          <TreatmentCard title="Skincare Consultations" description="Personalised skincare advice and planning" image="/images/skincare-consultations-card.jpg" href="/aesthetics/skincare-consultations" />
+        </div>
+      </div>
+    </section>
+
+    <ConsultationCTA
+      title="Ready to Enhance Your Natural Beauty?"
+      description="Book a free consultation to discuss your aesthetic goals."
+      buttonText="Book Free Consultation"
+    />
+  </main>
+</BaseLayout>

@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import HeroCards from '../../components/HeroCards.astro';
+import ContentSection from '../../components/ContentSection.astro';
+import ProblemsGrid from '../../components/ProblemsGrid.astro';
+import DarkOverlay from '../../components/DarkOverlay.astro';
+import ResultsCards from '../../components/ResultsCards.astro';
+import GallerySection from '../../components/GallerySection.astro';
+import PricingSection from '../../components/PricingSection.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import RelatedTreatments from '../../components/RelatedTreatments.astro';
+import ConsultationCTA from '../../components/ConsultationCTA.astro';
+import MapSection from '../../components/MapSection.astro';
+import { dentalTreatments } from '../../data/dental-treatments';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return dentalTreatments.map((t) => ({
+    params: { slug: t.slug },
+    props: { treatment: t },
+  }));
+};
+
+const { treatment: t } = Astro.props;
+---
+
+<BaseLayout title={t.pageTitle} description={t.metaDescription} bodyClass="dental-page">
+
+  <HeroSection
+    title={t.title}
+    subtitle={t.heroSubtitle}
+    image={t.heroImage}
+    imageAlt={`${t.title} at ProDenta`}
+    breadcrumbs={t.breadcrumbs}
+    theme="light"
+  />
+
+  <HeroCards cards={t.heroCards} theme="dental" />
+
+  <main>
+    <ContentSection
+      title={t.whatIsIt.title}
+      content={t.whatIsIt.content}
+      image={t.whatIsIt.image}
+      imageAlt={t.title}
+      imagePosition={t.whatIsIt.imagePosition}
+    />
+
+    <ProblemsGrid
+      title={t.problems.title}
+      problems={t.problems.items}
+      theme="dental"
+    />
+
+    <ContentSection
+      title={t.howItWorks.title}
+      content={t.howItWorks.content}
+      image={t.howItWorks.image}
+      imageAlt={`${t.title} Process`}
+      imagePosition={t.howItWorks.imagePosition}
+    />
+
+    <DarkOverlay
+      title={t.benefits.title}
+      benefits={t.benefits.items}
+      theme="dental"
+    />
+
+    <ContentSection
+      title={t.whyChoose.title}
+      content={t.whyChoose.content}
+      image={t.whyChoose.image}
+      imageAlt="Happy Patient"
+      imagePosition={t.whyChoose.imagePosition}
+    />
+
+    <ResultsCards cards={t.results} />
+
+    {t.gallery && (
+      <GallerySection
+        title={t.gallery.title}
+        intro={t.gallery.intro}
+        items={t.gallery.items}
+      />
+    )}
+
+    <PricingSection
+      heading={t.pricing.heading}
+      treatmentName={t.pricing.treatmentName}
+      price={t.pricing.price}
+      description={t.pricing.description}
+      buttonText={t.pricing.buttonText}
+    />
+
+    <FAQSection faqs={t.faqs} theme="dental" />
+
+    <RelatedTreatments treatments={t.related} />
+
+    <ConsultationCTA
+      title={t.cta.title}
+      description={t.cta.description}
+    />
+  </main>
+
+  <MapSection />
+</BaseLayout>

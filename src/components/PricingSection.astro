@@ -1,0 +1,33 @@
+---
+interface Props {
+  heading: string;
+  treatmentName: string;
+  price: string;
+  description: string;
+  buttonText?: string;
+  buttonHref?: string;
+  bgColor?: string;
+}
+
+const {
+  heading,
+  treatmentName,
+  price,
+  description,
+  buttonText = 'Book Free Consultation',
+  buttonHref = '/contact',
+  bgColor = ''
+} = Astro.props;
+---
+
+<section class={`section-padding ${bgColor}`}>
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-8">{heading}</h2>
+    <div class="bg-white rounded-2xl shadow-soft p-8 md:p-12">
+      <h3 class="font-display font-semibold uppercase tracking-wider text-lg text-primary mb-4">{treatmentName}</h3>
+      <div class="text-4xl font-display font-bold text-primary mb-4">{price}</div>
+      <p class="text-text-secondary mb-8 max-w-xl mx-auto">{description}</p>
+      <a href={buttonHref} class="cta-button">{buttonText}</a>
+    </div>
+  </div>
+</section>

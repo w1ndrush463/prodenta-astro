@@ -1,0 +1,51 @@
+---
+import Breadcrumb from './Breadcrumb.astro';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+  image: string;
+  imageAlt: string;
+  breadcrumbs?: BreadcrumbItem[];
+  theme?: 'light' | 'dark';
+  buttons?: { label: string; href: string; outline?: boolean }[];
+}
+
+const { title, subtitle, image, imageAlt, breadcrumbs, theme = 'light', buttons } = Astro.props;
+
+const bgClass = theme === 'dark' ? 'bg-primary' : 'bg-white';
+const titleClass = theme === 'dark' ? 'text-accent-light' : 'text-primary';
+const subtitleClass = theme === 'dark' ? 'text-white' : 'text-text-secondary';
+---
+
+<section class={`${bgClass} section-padding`}>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <div>
+      {breadcrumbs && <Breadcrumb items={breadcrumbs} light={theme === 'dark'} />}
+      <h1 class={`text-hero font-display font-bold uppercase tracking-wider ${titleClass} mb-4`}>{title}</h1>
+      <p class={`text-lg ${subtitleClass} max-w-xl`}>{subtitle}</p>
+      {buttons && (
+        <div class="flex flex-wrap gap-4 mt-8">
+          {buttons.map((btn) => (
+            <a
+              href={btn.href}
+              class={btn.outline
+                ? (theme === 'dark' ? 'cta-button cta-outline-white' : 'cta-button cta-outline')
+                : 'cta-button'}
+            >
+              {btn.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+    <div>
+      <img src={image} alt={imageAlt} class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]" loading="lazy">
+    </div>
+  </div>
+</section>

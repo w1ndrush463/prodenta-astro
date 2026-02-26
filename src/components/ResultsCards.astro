@@ -1,0 +1,27 @@
+---
+interface ResultCard {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  heading?: string;
+  cards: ResultCard[];
+}
+
+const { heading = 'Treatment Overview', cards } = Astro.props;
+---
+
+<section class="section-padding bg-bg-alt">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-12">{heading}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {cards.map((card) => (
+        <div class="bg-white rounded-xl p-6 text-center shadow-soft">
+          <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">{card.title}</h3>
+          <p class="text-sm text-text-secondary">{card.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

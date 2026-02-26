@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import TeamMemberCard from '../components/TeamMemberCard.astro';
+import ConsultationCTA from '../components/ConsultationCTA.astro';
+import { teamMembers } from '../data/team';
+
+const clinicians = teamMembers.filter(m => m.section === 'clinician');
+const specialists = teamMembers.filter(m => m.section === 'specialist');
+const nurses = teamMembers.filter(m => m.section === 'nurse');
+const support = teamMembers.filter(m => m.section === 'support');
+---
+
+<BaseLayout title="Our Team - ProDenta Battersea" description="Meet our talented team of dentists, specialists, and support staff at ProDenta Battersea.">
+
+  <HeroSection
+    title="Exceptional Dentistry From An Exceptional Team"
+    subtitle="Get to know our talented clinicians and the team behind your exceptional smile"
+    image="/images/team-hero.jpg"
+    imageAlt="ProDenta Team"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Our Team' },
+    ]}
+  />
+
+  <main>
+    <!-- Team Intro -->
+    <section class="section-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-6">Meet Our Team</h2>
+        <p class="text-text-secondary text-lg">Our team of talented clinicians and support staff work together to provide you with the best dental and facial aesthetic care. Get to know them better below.</p>
+      </div>
+    </section>
+
+    <!-- Main Clinicians -->
+    <section class="section-padding bg-bg-alt pt-0">
+      <div class="max-w-4xl mx-auto space-y-6">
+        {clinicians.map((member) => (
+          <TeamMemberCard
+            name={member.name}
+            role={member.role}
+            image={member.image}
+            bio={member.bio}
+            expertise={member.expertise}
+            profileHref={member.profilePage ? `/team/${member.slug}` : undefined}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Specialists -->
+    <section class="section-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Meet Our Specialists</h2>
+        <p class="text-text-secondary text-center mb-12">Our specialist network ensures you have access to world-class expertise for complex treatments</p>
+        <div class="space-y-6">
+          {specialists.map((member) => (
+            <TeamMemberCard
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              bio={member.bio}
+              expertise={member.expertise}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Dental Nurses -->
+    <section class="section-padding bg-bg-alt">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Our Dental Nurses</h2>
+        <p class="text-text-secondary text-center mb-12">Our qualified dental nurses ensure your comfort and safety throughout every visit</p>
+        <div class="space-y-6">
+          {nurses.map((member) => (
+            <TeamMemberCard
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              bio={member.bio}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Staff -->
+    <section class="section-padding">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-12">Support Team</h2>
+        <div class="space-y-6">
+          {support.map((member) => (
+            <TeamMemberCard
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              bio={member.bio}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <ConsultationCTA
+      title="Ready to Meet Our Team?"
+      description="Book your appointment today and experience the ProDenta difference. Our friendly, expert team is here to help you achieve your best smile."
+      image="/images/team-consultation.jpg"
+      buttonText="Book Appointment"
+      buttonHref="/contact#appointment"
+    />
+  </main>
+</BaseLayout>

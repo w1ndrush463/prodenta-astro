@@ -1,0 +1,38 @@
+---
+import { site } from '../data/site';
+import { footerLinks } from '../data/navigation';
+---
+
+<footer class="bg-primary text-white">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div>
+      <h3 class="font-display text-lg font-semibold uppercase tracking-wider mb-4">Meet the Team</h3>
+      <h4 class="text-accent text-sm font-semibold mb-2">Dental Nurses: Agi Paragi, Flori Pastor & Angela Bidaud</h4>
+      <p><a href="/team" class="text-accent hover:text-white transition-colors text-sm">Read more</a></p>
+    </div>
+
+    <div>
+      <h3 class="font-display text-lg font-semibold uppercase tracking-wider mb-4">How to Find Us</h3>
+      <p class="font-semibold text-sm">{site.name}</p>
+      <p class="text-sm text-gray-300">{site.address.line1}<br>{site.address.area}<br>{site.address.city}<br>{site.address.postcode}</p>
+      <p class="text-sm text-gray-300 mt-2">Tel: {site.phone}</p>
+      <h4 class="text-accent text-sm font-semibold mt-4 mb-2">Opening Hours</h4>
+      {site.hours.map((h) => (
+        <p class="text-sm text-gray-300">{h.days} {h.times}</p>
+      ))}
+      <p class="text-sm text-gray-300">{site.hoursNote}</p>
+    </div>
+
+    <div>
+      <nav class="flex flex-col gap-2">
+        {footerLinks.map((link) => (
+          <a href={link.href} class="text-sm text-gray-300 hover:text-white transition-colors">{link.label}</a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <div class="border-t border-white/20 py-4 text-center">
+    <p class="text-sm text-gray-400">&copy; {new Date().getFullYear()} Prodenta. All Rights Reserved.</p>
+  </div>
+</footer>

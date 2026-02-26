@@ -1,0 +1,32 @@
+---
+interface RelatedTreatment {
+  href: string;
+  image: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  heading?: string;
+  treatments: RelatedTreatment[];
+}
+
+const { heading = 'You Might Also Be Interested In', treatments } = Astro.props;
+---
+
+<section class="section-padding">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-12">{heading}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {treatments.map((t) => (
+        <a href={t.href} class="group block rounded-xl overflow-hidden shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-1">
+          <img src={t.image} alt={t.title} class="w-full aspect-[4/3] object-cover" loading="lazy">
+          <div class="p-5">
+            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2 group-hover:text-secondary transition-colors">{t.title}</h3>
+            <p class="text-sm text-text-secondary">{t.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

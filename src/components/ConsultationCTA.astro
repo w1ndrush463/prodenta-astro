@@ -1,0 +1,35 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  buttonText?: string;
+  buttonHref?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/images/consultation-woman.jpg',
+  buttonText = 'Book Consultation',
+  buttonHref = '/contact'
+} = Astro.props;
+---
+
+<section class="section-padding bg-bg-blue">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <div>
+      <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-6">{title}</h2>
+      <p class="text-text-primary leading-relaxed mb-8">{description}</p>
+      <div class="flex flex-wrap gap-4">
+        <a href={buttonHref} class="cta-button">{buttonText}</a>
+        <a href={site.phoneHref} class="cta-button cta-outline">Call {site.phone}</a>
+      </div>
+    </div>
+    <div>
+      <img src={image} alt="Book Consultation" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]" loading="lazy">
+    </div>
+  </div>
+</section>
