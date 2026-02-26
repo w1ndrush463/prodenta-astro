@@ -1,0 +1,379 @@
+Page URL,Asset Type,File Path,Context,File Exists
+/,image,/images/hero-practice.jpg,Hero image,No
+/,image,/images/practice-interior.jpg,"ContentSection: Welcome to ProDenta",No
+/,image,/images/straighten-category.jpg,"Category image: Straighten",No
+/,image,/images/orthodontics-thumb.jpg,"Treatment card: Orthodontics",No
+/,image,/images/clear-braces-thumb.jpg,"Treatment card: Invisalign & Clear Aligners",Yes
+/,image,/images/fixed-braces-thumb.jpg,"Treatment card: Fixed Braces",Yes
+/,image,/images/enhance-category.jpg,"Category image: Enhance",No
+/,image,/images/bonding-thumb.jpg,"Treatment card: Composite Bonding",Yes
+/,image,/images/whitening-thumb.jpg,"Treatment card: Teeth Whitening",No
+/,image,/images/veneers-thumb.jpg,"Treatment card: Veneers",No
+/,image,/images/repair-category.jpg,"Category image: Repair",No
+/,image,/images/fillings-thumb.jpg,"Treatment card: Fillings",No
+/,image,/images/root-canal-thumb.jpg,"Treatment card: Root Canal",No
+/,image,/images/restore-category.jpg,"Category image: Restore",No
+/,image,/images/crowns-thumb.jpg,"Treatment card: Crowns",Yes
+/,image,/images/dentures-thumb.jpg,"Treatment card: Dentures",Yes
+/,image,/images/implants-thumb.jpg,"Treatment card: Dental Implants",No
+/,image,/images/maintain-category.jpg,"Category image: Maintain",No
+/,image,/images/new-patient-thumb.jpg,"Treatment card: New Patient Appointments",Yes
+/,image,/images/checkup-thumb.jpg,"Treatment card: Routine Check-ups",Yes
+/,image,/images/hygiene-thumb.jpg,"Treatment card: Dental Hygiene",No
+/,image,/images/aesthetics-enhance.jpg,"Category image: Aesthetics Enhance",No
+/,image,/images/wrinkle-thumb.jpg,"Treatment card: Wrinkle Reduction",No
+/,image,/images/fillers-thumb.jpg,"Treatment card: Dermal Fillers",Yes
+/,image,/images/aesthetics-maintain.jpg,"Category image: Aesthetics Maintain",No
+/,image,/images/profhilo-thumb.jpg,"Treatment card: Profhilo",No
+/,image,/images/sunekos-thumb.jpg,"Treatment card: Sunekos",No
+/,image,/images/peels-thumb.jpg,"Treatment card: Chemical Peels",No
+/,image,/images/aesthetics-restore.jpg,"Category image: Aesthetics Restore",No
+/,image,/images/microneedling-thumb.jpg,"Treatment card: Microneedling",No
+/,image,/images/hair-loss-thumb.jpg,"Treatment card: Hair Loss Treatment",No
+/,image,/images/skincare-thumb.jpg,"Treatment card: Skincare Consultations",No
+/,image,/images/practice-team.jpg,"DarkOverlay: Why Choose ProDenta background",No
+/,image,/images/consultation-woman.jpg,"ConsultationCTA: Ready to Start Your Journey",No
+/,image,/images/prodenta-logo blue.png,"Header: logo",Yes
+/about,image,/images/practice-interior.jpg,Hero image,No
+/about,image,/images/dental.jpg,Video poster image,Yes
+/about,video,/videos/A_Dentist_With_His_Patient_optimized.mp4,About page video,Yes
+/about,image,/images/consultation-woman.jpg,"ConsultationCTA: Ready to Experience ProDenta Care (default)",No
+/aesthetics/aqualyx,image,/images/aqualyx-hero.jpg,Hero image,Yes
+/aesthetics/aqualyx,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is Aqualyx",No
+/aesthetics/aqualyx,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/aqualyx,image,/images/happy-patient.jpg,"ContentSection: Why Choose Aqualyx At ProDenta",No
+/aesthetics/aqualyx,image,/images/before-after-aqualyx-chin.jpg,"Gallery: Double Chin Reduction",Yes
+/aesthetics/aqualyx,image,/images/before-after-aqualyx-jawline.jpg,"Gallery: Jawline Contouring",Yes
+/aesthetics/aqualyx,image,/images/before-after-aqualyx-jowls.jpg,"Gallery: Jowl Reduction",Yes
+/aesthetics/aqualyx,image,/images/dermal-fillers-thumb.jpg,"Related: Dermal Fillers",Yes
+/aesthetics/aqualyx,image,/images/wrinkle-reduction-thumb.jpg,"Related: Wrinkle Reduction",No
+/aesthetics/aqualyx,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/aqualyx,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/chemical-peels,image,/images/chemical-peels-hero.jpg,Hero image,Yes
+/aesthetics/chemical-peels,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Are Chemical Peels",No
+/aesthetics/chemical-peels,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/chemical-peels,image,/images/happy-patient.jpg,"ContentSection: Why Choose Chemical Peels At ProDenta",No
+/aesthetics/chemical-peels,image,/images/before-after-peel-pigmentation.jpg,"Gallery: Pigmentation Reduction",No
+/aesthetics/chemical-peels,image,/images/before-after-peel-texture.jpg,"Gallery: Skin Texture & Tone",No
+/aesthetics/chemical-peels,image,/images/before-after-peel-acne.jpg,"Gallery: Acne Scarring",No
+/aesthetics/chemical-peels,image,/images/microneedling-thumb.jpg,"Related: Microneedling",No
+/aesthetics/chemical-peels,image,/images/perfect-peel-thumb.jpg,"Related: The Perfect Peel",No
+/aesthetics/chemical-peels,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/chemical-peels,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/dermal-fillers,image,/images/dermal-fillers-hero.jpg,Hero image,Yes
+/aesthetics/dermal-fillers,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Are Dermal Fillers",No
+/aesthetics/dermal-fillers,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/dermal-fillers,image,/images/happy-patient.jpg,"ContentSection: Why Choose Dermal Fillers At ProDenta",No
+/aesthetics/dermal-fillers,image,/images/before-after-fillers-lips.jpg,"Gallery: Lip Enhancement",No
+/aesthetics/dermal-fillers,image,/images/before-after-fillers-cheeks.jpg,"Gallery: Cheek Augmentation",No
+/aesthetics/dermal-fillers,image,/images/before-after-fillers-lines.jpg,"Gallery: Nasolabial Fold Reduction",No
+/aesthetics/dermal-fillers,image,/images/wrinkle-reduction-thumb.jpg,"Related: Wrinkle Reduction",No
+/aesthetics/dermal-fillers,image,/images/profhilo-thumb.jpg,"Related: Profhilo",No
+/aesthetics/dermal-fillers,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/dermal-fillers,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/hair-loss-treatment,image,/images/hair-loss-hero.jpg,Hero image,Yes
+/aesthetics/hair-loss-treatment,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is Hair Loss Treatment",No
+/aesthetics/hair-loss-treatment,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/hair-loss-treatment,image,/images/happy-patient.jpg,"ContentSection: Why Choose Hair Loss Treatment At ProDenta",No
+/aesthetics/hair-loss-treatment,image,/images/before-after-hair-crown.jpg,"Gallery: Crown Density",No
+/aesthetics/hair-loss-treatment,image,/images/before-after-hair-hairline.jpg,"Gallery: Hairline Restoration",No
+/aesthetics/hair-loss-treatment,image,/images/before-after-hair-thickness.jpg,"Gallery: Hair Thickness",No
+/aesthetics/hair-loss-treatment,image,/images/microneedling-thumb.jpg,"Related: Microneedling",No
+/aesthetics/hair-loss-treatment,image,/images/mesotherapy-thumb.jpg,"Related: Mesotherapy",No
+/aesthetics/hair-loss-treatment,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/hair-loss-treatment,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/mesotherapy,image,/images/mesotherapy-hero.jpg,Hero image,Yes
+/aesthetics/mesotherapy,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is Mesotherapy",No
+/aesthetics/mesotherapy,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/mesotherapy,image,/images/happy-patient.jpg,"ContentSection: Why Choose Mesotherapy At ProDenta",No
+/aesthetics/mesotherapy,image,/images/before-after-mesotherapy-face.jpg,"Gallery: Skin Radiance & Tone",No
+/aesthetics/mesotherapy,image,/images/before-after-mesotherapy-texture.jpg,"Gallery: Skin Texture",No
+/aesthetics/mesotherapy,image,/images/before-after-mesotherapy-pigmentation.jpg,"Gallery: Pigmentation",No
+/aesthetics/mesotherapy,image,/images/microneedling-thumb.jpg,"Related: Microneedling",No
+/aesthetics/mesotherapy,image,/images/profhilo-thumb.jpg,"Related: Profhilo",No
+/aesthetics/mesotherapy,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/mesotherapy,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/microneedling,image,/images/microneedling-hero.jpg,Hero image,Yes
+/aesthetics/microneedling,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is Microneedling",No
+/aesthetics/microneedling,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/microneedling,image,/images/happy-patient.jpg,"ContentSection: Why Choose Microneedling At ProDenta",No
+/aesthetics/microneedling,image,/images/before-after-microneedling-scars.jpg,"Gallery: Acne Scarring",No
+/aesthetics/microneedling,image,/images/before-after-microneedling-texture.jpg,"Gallery: Skin Texture",Yes
+/aesthetics/microneedling,image,/images/before-after-microneedling-pores.jpg,"Gallery: Pore Reduction",No
+/aesthetics/microneedling,image,/images/chemical-peels-thumb.jpg,"Related: Chemical Peels",Yes
+/aesthetics/microneedling,image,/images/profhilo-thumb.jpg,"Related: Profhilo",No
+/aesthetics/microneedling,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/microneedling,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/perfect-peel,image,/images/perfect-peel-hero.jpg,Hero image,Yes
+/aesthetics/perfect-peel,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is The Perfect Peel",No
+/aesthetics/perfect-peel,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/perfect-peel,image,/images/happy-patient.jpg,"ContentSection: Why Choose The Perfect Peel At ProDenta",No
+/aesthetics/perfect-peel,image,/images/before-after-peel-pigmentation.jpg,"Gallery: Pigmentation Reduction",No
+/aesthetics/perfect-peel,image,/images/before-after-peel-texture.jpg,"Gallery: Skin Texture & Tone",No
+/aesthetics/perfect-peel,image,/images/before-after-peel-acne.jpg,"Gallery: Acne Scarring",No
+/aesthetics/perfect-peel,image,/images/microneedling-thumb.jpg,"Related: Microneedling",No
+/aesthetics/perfect-peel,image,/images/chemical-peels-thumb.jpg,"Related: Chemical Peels",Yes
+/aesthetics/perfect-peel,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/perfect-peel,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/profhilo,image,/images/profhilo-hero.jpg,Hero image,Yes
+/aesthetics/profhilo,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is Profhilo",No
+/aesthetics/profhilo,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/profhilo,image,/images/happy-patient.jpg,"ContentSection: Why Choose Profhilo At ProDenta",No
+/aesthetics/profhilo,image,/images/before-after-profhilo-face.jpg,"Gallery: Skin Texture & Firmness",No
+/aesthetics/profhilo,image,/images/before-after-profhilo-neck.jpg,"Gallery: Neck Laxity",No
+/aesthetics/profhilo,image,/images/before-after-profhilo-hydration.jpg,"Gallery: Skin Hydration",No
+/aesthetics/profhilo,image,/images/sunekos-thumb.jpg,"Related: Sunekos",No
+/aesthetics/profhilo,image,/images/dermal-fillers-thumb.jpg,"Related: Dermal Fillers",Yes
+/aesthetics/profhilo,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/profhilo,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/skincare-consultations,image,/images/skincare-consultations-hero.jpg,Hero image,No
+/aesthetics/skincare-consultations,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is A Skincare Consultation",No
+/aesthetics/skincare-consultations,image,/images/wrinkle-reduction-process.jpg,"ContentSection: What Happens During Your Consultation",Yes
+/aesthetics/skincare-consultations,image,/images/happy-patient.jpg,"ContentSection: Why Choose ProDenta For Your Skincare Consultation",No
+/aesthetics/skincare-consultations,image,/images/chemical-peels-thumb.jpg,"Related: Chemical Peels",Yes
+/aesthetics/skincare-consultations,image,/images/microneedling-thumb.jpg,"Related: Microneedling",No
+/aesthetics/skincare-consultations,image,/images/profhilo-thumb.jpg,"Related: Profhilo",No
+/aesthetics/skincare-consultations,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/sunekos,image,/images/sunekos-hero.jpg,Hero image,Yes
+/aesthetics/sunekos,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Is Sunekos",No
+/aesthetics/sunekos,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/sunekos,image,/images/happy-patient.jpg,"ContentSection: Why Choose Sunekos At ProDenta",No
+/aesthetics/sunekos,image,/images/before-after-sunekos-eyes.jpg,"Gallery: Under-Eye Rejuvenation",No
+/aesthetics/sunekos,image,/images/before-after-sunekos-texture.jpg,"Gallery: Skin Texture & Tone",No
+/aesthetics/sunekos,image,/images/before-after-sunekos-elasticity.jpg,"Gallery: Skin Elasticity",No
+/aesthetics/sunekos,image,/images/profhilo-thumb.jpg,"Related: Profhilo",No
+/aesthetics/sunekos,image,/images/microneedling-thumb.jpg,"Related: Microneedling",No
+/aesthetics/sunekos,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/sunekos,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/aesthetics/wrinkle-reduction,image,/images/wrinkle-reduction-hero.jpg,Hero image,Yes
+/aesthetics/wrinkle-reduction,image,/images/wrinkle-reduction-what-is.jpg,"ContentSection: What Are Anti-Wrinkle Injections",Yes
+/aesthetics/wrinkle-reduction,image,/images/wrinkle-reduction-process.jpg,"ContentSection: How Does The Treatment Work",Yes
+/aesthetics/wrinkle-reduction,image,/images/happy-patient.jpg,"ContentSection: Why Choose Wrinkle Reduction At ProDenta",No
+/aesthetics/wrinkle-reduction,image,/images/before-after-forehead.jpg,"Gallery: Forehead Lines",No
+/aesthetics/wrinkle-reduction,image,/images/before-after-frown.jpg,"Gallery: Frown Lines",No
+/aesthetics/wrinkle-reduction,image,/images/before-after-crows-feet.jpg,"Gallery: Crows' Feet",No
+/aesthetics/wrinkle-reduction,image,/images/dermal-fillers-thumb.jpg,"Related: Dermal Fillers",Yes
+/aesthetics/wrinkle-reduction,image,/images/profhilo-thumb.jpg,"Related: Profhilo",No
+/aesthetics/wrinkle-reduction,image,/images/skincare-thumb.jpg,"Related: Skincare Consultations",No
+/aesthetics/wrinkle-reduction,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/contact,image,/images/contact-hero.jpg,Hero image,Yes
+/contact,image,/images/practice.webp,"Practice photo: Visit Our Battersea Practice",Yes
+/dental/check-ups,image,/images/check-ups-hero.jpg,Hero image,Yes
+/dental/check-ups,image,/images/composite-bonding-what-is.jpg,"ContentSection: What Are Routine Check-ups",Yes
+/dental/check-ups,image,/images/composite-bonding-process.jpg,"ContentSection: What Happens During a Check-up",Yes
+/dental/check-ups,image,/images/happy-patient-bonding.jpg,"ContentSection: Why Choose ProDenta for Your Check-ups",No
+/dental/check-ups,image,/images/check-up-examination.jpg,"Gallery: Thorough Examination",No
+/dental/check-ups,image,/images/check-up-xray.jpg,"Gallery: Digital X-rays",No
+/dental/check-ups,image,/images/check-up-consultation.jpg,"Gallery: Clear Communication",No
+/dental/check-ups,image,/images/hygiene-thumb.jpg,"Related: Dental Hygiene",No
+/dental/check-ups,image,/images/new-patients-thumb.jpg,"Related: New Patients",No
+/dental/check-ups,image,/images/emergency-thumb.jpg,"Related: Emergency Appointments",Yes
+/dental/check-ups,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/clear-braces,image,/images/invisalign-hero.jpg,Hero image,Yes
+/dental/clear-braces,image,/images/invisalign-what-is.jpg,"ContentSection: What Is Invisalign",Yes
+/dental/clear-braces,image,/images/invisalign-process.jpg,"ContentSection: How Does Invisalign Work",Yes
+/dental/clear-braces,image,/images/happy-patient.jpg,"ContentSection: Why Choose Invisalign At ProDenta",No
+/dental/clear-braces,image,/images/before-after-invisalign-1.jpg,"Gallery: Crooked Teeth Correction",Yes
+/dental/clear-braces,image,/images/before-after-invisalign-2.jpg,"Gallery: Gap Closure",Yes
+/dental/clear-braces,image,/images/before-after-invisalign-3.jpg,"Gallery: Bite Correction",Yes
+/dental/clear-braces,image,/images/teeth-whitening-thumb.jpg,"Related: Teeth Whitening",No
+/dental/clear-braces,image,/images/composite-bonding-thumb.jpg,"Related: Composite Bonding",Yes
+/dental/clear-braces,image,/images/veneers-thumb.jpg,"Related: Veneers",No
+/dental/clear-braces,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/composite-bonding,image,/images/composite-bonding-hero.jpg,Hero image,Yes
+/dental/composite-bonding,image,/images/composite-bonding-what-is.jpg,"ContentSection: What Is Composite Bonding",Yes
+/dental/composite-bonding,image,/images/composite-bonding-process.jpg,"ContentSection: How Does Composite Bonding Work",Yes
+/dental/composite-bonding,image,/images/happy-patient-bonding.jpg,"ContentSection: Why Choose Composite Bonding At ProDenta",No
+/dental/composite-bonding,image,/images/before-after-bonding-1.jpg,"Gallery: Chipped Tooth Repair",No
+/dental/composite-bonding,image,/images/before-after-bonding-2.jpg,"Gallery: Gap Closure",No
+/dental/composite-bonding,image,/images/before-after-bonding-3.jpg,"Gallery: Smile Reshaping",No
+/dental/composite-bonding,image,/images/teeth-whitening-thumb.jpg,"Related: Teeth Whitening",No
+/dental/composite-bonding,image,/images/veneers-thumb.jpg,"Related: Veneers",No
+/dental/composite-bonding,image,/images/invisalign-thumb.jpg,"Related: Invisalign",No
+/dental/composite-bonding,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/crowns,image,/images/crowns-hero.jpg,Hero image,Yes
+/dental/crowns,image,/images/veneers-what-is.jpg,"ContentSection: What Are Dental Crowns",Yes
+/dental/crowns,image,/images/veneers-process.jpg,"ContentSection: How Do Crowns Work",Yes
+/dental/crowns,image,/images/happy-patient-veneers.jpg,"ContentSection: Why Choose Crowns At ProDenta",Yes
+/dental/crowns,image,/images/before-after-veneers-1.jpg,"Gallery: Complete Smile Makeover",Yes
+/dental/crowns,image,/images/before-after-veneers-2.jpg,"Gallery: Discolouration Correction",Yes
+/dental/crowns,image,/images/before-after-veneers-3.jpg,"Gallery: Shape & Size Enhancement",Yes
+/dental/crowns,image,/images/root-canal-thumb.jpg,"Related: Root Canal Treatment",No
+/dental/crowns,image,/images/implants-thumb.jpg,"Related: Dental Implants",No
+/dental/crowns,image,/images/veneers-thumb.jpg,"Related: Veneers",No
+/dental/crowns,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/dental-implants,image,/images/implants-hero.jpg,Hero image,Yes
+/dental/dental-implants,image,/images/veneers-what-is.jpg,"ContentSection: What Are Dental Implants",Yes
+/dental/dental-implants,image,/images/veneers-process.jpg,"ContentSection: How Do Dental Implants Work",Yes
+/dental/dental-implants,image,/images/happy-patient-veneers.jpg,"ContentSection: Why Choose Dental Implants At ProDenta",Yes
+/dental/dental-implants,image,/images/before-after-veneers-1.jpg,"Gallery: Complete Smile Makeover",Yes
+/dental/dental-implants,image,/images/before-after-veneers-2.jpg,"Gallery: Discolouration Correction",Yes
+/dental/dental-implants,image,/images/before-after-veneers-3.jpg,"Gallery: Shape & Size Enhancement",Yes
+/dental/dental-implants,image,/images/crowns-thumb.jpg,"Related: Dental Crowns",Yes
+/dental/dental-implants,image,/images/dentures-thumb.jpg,"Related: Dentures",Yes
+/dental/dental-implants,image,/images/oral-surgery-thumb.jpg,"Related: Oral Surgery",No
+/dental/dental-implants,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/dentures,image,/images/dentures-hero.jpg,Hero image,Yes
+/dental/dentures,image,/images/veneers-what-is.jpg,"ContentSection: What Are Dentures",Yes
+/dental/dentures,image,/images/veneers-process.jpg,"ContentSection: How Do Dentures Work",Yes
+/dental/dentures,image,/images/happy-patient-veneers.jpg,"ContentSection: Why Choose Dentures At ProDenta",Yes
+/dental/dentures,image,/images/before-after-veneers-1.jpg,"Gallery: Complete Smile Restoration",Yes
+/dental/dentures,image,/images/before-after-veneers-2.jpg,"Gallery: Natural-Looking Dentures",Yes
+/dental/dentures,image,/images/before-after-veneers-3.jpg,"Gallery: Full Arch Replacement",Yes
+/dental/dentures,image,/images/implants-thumb.jpg,"Related: Dental Implants",No
+/dental/dentures,image,/images/crowns-thumb.jpg,"Related: Dental Crowns",Yes
+/dental/dentures,image,/images/hygiene-thumb.jpg,"Related: Dental Hygiene",No
+/dental/dentures,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/emergency,image,/images/emergency-hero.jpg,Hero image,Yes
+/dental/emergency,image,/images/composite-bonding-what-is.jpg,"ContentSection: What Is Emergency Dental Care",Yes
+/dental/emergency,image,/images/composite-bonding-process.jpg,"ContentSection: What To Expect During Emergency Treatment",Yes
+/dental/emergency,image,/images/happy-patient-bonding.jpg,"ContentSection: Emergency Dental Care At ProDenta",No
+/dental/emergency,image,/images/before-after-bonding-1.jpg,"Gallery: Chipped Tooth Repair",No
+/dental/emergency,image,/images/before-after-bonding-2.jpg,"Gallery: Emergency Restoration",No
+/dental/emergency,image,/images/before-after-bonding-3.jpg,"Gallery: Smile Restored",No
+/dental/emergency,image,/images/root-canal-thumb.jpg,"Related: Root Canal Treatment",No
+/dental/emergency,image,/images/crowns-thumb.jpg,"Related: Dental Crowns",Yes
+/dental/emergency,image,/images/checkup-thumb.jpg,"Related: Regular Check-Ups",Yes
+/dental/emergency,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/fillings,image,/images/fillings-hero.jpg,Hero image,Yes
+/dental/fillings,image,/images/composite-bonding-what-is.jpg,"ContentSection: What Are Dental Fillings",Yes
+/dental/fillings,image,/images/composite-bonding-process.jpg,"ContentSection: How Do Fillings Work",Yes
+/dental/fillings,image,/images/happy-patient-bonding.jpg,"ContentSection: Why Choose Fillings At ProDenta",No
+/dental/fillings,image,/images/before-after-bonding-1.jpg,"Gallery: Cavity Repair",No
+/dental/fillings,image,/images/before-after-bonding-2.jpg,"Gallery: Old Filling Replacement",No
+/dental/fillings,image,/images/before-after-bonding-3.jpg,"Gallery: Natural-Looking Results",No
+/dental/fillings,image,/images/hygiene-thumb.jpg,"Related: Dental Hygiene",No
+/dental/fillings,image,/images/checkup-thumb.jpg,"Related: Routine Check-Ups",Yes
+/dental/fillings,image,/images/root-canal-thumb.jpg,"Related: Root Canal",No
+/dental/fillings,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/fixed-braces,image,/images/fixed-braces-hero.jpg,Hero image,Yes
+/dental/fixed-braces,image,/images/invisalign-what-is.jpg,"ContentSection: What Are Fixed Braces",Yes
+/dental/fixed-braces,image,/images/invisalign-process.jpg,"ContentSection: How Do Fixed Braces Work",Yes
+/dental/fixed-braces,image,/images/happy-patient.jpg,"ContentSection: Why Choose Fixed Braces At ProDenta",No
+/dental/fixed-braces,image,/images/before-after-braces-1.jpg,"Gallery: Crooked Teeth Correction",No
+/dental/fixed-braces,image,/images/before-after-braces-2.jpg,"Gallery: Gap Closure",No
+/dental/fixed-braces,image,/images/before-after-braces-3.jpg,"Gallery: Bite Correction",No
+/dental/fixed-braces,image,/images/teeth-whitening-thumb.jpg,"Related: Teeth Whitening",No
+/dental/fixed-braces,image,/images/composite-bonding-thumb.jpg,"Related: Composite Bonding",Yes
+/dental/fixed-braces,image,/images/veneers-thumb.jpg,"Related: Veneers",No
+/dental/fixed-braces,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/hygiene,image,/images/hygiene-hero.jpg,Hero image,Yes
+/dental/hygiene,image,/images/composite-bonding-what-is.jpg,"ContentSection: What Is Dental Hygiene",Yes
+/dental/hygiene,image,/images/hygiene-process.jpg,"ContentSection: What Happens During A Hygiene Appointment",No
+/dental/hygiene,image,/images/happy-patient-bonding.jpg,"ContentSection: Why Choose Dental Hygiene At ProDenta",No
+/dental/hygiene,image,/images/before-after-hygiene-1.jpg,"Gallery: Tartar Removal",No
+/dental/hygiene,image,/images/before-after-hygiene-2.jpg,"Gallery: Stain Removal",No
+/dental/hygiene,image,/images/before-after-hygiene-3.jpg,"Gallery: Gum Health Improvement",No
+/dental/hygiene,image,/images/checkups-thumb.jpg,"Related: Routine Check-ups",Yes
+/dental/hygiene,image,/images/teeth-whitening-thumb.jpg,"Related: Teeth Whitening",No
+/dental/hygiene,image,/images/new-patients-thumb.jpg,"Related: New Patients",No
+/dental/hygiene,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/new-patients,image,/images/new-patients-hero.jpg,Hero image,Yes
+/dental/new-patients,image,/images/composite-bonding-what-is.jpg,"ContentSection: What Happens at Your First Appointment",Yes
+/dental/new-patients,image,/images/composite-bonding-process.jpg,"ContentSection: What's Included in Your New Patient Appointment",Yes
+/dental/new-patients,image,/images/happy-patient-bonding.jpg,"ContentSection: Your Comfort Is Our Priority",No
+/dental/new-patients,image,/images/prodenta-reception.jpg,"Gallery: Welcoming Reception Area",No
+/dental/new-patients,image,/images/prodenta-surgery.jpg,"Gallery: Modern Treatment Rooms",No
+/dental/new-patients,image,/images/prodenta-team.jpg,"Gallery: Experienced Friendly Team",No
+/dental/new-patients,image,/images/check-ups-thumb.jpg,"Related: Routine Check-ups",Yes
+/dental/new-patients,image,/images/hygiene-thumb.jpg,"Related: Dental Hygiene",No
+/dental/new-patients,image,/images/emergency-thumb.jpg,"Related: Emergency Appointments",Yes
+/dental/new-patients,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/oral-surgery,image,/images/oral-surgery-hero.jpg,Hero image,No
+/dental/oral-surgery,image,/images/oral-surgery-what-is.jpg,"ContentSection: What Is Oral Surgery",No
+/dental/oral-surgery,image,/images/oral-surgery-process.jpg,"ContentSection: What To Expect During Oral Surgery",No
+/dental/oral-surgery,image,/images/happy-patient.jpg,"ContentSection: Expert Oral Surgery In Battersea",No
+/dental/oral-surgery,image,/images/implants-thumb.jpg,"Related: Dental Implants",No
+/dental/oral-surgery,image,/images/emergency-thumb.jpg,"Related: Emergency Appointments",Yes
+/dental/oral-surgery,image,/images/crowns-thumb.jpg,"Related: Dental Crowns",Yes
+/dental/oral-surgery,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/orthodontics,image,/images/orthodontics-hero.jpg,Hero image,Yes
+/dental/orthodontics,image,/images/orthodontics-what-is.jpg,"ContentSection: What Is Orthodontic Treatment",No
+/dental/orthodontics,image,/images/orthodontics-process.jpg,"ContentSection: Our Orthodontic Treatment Options",No
+/dental/orthodontics,image,/images/happy-patient-ortho.jpg,"ContentSection: Why Choose Orthodontics At ProDenta",No
+/dental/orthodontics,image,/images/before-after-ortho-1.jpg,"Gallery: Crowded Teeth Straightening",No
+/dental/orthodontics,image,/images/before-after-ortho-2.jpg,"Gallery: Bite Correction",No
+/dental/orthodontics,image,/images/before-after-ortho-3.jpg,"Gallery: Adult Orthodontic Treatment",No
+/dental/orthodontics,image,/images/invisalign-thumb.jpg,"Related: Invisalign & Clear Aligners",No
+/dental/orthodontics,image,/images/fixed-braces-thumb.jpg,"Related: Fixed Braces",Yes
+/dental/orthodontics,image,/images/teeth-whitening-thumb.jpg,"Related: Teeth Whitening",No
+/dental/orthodontics,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/root-canal,image,/images/root-canal-hero.jpg,Hero image,Yes
+/dental/root-canal,image,/images/composite-bonding-what-is.jpg,"ContentSection: What Is Root Canal Treatment",Yes
+/dental/root-canal,image,/images/composite-bonding-process.jpg,"ContentSection: How Does Root Canal Treatment Work",Yes
+/dental/root-canal,image,/images/happy-patient-bonding.jpg,"ContentSection: Why Choose Root Canal Treatment At ProDenta",No
+/dental/root-canal,image,/images/before-after-bonding-1.jpg,"Gallery: Tooth Saved from Extraction",No
+/dental/root-canal,image,/images/before-after-bonding-2.jpg,"Gallery: Pain Eliminated",No
+/dental/root-canal,image,/images/before-after-bonding-3.jpg,"Gallery: Full Function Restored",No
+/dental/root-canal,image,/images/crowns-thumb.jpg,"Related: Dental Crowns",Yes
+/dental/root-canal,image,/images/emergency-thumb.jpg,"Related: Emergency Dentist",Yes
+/dental/root-canal,image,/images/fillings-thumb.jpg,"Related: Dental Fillings",No
+/dental/root-canal,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/teeth-whitening,image,/images/teeth-whitening-hero.jpg,Hero image,Yes
+/dental/teeth-whitening,image,/images/teeth-whitening-what-is.jpg,"ContentSection: What Is Professional Teeth Whitening",No
+/dental/teeth-whitening,image,/images/teeth-whitening-process.jpg,"ContentSection: Our Whitening Options",No
+/dental/teeth-whitening,image,/images/happy-patient-whitening.jpg,"ContentSection: Why Choose Teeth Whitening At ProDenta",No
+/dental/teeth-whitening,image,/images/before-after-whitening-1.jpg,"Gallery: At-Home Whitening Results",No
+/dental/teeth-whitening,image,/images/before-after-whitening-2.jpg,"Gallery: In-Chair Whitening Results",No
+/dental/teeth-whitening,image,/images/before-after-whitening-3.jpg,"Gallery: Coffee Stain Removal",No
+/dental/teeth-whitening,image,/images/composite-bonding-thumb.jpg,"Related: Composite Bonding",Yes
+/dental/teeth-whitening,image,/images/veneers-thumb.jpg,"Related: Veneers",No
+/dental/teeth-whitening,image,/images/hygiene-thumb.jpg,"Related: Dental Hygiene",No
+/dental/teeth-whitening,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/dental/veneers,image,/images/veneers-hero.jpg,Hero image,Yes
+/dental/veneers,image,/images/veneers-what-is.jpg,"ContentSection: What Are Porcelain Veneers",Yes
+/dental/veneers,image,/images/veneers-process.jpg,"ContentSection: How Do Veneers Work",Yes
+/dental/veneers,image,/images/happy-patient-veneers.jpg,"ContentSection: Why Choose Veneers At ProDenta",Yes
+/dental/veneers,image,/images/before-after-veneers-1.jpg,"Gallery: Complete Smile Makeover",Yes
+/dental/veneers,image,/images/before-after-veneers-2.jpg,"Gallery: Discolouration Correction",Yes
+/dental/veneers,image,/images/before-after-veneers-3.jpg,"Gallery: Shape & Size Enhancement",Yes
+/dental/veneers,image,/images/teeth-whitening-thumb.jpg,"Related: Teeth Whitening",No
+/dental/veneers,image,/images/composite-bonding-thumb.jpg,"Related: Composite Bonding",Yes
+/dental/veneers,image,/images/invisalign-thumb.jpg,"Related: Invisalign",No
+/dental/veneers,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/facial-aesthetics-treatments,image,/images/facial-aesthetics-hero.jpg,Hero image,Yes
+/facial-aesthetics-treatments,image,/images/wrinkle-reduction-card.jpg,"TreatmentCard: Wrinkle Reduction",No
+/facial-aesthetics-treatments,image,/images/dermal-fillers-card.jpg,"TreatmentCard: Dermal Fillers",No
+/facial-aesthetics-treatments,image,/images/aqualyx-card.jpg,"TreatmentCard: Aqualyx",No
+/facial-aesthetics-treatments,image,/images/profhilo-card.jpg,"TreatmentCard: Profhilo",No
+/facial-aesthetics-treatments,image,/images/sunekos-card.jpg,"TreatmentCard: Sunekos",No
+/facial-aesthetics-treatments,image,/images/perfect-peel-card.jpg,"TreatmentCard: The Perfect Peel",No
+/facial-aesthetics-treatments,image,/images/microneedling-card.jpg,"TreatmentCard: Microneedling",No
+/facial-aesthetics-treatments,image,/images/chemical-peels-card.jpg,"TreatmentCard: Chemical Peels",No
+/facial-aesthetics-treatments,image,/images/mesotherapy-card.jpg,"TreatmentCard: Mesotherapy",No
+/facial-aesthetics-treatments,image,/images/hair-loss-card.jpg,"TreatmentCard: Hair Loss Treatment",No
+/facial-aesthetics-treatments,image,/images/skincare-consultations-card.jpg,"TreatmentCard: Skincare Consultations",No
+/facial-aesthetics-treatments,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No
+/fees,image,/images/fees-hero.jpg,Hero image,No
+/fees,image,/images/payment-plans.jpg,"Practice info: Payment Plans image",No
+/fees,image,/images/consultation-payment.jpg,"ConsultationCTA image",No
+/team,image,/images/team-hero.jpg,Hero image,No
+/team,image,/images/shubhra-lallu.jpg,"Team card: Dr. Shubhra Lallu",No
+/team,image,/images/nicole-verschaeren.jpg,"Team card: Nicole Verschaeren",No
+/team,image,/images/robbie-stewart.jpg,"Team card: Robbie Stewart",No
+/team,image,/images/amar-lal-sarin.jpg,"Team card: Dr. Amar Lal-Sarin",No
+/team,image,/images/leonor-chen-kuo.jpg,"Team card: Dr. Leonor Chen-Kuo",No
+/team,image,/images/jonathan-avanessian.jpg,"Team card: Jonathan Avanessian",No
+/team,image,/images/agi-paragi.jpg,"Team card: Agi Paragi",No
+/team,image,/images/flori-pastor.jpg,"Team card: Flori Pastor",No
+/team,image,/images/angela-bidaud.jpg,"Team card: Angela Bidaud",No
+/team,image,/images/julia-burcham.jpg,"Team card: Julia Burcham",No
+/team,image,/images/team-consultation.jpg,"ConsultationCTA: Ready to Meet Our Team",No
+/team/nicole-verschaeren,image,/images/pexels-olly-3779703.jpg,"Profile photo: Nicole Verschaeren",Yes
+/team/robbie-stewart,image,/images/pexels-pavel-danilyuk-6812547.jpg,"Profile photo: Robbie Stewart",Yes
+/team/shubhra-lallu,image,/images/pexels-cedric-fauntleroy-4269934.jpg,"Profile photo: Dr. Shubhra Lallu",Yes
+/treatments,image,/images/dental-treatments-hero.jpg,Hero image,Yes
+/treatments,image,/images/invisalign-card.jpg,"TreatmentCard: Invisalign & Clear Aligners",No
+/treatments,image,/images/orthodontics-card.jpg,"TreatmentCard: Orthodontics",No
+/treatments,image,/images/fixed-braces-card.jpg,"TreatmentCard: Fixed Braces",Yes
+/treatments,image,/images/teeth-whitening-card.jpg,"TreatmentCard: Teeth Whitening",No
+/treatments,image,/images/composite-bonding-card.jpg,"TreatmentCard: Composite Bonding",Yes
+/treatments,image,/images/veneers-card.jpg,"TreatmentCard: Veneers",No
+/treatments,image,/images/checkups-card.jpg,"TreatmentCard: Routine Check-ups",Yes
+/treatments,image,/images/hygiene-card.jpg,"TreatmentCard: Dental Hygiene",No
+/treatments,image,/images/new-patients-card.jpg,"TreatmentCard: New Patients",No
+/treatments,image,/images/implants-card.jpg,"TreatmentCard: Dental Implants",No
+/treatments,image,/images/crowns-card.jpg,"TreatmentCard: Crowns",Yes
+/treatments,image,/images/dentures-card.jpg,"TreatmentCard: Dentures",Yes
+/treatments,image,/images/root-canal-card.jpg,"TreatmentCard: Root Canal Treatment",No
+/treatments,image,/images/consultation-woman.jpg,"ConsultationCTA (default image)",No

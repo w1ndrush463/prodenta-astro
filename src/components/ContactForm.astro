@@ -8,16 +8,16 @@ const showBoth = formType === 'both';
 ---
 
 {showBoth && (
-  <div class="flex gap-4 mb-8">
+  <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
     <button
-      class="form-tab active px-6 py-3 rounded-lg font-display font-semibold text-sm uppercase tracking-wider transition-colors bg-primary text-white"
+      class="form-tab active px-4 sm:px-6 py-3 rounded-lg font-display font-semibold text-xs sm:text-sm uppercase tracking-wider transition-colors bg-primary text-white"
       data-form="appointment"
       onclick="switchForm('appointment')"
     >
       Request an Appointment
     </button>
     <button
-      class="form-tab px-6 py-3 rounded-lg font-display font-semibold text-sm uppercase tracking-wider transition-colors bg-gray-100 text-primary"
+      class="form-tab px-4 sm:px-6 py-3 rounded-lg font-display font-semibold text-xs sm:text-sm uppercase tracking-wider transition-colors bg-gray-100 text-primary"
       data-form="consultation"
       onclick="switchForm('consultation')"
     >

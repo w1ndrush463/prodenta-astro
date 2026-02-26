@@ -26,17 +26,17 @@ import { site } from '../data/site';
       <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl shadow-soft p-6 text-center">
           <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Call Us</h3>
-          <a href={site.phoneHref} class="text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.phone}</a>
+          <a href={site.phoneHref} class="text-lg sm:text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.phone}</a>
           <p class="text-sm text-text-secondary mt-2">Mon-Thu: 8am-8pm / Wed-Fri: 8am-6pm / Sat: 9am-3pm</p>
         </div>
         <div class="bg-white rounded-xl shadow-soft p-6 text-center">
           <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">WhatsApp Us</h3>
-          <a href={site.whatsappHref} class="text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.whatsapp}</a>
+          <a href={site.whatsappHref} class="text-lg sm:text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.whatsapp}</a>
           <p class="text-sm text-text-secondary mt-2">Quick responses during business hours</p>
         </div>
         <div class="bg-white rounded-xl shadow-soft p-6 text-center">
           <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Email Us</h3>
-          <a href={site.emailHref} class="text-xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.email}</a>
+          <a href={site.emailHref} class="text-base sm:text-xl font-display font-bold text-primary hover:text-secondary transition-colors break-all sm:break-normal">{site.email}</a>
           <p class="text-sm text-text-secondary mt-2">We'll respond within 24 hours</p>
         </div>
       </div>
@@ -95,14 +95,21 @@ import { site } from '../data/site';
             allowfullscreen
             loading="lazy"
             title="ProDenta location map"
+            class="h-[350px] sm:h-[500px]"
           ></iframe>
-          <div class="absolute bottom-4 left-4 bg-white rounded-xl shadow-deep p-6 max-w-sm">
+          <div class="hidden sm:block absolute bottom-4 left-4 bg-white rounded-xl shadow-deep p-6 max-w-sm">
             <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Find Us</h3>
             <p class="text-sm text-text-secondary mb-4">{site.name}, 227 St. John's Hill, {site.address.area}, {site.address.city} {site.address.postcode}</p>
             <div class="flex gap-3">
               <a href={site.mapsDirections} target="_blank" class="cta-button text-xs py-2 px-4">Get Directions</a>
               <a href={site.phoneHref} class="cta-button cta-outline text-xs py-2 px-4">Call Us</a>
             </div>
+          </div>
+        </div>
+        <div class="sm:hidden p-4 bg-white">
+          <div class="flex gap-3">
+            <a href={site.mapsDirections} target="_blank" class="cta-button text-xs py-2 px-4">Get Directions</a>
+            <a href={site.phoneHref} class="cta-button cta-outline text-xs py-2 px-4">Call Us</a>
           </div>
         </div>
       </div>
