@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "Contact and Booking",
+    "description": "Book an appointment or free consultation at ProDenta, 227 St. John's Hill, Battersea, London SW11 1TH. Call 0207 223 2244."
+  },
+  "heading": "Book a visit",
+  "intro": "Call, message or send the form below and we will be in touch to confirm a time that suits you.",
+  "formHeading": "Request an appointment",
+  "formText": "Tell us a little about what you need. We aim to reply within one working day.",
+  "enquiryTypes": [
+    "New patient appointment",
+    "Existing patient appointment",
+    "Free consultation",
+    "Facial aesthetics",
+    "Dental emergency",
+    "General enquiry"
+  ],
+  "successHeading": "Thank you",
+  "successText": "Your request has been sent. A member of the team will be in touch shortly. If your enquiry is urgent, please call us.",
+  "image": "/src/assets/images/practice-exterior.jpg",
+  "imageAlt": "The ProDenta practice on St. John's Hill, Battersea"
+}

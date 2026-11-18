@@ -1,130 +1,86 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import ContactForm from '../components/ContactForm.astro';
-import FAQSection from '../components/FAQSection.astro';
-import MapSection from '../components/MapSection.astro';
-import { site } from '../data/site';
+import PageHero from '../components/PageHero.astro';
+import Visit from '../components/Visit.astro';
+import { page, site as getSite, telHref, whatsappHref } from '../lib/content';
+
+const p = await page('contact');
+const site = await getSite();
+const types: string[] = p.enquiryTypes ?? [];
+const breadcrumbs = [{ label: 'Home', url: '/' }, { label: 'Contact' }];
 ---
 
-<BaseLayout title="Contact Us - ProDenta Battersea" description="Get in touch with ProDenta Battersea. Book an appointment or request a free consultation. Call 0207 223 2244.">
+<BaseLayout title={p.seo?.title} description={p.seo?.description} image={p.image} breadcrumbs={breadcrumbs}>
+  <PageHero eyebrow="Contact" heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
 
-  <HeroSection
-    title="Get In Touch"
-    subtitle="We're here to help with all your dental and aesthetic needs. Book an appointment or request a free consultation today."
-    image="/images/contact-hero.jpg"
-    imageAlt="Contact ProDenta"
-    breadcrumbs={[
-      { label: 'Home', href: '/' },
-      { label: 'Contact Us' },
-    ]}
-  />
-
-  <main>
-    <!-- Quick Contact Cards -->
-    <section class="section-padding bg-bg-alt">
-      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl shadow-soft p-6 text-center">
-          <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Call Us</h3>
-          <a href={site.phoneHref} class="text-lg sm:text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.phone}</a>
-          <p class="text-sm text-text-secondary mt-2">Mon-Thu: 8am-8pm / Wed-Fri: 8am-6pm / Sat: 9am-3pm</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-soft p-6 text-center">
-          <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">WhatsApp Us</h3>
-          <a href={site.whatsappHref} class="text-lg sm:text-2xl font-display font-bold text-primary hover:text-secondary transition-colors">{site.whatsapp}</a>
-          <p class="text-sm text-text-secondary mt-2">Quick responses during business hours</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-soft p-6 text-center">
-          <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-3">Email Us</h3>
-          <a href={site.emailHref} class="text-base sm:text-xl font-display font-bold text-primary hover:text-secondary transition-colors break-all sm:break-normal">{site.email}</a>
-          <p class="text-sm text-text-secondary mt-2">We'll respond within 24 hours</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Forms -->
-    <section id="appointment" class="section-padding">
-      <div class="max-w-3xl mx-auto">
-        <ContactForm formType="both" />
-      </div>
-    </section>
-
-    <!-- Practice Information -->
-    <section class="section-padding bg-bg-alt">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <div>
-          <img src="/images/practice.webp" alt="ProDenta Practice" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]">
-        </div>
-        <div>
-          <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-6">Visit Our Battersea Practice</h2>
-          <p class="text-text-primary mb-6">Located in the heart of Battersea on St. John's Hill, our modern practice offers a warm, welcoming environment for all your dental and facial aesthetic needs.</p>
-
-          <div class="mb-6">
-            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Address</h3>
-            <p class="text-text-secondary">{site.name}<br>{site.address.line1}<br>{site.address.area}, {site.address.city}<br>{site.address.postcode}</p>
+  <section class="section">
+    <div class="wrap grid gap-16 lg:grid-cols-12 lg:gap-20">
+      <div class="lg:col-span-4">
+        <h2 class="text-title">Talk to us</h2>
+        <dl class="mt-10 border-t border-ink/80">
+          <div class="border-b border-line py-6">
+            <dt class="eyebrow">Call</dt>
+            <dd class="mt-2"><a href={telHref(site.phone)} class="font-display text-3xl text-ink hover:text-clay">{site.phone}</a></dd>
           </div>
-
-          <div class="mb-6">
-            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Opening Hours</h3>
-            <p class="text-text-secondary">Monday, Tuesday, Thursday: 8am - 8pm</p>
-            <p class="text-text-secondary">Wednesday, Friday: 8am - 6pm</p>
-            <p class="text-text-secondary">Saturday: 9am - 3pm</p>
-            <p class="text-text-secondary">Sunday: Closed</p>
-            <p class="text-text-secondary mt-1">Outside hours appointments available by arrangement</p>
-          </div>
-
-          <div>
-            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Getting Here</h3>
-            <p class="text-text-secondary"><strong>By Train:</strong> 10-minute walk from Clapham Junction or Wandsworth Town stations</p>
-            <p class="text-text-secondary"><strong>By Bus:</strong> Routes 35, 37, 39, 87, 156, 170, 337 stop nearby</p>
-            <p class="text-text-secondary"><strong>By Car:</strong> Limited street parking available on St. John's Hill and surrounding streets</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Map -->
-    <section class="bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="relative">
-          <iframe
-            src={site.mapEmbed}
-            width="100%"
-            height="500"
-            style="border:0;"
-            allowfullscreen
-            loading="lazy"
-            title="ProDenta location map"
-            class="h-[350px] sm:h-[500px]"
-          ></iframe>
-          <div class="hidden sm:block absolute bottom-4 left-4 bg-white rounded-xl shadow-deep p-6 max-w-sm">
-            <h3 class="font-display font-semibold uppercase tracking-wider text-sm text-primary mb-2">Find Us</h3>
-            <p class="text-sm text-text-secondary mb-4">{site.name}, 227 St. John's Hill, {site.address.area}, {site.address.city} {site.address.postcode}</p>
-            <div class="flex gap-3">
-              <a href={site.mapsDirections} target="_blank" class="cta-button text-xs py-2 px-4">Get Directions</a>
-              <a href={site.phoneHref} class="cta-button cta-outline text-xs py-2 px-4">Call Us</a>
+          {site.whatsapp && (
+            <div class="border-b border-line py-6">
+              <dt class="eyebrow">WhatsApp</dt>
+              <dd class="mt-2"><a href={whatsappHref(site.whatsapp)} target="_blank" rel="noopener" class="font-display text-3xl text-ink hover:text-clay">{site.whatsapp}</a></dd>
             </div>
+          )}
+          <div class="border-b border-line py-6">
+            <dt class="eyebrow">Email</dt>
+            <dd class="mt-2"><a href={`mailto:${site.email}`} class="font-display text-[1.7rem] text-ink hover:text-clay">{site.email}</a></dd>
           </div>
-        </div>
-        <div class="sm:hidden p-4 bg-white">
-          <div class="flex gap-3">
-            <a href={site.mapsDirections} target="_blank" class="cta-button text-xs py-2 px-4">Get Directions</a>
-            <a href={site.phoneHref} class="cta-button cta-outline text-xs py-2 px-4">Call Us</a>
-          </div>
-        </div>
+        </dl>
       </div>
-    </section>
 
-    <FAQSection
-      title="Frequently Asked Questions"
-      faqs={[
-        { question: 'How do I book an appointment?', answer: 'You can book through our online booking system, call us at 0207 223 2244, WhatsApp us at 07407 422 443, or fill out the contact form above. For existing patients, our instant booking system allows you to schedule appointments directly. New patients can request a free consultation to discuss their needs with our team.' },
-        { question: 'Do you accept new patients?', answer: 'Yes, we\'re always happy to welcome new patients to ProDenta. We recommend booking a New Patient Consultation where we\'ll conduct a comprehensive examination, discuss your dental history, and create a personalised treatment plan. This initial appointment allows us to understand your needs and establish the foundation for your ongoing dental care.' },
-        { question: 'What are your opening hours?', answer: 'We\'re open Monday, Tuesday, and Thursday from 8am to 8pm, Wednesday and Friday from 8am to 6pm, and Saturday from 9am to 3pm. We understand that dental care needs to fit around busy schedules, so we also offer appointments outside these hours by arrangement. Simply let us know when booking if you need an appointment outside our standard hours.' },
-        { question: 'Do you offer emergency appointments?', answer: 'Yes, we provide emergency dental appointments for urgent situations. If you\'re experiencing severe pain, swelling, trauma to your teeth, or any other dental emergency, call us immediately on 0207 223 2244. We\'ll do our best to see you the same day. For out-of-hours emergencies, leave a message and we\'ll get back to you as soon as possible.' },
-        { question: 'Is parking available near the practice?', answer: 'There is on-street parking available on surrounding streets, including some free parking zones. The nearest car park is NCP Clapham Junction, approximately a 10-minute walk from our practice. We\'re also easily accessible by public transport - Clapham Junction station is nearby, with excellent bus connections along St. John\'s Hill.' },
-        { question: 'Do you offer payment plans and finance options?', answer: 'Yes, we offer flexible payment options to make dental care more affordable. This includes 0% finance plans for larger treatments and membership plans (ProDenta Care and ProDenta Plus) that provide discounted treatments and routine care. During your consultation, we\'ll discuss all payment options available to you and help you find the best solution for your budget.' },
-      ]}
-    />
-  </main>
+      <div class="lg:col-span-7 lg:col-start-6">
+        <h2 class="text-title">{p.formHeading}</h2>
+        <p class="mt-4 max-w-xl text-muted">{p.formText}</p>
+
+        <form name="enquiry" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="company" class="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
+          <input type="hidden" name="form-name" value="enquiry" />
+          <p class="hidden"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="field">
+            <label for="first-name">First name</label>
+            <input id="first-name" name="first-name" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="last-name">Last name</label>
+            <input id="last-name" name="last-name" type="text" autocomplete="family-name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+          </div>
+          <div class="field sm:col-span-2">
+            <label for="enquiry-type">How can we help?</label>
+            <select id="enquiry-type" name="enquiry-type" required>
+              <option value="">Please choose</option>
+              {types.map((t) => <option>{t}</option>)}
+            </select>
+          </div>
+          <div class="field sm:col-span-2">
+            <label for="preferred-time">Preferred days or times <span class="font-normal normal-case tracking-normal text-muted">(optional)</span></label>
+            <input id="preferred-time" name="preferred-time" type="text" />
+          </div>
+          <div class="field sm:col-span-2">
+            <label for="message">Message <span class="font-normal normal-case tracking-normal text-muted">(optional)</span></label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="btn">Send request</button>
+            <p class="mt-5 max-w-xl text-sm text-muted">We use your details only to respond to your enquiry. Please do not include sensitive medical information in this form.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <Visit showTravel />
 </BaseLayout>

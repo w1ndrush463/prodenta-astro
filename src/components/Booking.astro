@@ -1,0 +1,23 @@
+---
+// Closing call-to-action band. Text comes from Site settings > Booking banner.
+import Img from './Img.astro';
+import { site as getSite, telHref } from '../lib/content';
+
+const site = await getSite();
+const b = site.booking ?? {};
+---
+
+<section class="on-dark bg-ink">
+  <div class="grid lg:grid-cols-2">
+    <div class="wrap flex flex-col justify-center py-20 lg:max-w-none lg:py-28 lg:pl-[max(var(--spacing-gutter),calc((100vw-82rem)/2+var(--spacing-gutter)))] lg:pr-20" data-reveal>
+      <p class="eyebrow mb-5">Book a visit</p>
+      <h2 class="text-title max-w-[14ch]">{b.heading}</h2>
+      <p class="mt-6 max-w-md text-lead">{b.text}</p>
+      <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+        <a href="/contact" class="btn btn-light">{b.buttonLabel || 'Book an appointment'}</a>
+        <a href={telHref(site.phone)} class="link">Call {site.phone}</a>
+      </div>
+    </div>
+    <Img src={b.image} alt={b.imageAlt} class="aspect-[4/3] lg:aspect-auto lg:min-h-[34rem]" position="center 25%" />
+  </div>
+</section>

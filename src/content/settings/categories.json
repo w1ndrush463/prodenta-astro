@@ -1,0 +1,46 @@
+{
+  "dental": [
+    {
+      "id": "maintain",
+      "title": "Maintain",
+      "text": "Preventive care to keep your smile healthy for life."
+    },
+    {
+      "id": "straighten",
+      "title": "Straighten",
+      "text": "Modern orthodontics that fit around your lifestyle."
+    },
+    {
+      "id": "enhance",
+      "title": "Enhance",
+      "text": "Cosmetic dentistry to brighten and refine your smile."
+    },
+    {
+      "id": "repair",
+      "title": "Repair",
+      "text": "Restorative treatment to fix problems comfortably."
+    },
+    {
+      "id": "restore",
+      "title": "Restore",
+      "text": "Lasting replacements for missing or damaged teeth."
+    }
+  ],
+  "aesthetics": [
+    {
+      "id": "enhance",
+      "title": "Enhance",
+      "text": "Refine your features and soften lines, naturally."
+    },
+    {
+      "id": "maintain",
+      "title": "Maintain",
+      "text": "Keep skin hydrated, firm and healthy."
+    },
+    {
+      "id": "restore",
+      "title": "Restore",
+      "text": "Renew skin texture, tone and vitality."
+    }
+  ]
+}

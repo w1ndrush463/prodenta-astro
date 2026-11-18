@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Booking from '../components/Booking.astro';
+import { page } from '../lib/content';
+
+const p = await page('reviews');
+const reviews: { name: string; quote: string }[] = (p.reviews ?? []).filter((r: { quote?: string }) => r.quote);
+const breadcrumbs = [{ label: 'Home', url: '/' }, { label: 'Reviews' }];
+---
+
+<BaseLayout title={p.seo?.title} description={p.seo?.description} image={p.image} breadcrumbs={breadcrumbs}>
+  <PageHero eyebrow="Reviews" heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
+
+  <section class="section">
+    <ul class="wrap columns-1 gap-x-16 md:columns-2">
+      {reviews.map((r) => (
+        <li class="mb-12 break-inside-avoid border-t border-ink/80 pt-8">
+          <figure>
+            <blockquote class="font-display text-[1.9rem] italic leading-[1.2] text-ink">&ldquo;{r.quote}&rdquo;</blockquote>
+            <figcaption class="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted">{r.name}</figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <Booking />
+</BaseLayout>

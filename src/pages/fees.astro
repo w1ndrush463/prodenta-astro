@@ -1,864 +1,145 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import OfferCard from '../components/OfferCard.astro';
-import ConsultationCTA from '../components/ConsultationCTA.astro';
+import PageHero from '../components/PageHero.astro';
+import Booking from '../components/Booking.astro';
+import { page } from '../lib/content';
+
+const p = await page('fees');
+const breadcrumbs = [{ label: 'Home', url: '/' }, { label: 'Fees' }];
+type Row = { treatment: string; price: string; memberPrice?: string };
+type Table = { heading: string; intro?: string; groups: { name: string; rows: Row[] }[] };
+const offers: { title: string; price: string; text: string }[] = p.offers ?? [];
+const payment: { title: string; text: string }[] = p.payment ?? [];
+const plans: { name: string; audience?: string; price: string; period?: string; features: string[] }[] = p.plans ?? [];
+const tables: Table[] = p.tables ?? [];
+const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
 
-<BaseLayout title="Fees, Payment & Membership Plans - ProDenta" description="Transparent dental pricing with flexible payment options. View our treatment fees, membership plans and special offers at ProDenta Battersea.">
+<BaseLayout title={p.seo?.title} description={p.seo?.description} image={p.image} breadcrumbs={breadcrumbs}>
+  <PageHero heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
 
-  <HeroSection
-    title="Fees, Payment and Membership Plans"
-    subtitle="Transparent pricing with flexible payment options to suit your needs. Quality dental care that's accessible to everyone."
-    image="/images/fees-hero.jpg"
-    imageAlt="Fees and Payment Plans"
-    breadcrumbs={[
-      { label: 'Home', href: '/' },
-      { label: 'Fees, Payment and Membership Plans' },
-    ]}
-  />
+  <nav class="border-b border-line" aria-label="On this page">
+    <ul class="wrap flex gap-8 overflow-x-auto py-4 text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+      {plans.length > 0 && <li class="shrink-0"><a href="#membership" class="hover:text-clay">Membership</a></li>}
+      {tables.map((t) => <li class="shrink-0"><a href={`#${anchor(t.heading)}`} class="hover:text-clay">{t.heading}</a></li>)}
+    </ul>
+  </nav>
 
-  <main>
-    <!-- Limited Time Offers -->
-    <section class="section-padding bg-bg-alt">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Limited Time Offers</h2>
-        <p class="text-text-secondary text-center mb-12 max-w-2xl mx-auto">Take advantage of our special offers and start your journey to a healthier, more confident smile.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <OfferCard
-            title="New Patient Special"
-            price="£195"
-            description="Full examination & hygiene clean"
-          />
-          <OfferCard
-            title="Over 40s Special"
-            price="Limited Time"
-            description="Take control of your smile with our special package"
-          />
-          <OfferCard
-            title="£65 OTC Teeth Whitening"
-            price="£65"
-            description="Professional at-home whitening kit"
-          />
+  <!-- Offers and ways to pay -->
+  <section class="section">
+    <div class="wrap grid gap-16 lg:grid-cols-12 lg:gap-20">
+      {offers.length > 0 && (
+        <div class="lg:col-span-6" data-reveal>
+          <p class="eyebrow mb-5">Offers</p>
+          <h2 class="text-title">{p.offersHeading || 'Current offers'}</h2>
+          <ul class="mt-10 border-t border-ink/80">
+            {offers.map((o) => (
+              <li class="flex items-baseline justify-between gap-6 border-b border-line py-6">
+                <div>
+                  <h3 class="text-[1.6rem] leading-tight">{o.title}</h3>
+                  <p class="mt-1 text-muted">{o.text}</p>
+                </div>
+                <p class="shrink-0 font-display text-3xl text-ink">{o.price}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {payment.length > 0 && (
+        <div class="lg:col-span-5 lg:col-start-8" data-reveal>
+          <p class="eyebrow mb-5">Ways to pay</p>
+          <div class="space-y-8">
+            {payment.map((x) => (
+              <div>
+                <h3 class="text-subtitle">{x.title}</h3>
+                <p class="mt-3">{x.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Membership plans -->
+  {plans.length > 0 && (
+    <section id="membership" class="section bg-sand">
+      <div class="wrap">
+        <div class="max-w-2xl" data-reveal>
+          <p class="eyebrow mb-5">Membership</p>
+          <h2 class="text-title">{p.plansHeading}</h2>
+          <p class="mt-5 text-lead">{p.plansIntro}</p>
+        </div>
+        <div class="mt-14 grid border-t border-ink/80 sm:grid-cols-2 lg:grid-cols-4">
+          {plans.map((plan, i) => (
+            <article class:list={['border-b border-ink/15 py-9 sm:px-8 lg:border-b-0', i > 0 && 'lg:border-l lg:border-ink/15', i % 2 === 1 && 'sm:border-l sm:border-ink/15', 'first:sm:pl-0']}>
+              <p class="eyebrow">{plan.audience}</p>
+              <h3 class="mt-3 text-[1.9rem] leading-tight">{plan.name}</h3>
+              <p class="mt-4 flex items-baseline gap-2 text-ink">
+                <span class="font-display text-5xl">{plan.price}</span>
+                <span class="text-sm text-muted">{plan.period}</span>
+              </p>
+              <ul class="mt-7 space-y-2.5 text-[0.95rem]">
+                {(plan.features ?? []).map((f) => (
+                  <li class="flex gap-3"><span class="mt-[0.7em] h-px w-3 shrink-0 bg-clay" aria-hidden="true"></span>{f}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+        <p class="mt-10"><a href="/contact" class="btn">Ask about joining</a></p>
+      </div>
+    </section>
+  )}
+
+  <!-- Fee lists -->
+  {tables.map((table) => (
+    <section id={anchor(table.heading)} class="section border-b border-line">
+      <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-32" data-reveal>
+            <p class="eyebrow mb-5">Fee guide</p>
+            <h2 class="text-title">{table.heading}</h2>
+            {table.intro && <p class="mt-5 max-w-xs text-muted">{table.intro}</p>}
+          </div>
+        </div>
+        <div class="space-y-14 lg:col-span-8">
+          {table.groups.map((g) => {
+            const hasMember = g.rows.some((r) => r.memberPrice);
+            return (
+              <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                  <caption class="pb-4 text-left font-display text-[1.75rem] text-ink">{g.name}</caption>
+                  <thead>
+                    <tr class="border-y border-ink/80 text-xs uppercase tracking-[0.16em] text-ink">
+                      <th scope="col" class="py-3 pr-4 font-semibold">Treatment</th>
+                      <th scope="col" class="w-36 py-3 pr-4 text-right font-semibold">Fee</th>
+                      {hasMember && <th scope="col" class="w-36 py-3 text-right font-semibold">Members</th>}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {g.rows.map((r) => (
+                      <tr class="border-b border-line">
+                        <th scope="row" class="py-4 pr-4 font-normal text-body">{r.treatment}</th>
+                        <td class="py-4 pr-4 text-right text-ink">{r.price}</td>
+                        {hasMember && <td class="py-4 text-right text-clay">{r.memberPrice}</td>}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
+  ))}
 
-    <!-- Cost of Your Treatment -->
-    <section class="section-padding">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <div>
-          <img src="/images/payment-plans.jpg" alt="Payment Plans" class="rounded-2xl shadow-soft w-full object-cover aspect-[4/3]" loading="lazy">
-        </div>
-        <div>
-          <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary mb-6">Cost of Your Treatment</h2>
-          <h3 class="text-xl font-display font-bold uppercase tracking-wider text-primary mb-4">Pay As You Go</h3>
-          <p class="text-text-primary leading-relaxed mb-6">We offer transparent pricing for all of our treatments. You can pay for your treatment in full at the time of your appointment. We accept all major credit and debit cards.</p>
-          <h3 class="text-xl font-display font-bold uppercase tracking-wider text-primary mb-4">Spread the Cost</h3>
-          <p class="text-text-primary leading-relaxed mb-8">For more extensive treatments, we offer flexible payment plans so you can spread the cost over a period that suits you. Ask our team for details on interest-free and low-cost finance options.</p>
-          <a href="/contact" class="cta-button">Request a Quote</a>
-        </div>
-      </div>
+  {p.note && (
+    <section class="section-tight">
+      <p class="wrap wrap-narrow text-center text-muted">{p.note}</p>
     </section>
+  )}
 
-    <!-- Adult Membership Plans -->
-    <section class="section-padding bg-bg-blue">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Adult Membership Plans</h2>
-        <p class="text-text-secondary text-center mb-12 max-w-2xl mx-auto">Join our membership plans and enjoy discounted treatment fees, routine care and worldwide emergency cover.</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- ProDenta Plus (Featured) -->
-          <div class="bg-white rounded-xl shadow-hover p-8 border-2 border-primary relative">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-              <span class="bg-primary text-white font-display font-semibold uppercase tracking-wider text-xs px-4 py-1.5 rounded-full">Most Popular</span>
-            </div>
-            <h3 class="font-display font-bold uppercase tracking-wider text-primary text-center text-lg mb-2 mt-2">ProDenta Plus</h3>
-            <div class="text-center mb-6">
-              <span class="text-4xl font-display font-bold text-primary">£36.50</span>
-              <span class="text-text-secondary">/month</span>
-            </div>
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">2 dental check-ups per year</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">4 hygiene visits per year</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">All necessary x-rays included</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm font-semibold">15% discount on all treatments</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">Worldwide dental emergency cover</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">Priority booking</span>
-              </li>
-            </ul>
-            <div class="text-center">
-              <a href="/contact" class="cta-button w-full block text-center">Join Now</a>
-            </div>
-          </div>
-
-          <!-- ProDenta Care -->
-          <div class="bg-white rounded-xl shadow-soft p-8 border border-border-light">
-            <h3 class="font-display font-bold uppercase tracking-wider text-primary text-center text-lg mb-2">ProDenta Care</h3>
-            <div class="text-center mb-6">
-              <span class="text-4xl font-display font-bold text-primary">£28.50</span>
-              <span class="text-text-secondary">/month</span>
-            </div>
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">2 dental check-ups per year</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">2 hygiene visits per year</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">All necessary x-rays included</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">10% discount on all treatments</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">Worldwide dental emergency cover</span>
-              </li>
-            </ul>
-            <div class="text-center">
-              <a href="/contact" class="cta-button cta-outline w-full block text-center">Join Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Children's Membership Plans -->
-    <section class="section-padding">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Children's Membership Plans</h2>
-        <p class="text-text-secondary text-center mb-12 max-w-2xl mx-auto">Affordable plans to keep your children's teeth healthy from their very first visit.</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- ProDenta Teen -->
-          <div class="bg-white rounded-xl shadow-soft p-8 border border-border-light">
-            <h3 class="font-display font-bold uppercase tracking-wider text-primary text-center text-lg mb-1">ProDenta Teen</h3>
-            <p class="text-text-secondary text-center text-sm mb-4">Ages 7 - 17</p>
-            <div class="text-center mb-6">
-              <span class="text-4xl font-display font-bold text-primary">£15.50</span>
-              <span class="text-text-secondary">/month</span>
-            </div>
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">2 dental check-ups per year</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">2 hygiene visits per year</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">All necessary x-rays included</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">10% discount on all treatments</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">Worldwide dental emergency cover</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">Oral health education</span>
-              </li>
-            </ul>
-            <div class="text-center">
-              <a href="/contact" class="cta-button cta-outline w-full block text-center">Join Now</a>
-            </div>
-          </div>
-
-          <!-- ProDenta Junior -->
-          <div class="bg-white rounded-xl shadow-soft p-8 border border-border-light">
-            <h3 class="font-display font-bold uppercase tracking-wider text-primary text-center text-lg mb-1">ProDenta Junior</h3>
-            <p class="text-text-secondary text-center text-sm mb-4">Ages 0 - 6</p>
-            <div class="text-center mb-6">
-              <span class="text-4xl font-display font-bold text-primary">£10.50</span>
-              <span class="text-text-secondary">/month</span>
-            </div>
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">2 dental check-ups per year</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">All necessary x-rays included</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">Fluoride varnish application</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">10% discount on all treatments</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                <span class="text-text-primary text-sm">Worldwide dental emergency cover</span>
-              </li>
-            </ul>
-            <div class="text-center">
-              <a href="/contact" class="cta-button cta-outline w-full block text-center">Join Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Adult Treatment Fee Tables -->
-    <section class="section-padding bg-bg-alt" id="adult-fees">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Adult Treatment Costs</h2>
-        <p class="text-text-secondary text-center mb-10 max-w-2xl mx-auto">View our full list of treatment fees. Membership plan holders enjoy discounted rates on all treatments.</p>
-
-        <!-- Category Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 mb-10" id="adult-tabs" role="tablist">
-          <button class="fee-tab active font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="maintain" role="tab" aria-selected="true">Maintain</button>
-          <button class="fee-tab font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="enhance" role="tab" aria-selected="false">Enhance</button>
-          <button class="fee-tab font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="repair" role="tab" aria-selected="false">Repair</button>
-          <button class="fee-tab font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="straighten" role="tab" aria-selected="false">Straighten</button>
-          <button class="fee-tab font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="restore" role="tab" aria-selected="false">Restore</button>
-        </div>
-
-        <!-- Maintain Table -->
-        <div class="fee-panel" id="panel-maintain">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Adult Check-Up</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£60</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Hygiene Clean (40 mins)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£95 - £135</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Emergency Appointment</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£95</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£85.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Digital 3D Scan</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£65</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£58.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Small X-Ray</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£14</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Large X-Ray (OPG)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£65</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Enhance Table -->
-        <div class="fee-panel hidden" id="panel-enhance">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Composite Bonding (per tooth)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£120 - £350</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£102 - £297.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Direct Composite Veneer</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £300</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £255</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Porcelain Veneer</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £800</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £680</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Home Teeth Whitening</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£395</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£335.75</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">In-Surgery Teeth Whitening</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£450</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£382.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Internal Whitening (per tooth)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£195</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£165.75</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Repair Table -->
-        <div class="fee-panel hidden" id="panel-repair">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Small Composite Filling</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£210</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£178.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Medium Composite Filling</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£265</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£225.25</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Large Composite Filling</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£345</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£293.25</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Root Canal - Front Tooth</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£550</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£467.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Root Canal - Premolar</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£750</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£637.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Root Canal - Molar</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£1050</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£892.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Simple Extraction</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£95</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£80.75</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Surgical Extraction</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£295 - £400</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£250.75 - £340</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Straighten Table -->
-        <div class="fee-panel hidden" id="panel-straighten">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Orthodontic Consultation</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£100</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£85</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Invisalign Treatment</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £3000</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £2550</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Fixed Metal Braces</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £4000</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £3400</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Clear Fixed Braces</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £4500</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £3825</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Retainers (per arch)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£250</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£212.50</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Restore Table -->
-        <div class="fee-panel hidden" id="panel-restore">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Porcelain Crown</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £750</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £637.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Dental Implant (including crown)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £2450</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £2082.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Implant Consultation</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£100</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£85</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Denture - Partial Acrylic</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £650</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £552.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Denture - Full Acrylic</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £950</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £807.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Denture - Chrome Cobalt</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £1450</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £1232.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Grinding Splint / Night Guard</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£750</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£637.50</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Children's Treatment Fee Tables -->
-    <section class="section-padding" id="childrens-fees">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Children's Treatment Costs</h2>
-        <p class="text-text-secondary text-center mb-10 max-w-2xl mx-auto">Affordable dental care for children of all ages, with membership discounts available.</p>
-
-        <!-- Category Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 mb-10" id="child-tabs" role="tablist">
-          <button class="fee-tab-child active font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="child-maintain" role="tab" aria-selected="true">Maintain</button>
-          <button class="fee-tab-child font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="child-repair" role="tab" aria-selected="false">Repair</button>
-          <button class="fee-tab-child font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="child-straighten" role="tab" aria-selected="false">Straighten</button>
-        </div>
-
-        <!-- Children's Maintain Table -->
-        <div class="fee-panel-child" id="panel-child-maintain">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Under 3 Check-Up</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£25</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Child Exam (3 - 11)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£60</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Teen Exam (12 - 17)</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£90</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Fluoride Varnish</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£35</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">Included</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Fissure Sealants</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£45</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£40.50</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Children's Repair Table -->
-        <div class="fee-panel-child hidden" id="panel-child-repair">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Small Filling</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£120</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£108</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Medium Filling</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£180</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£162</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Baby Tooth Extraction</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£65</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£58.50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Pulpotomy</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£250</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£225</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Children's Straighten Table -->
-        <div class="fee-panel-child hidden" id="panel-child-straighten">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">With Membership</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Orthodontic Assessment</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£100</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">£90</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Early Interceptive Treatment</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £1500</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £1350</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Teen Invisalign</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £3500</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £3150</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Fixed Braces</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £4000</td>
-                    <td class="px-6 py-4 text-sm text-primary font-semibold">From £3600</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Facial Aesthetics Pricing -->
-    <section class="section-padding bg-bg-alt" id="aesthetics-fees">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-section font-display font-bold uppercase tracking-wider text-primary text-center mb-4">Facial Aesthetics Pricing</h2>
-        <p class="text-text-secondary text-center mb-10 max-w-2xl mx-auto">Professional facial aesthetic treatments carried out by our experienced dental practitioners.</p>
-
-        <!-- Category Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 mb-10" id="aesthetics-tabs" role="tablist">
-          <button class="fee-tab-aesthetics active font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="aesthetics-enhance" role="tab" aria-selected="true">Enhance</button>
-          <button class="fee-tab-aesthetics font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="aesthetics-maintain" role="tab" aria-selected="false">Maintain</button>
-          <button class="fee-tab-aesthetics font-display font-semibold uppercase tracking-wider text-sm px-6 py-3 rounded-lg transition-all duration-300" data-tab="aesthetics-restore" role="tab" aria-selected="false">Restore</button>
-        </div>
-
-        <!-- Aesthetics Enhance Table -->
-        <div class="fee-panel-aesthetics" id="panel-aesthetics-enhance">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="bg-bg-alt">
-                    <td colspan="2" class="px-6 py-3 text-sm font-display font-semibold uppercase tracking-wider text-primary">Wrinkle Reduction</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">1 Area</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£245</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">2 Areas</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£295</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">3 Areas</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£350</td>
-                  </tr>
-                  <tr class="bg-bg-alt">
-                    <td colspan="2" class="px-6 py-3 text-sm font-display font-semibold uppercase tracking-wider text-primary">Dermal Fillers</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Lip Filler 0.5ml</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£250</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Lip Filler 1ml</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£350</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Cheek Filler</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £400</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Nasolabial Filler</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £350</td>
-                  </tr>
-                  <tr class="bg-bg-alt">
-                    <td colspan="2" class="px-6 py-3 text-sm font-display font-semibold uppercase tracking-wider text-primary">Fat Dissolving</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Aqualyx - Single Session</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£350</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Aqualyx - Multiple Sessions</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">From £500</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Aesthetics Maintain Table -->
-        <div class="fee-panel-aesthetics hidden" id="panel-aesthetics-maintain">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Profhilo</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£350</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Sunekos</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£300</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Light Peel</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£100</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Medium Peel</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£200</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Deep Peel</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£350</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Aesthetics Restore Table -->
-        <div class="fee-panel-aesthetics hidden" id="panel-aesthetics-restore">
-          <div class="bg-white rounded-xl shadow-soft overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full">
-                <thead>
-                  <tr class="bg-primary text-white">
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Treatment</th>
-                    <th class="text-left font-display font-semibold uppercase tracking-wider text-xs px-6 py-4">Price</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-border-light">
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Microneedling - Single Session</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£250</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Microneedling - Course of 3</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£650</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Skincare Consultation</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£50</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Hair Loss Consultation</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£75</td>
-                  </tr>
-                  <tr class="hover:bg-bg-alt transition-colors">
-                    <td class="px-6 py-4 text-sm text-text-primary">Hair Loss Treatment Session</td>
-                    <td class="px-6 py-4 text-sm text-text-primary font-semibold">£250</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <ConsultationCTA
-      title="Ready to Start Your Treatment?"
-      description="Contact our friendly team to discuss your treatment options, membership plans, or to request a personalised quote. We're here to help you achieve the smile you've always wanted."
-      image="/images/consultation-payment.jpg"
-      buttonText="Book Consultation"
-      buttonHref="/contact"
-    />
-  </main>
+  <Booking />
 </BaseLayout>
-
-<style>
-  /* Tab button styles */
-  .fee-tab,
-  .fee-tab-child,
-  .fee-tab-aesthetics {
-    @apply bg-white text-text-secondary border border-border-light cursor-pointer;
-  }
-
-  .fee-tab.active,
-  .fee-tab-child.active,
-  .fee-tab-aesthetics.active {
-    @apply bg-primary text-white border-primary shadow-soft;
-  }
-
-  .fee-tab:not(.active):hover,
-  .fee-tab-child:not(.active):hover,
-  .fee-tab-aesthetics:not(.active):hover {
-    @apply bg-bg-alt text-primary border-primary;
-  }
-</style>
-
-<script>
-  // Generic tab switching function
-  function initTabs(tabSelector: string, panelPrefix: string) {
-    const tabs = document.querySelectorAll(tabSelector);
-
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const targetTab = (tab as HTMLElement).dataset.tab;
-        if (!targetTab) return;
-
-        // Deactivate all tabs in this group
-        tabs.forEach((t) => {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
-        });
-
-        // Hide all panels in this group
-        document.querySelectorAll(`.${panelPrefix}`).forEach((panel) => {
-          panel.classList.add('hidden');
-        });
-
-        // Activate clicked tab
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-
-        // Show target panel
-        const targetPanel = document.getElementById(`panel-${targetTab}`);
-        if (targetPanel) {
-          targetPanel.classList.remove('hidden');
-        }
-      });
-    });
-  }
-
-  // Initialize all three tab groups
-  initTabs('.fee-tab', 'fee-panel');
-  initTabs('.fee-tab-child', 'fee-panel-child');
-  initTabs('.fee-tab-aesthetics', 'fee-panel-aesthetics');
-</script>

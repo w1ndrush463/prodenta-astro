@@ -1,38 +1,76 @@
 ---
-import { site } from '../data/site';
-import { footerLinks } from '../data/navigation';
+import { site as getSite, setting, telHref, whatsappHref } from '../lib/content';
+
+const site = await getSite();
+const nav = await setting('navigation');
+const links: { label: string; url: string }[] = nav.footer ?? [];
+const legal: { label: string; url: string }[] = nav.legal ?? [];
+const hours: { days: string; times: string }[] = site.hours ?? [];
 ---
 
-<footer class="bg-primary text-white">
-  <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div>
-      <h3 class="font-display text-lg font-semibold uppercase tracking-wider mb-4">Meet the Team</h3>
-      <h4 class="text-accent text-sm font-semibold mb-2">Dental Nurses: Agi Paragi, Flori Pastor & Angela Bidaud</h4>
-      <p><a href="/team" class="text-accent hover:text-white transition-colors text-sm">Read more</a></p>
+<footer class="on-dark bg-ink pb-16 md:pb-0">
+  <div class="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:py-24">
+    <div class="lg:col-span-4">
+      <p class="font-display text-4xl text-ivory">{site.name}</p>
+      <p class="mt-5 max-w-sm text-[0.95rem] leading-relaxed">{site.footerNote}</p>
+      <div class="mt-7 flex gap-5">
+        {site.social?.instagram && (
+          <a href={site.social.instagram} target="_blank" rel="noopener" aria-label="ProDenta on Instagram" class="text-ivory/80 hover:text-ivory">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" /></svg>
+          </a>
+        )}
+        {site.social?.facebook && (
+          <a href={site.social.facebook} target="_blank" rel="noopener" aria-label="ProDenta on Facebook" class="text-ivory/80 hover:text-ivory">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M13 21v-8h2.5l.5-3H13V8.5c0-.9.4-1.5 1.6-1.5H16V4.4c-.5-.1-1.3-.2-2.1-.2C11.700 4.200 10 5.600 10 8.200V10H7.500v3H10v8" /></svg>
+          </a>
+        )}
+      </div>
     </div>
 
-    <div>
-      <h3 class="font-display text-lg font-semibold uppercase tracking-wider mb-4">How to Find Us</h3>
-      <p class="font-semibold text-sm">{site.name}</p>
-      <p class="text-sm text-gray-300">{site.address.line1}<br>{site.address.area}<br>{site.address.city}<br>{site.address.postcode}</p>
-      <p class="text-sm text-gray-300 mt-2">Tel: {site.phone}</p>
-      <h4 class="text-accent text-sm font-semibold mt-4 mb-2">Opening Hours</h4>
-      {site.hours.map((h) => (
-        <p class="text-sm text-gray-300">{h.days} {h.times}</p>
-      ))}
-      <p class="text-sm text-gray-300">{site.hoursNote}</p>
+    <div class="lg:col-span-3 lg:col-start-6">
+      <h2 class="eyebrow mb-5 !font-sans">Visit</h2>
+      <address class="not-italic leading-relaxed">
+        {site.address?.line1}<br />
+        {site.address?.area}, {site.address?.city}<br />
+        {site.address?.postcode}
+      </address>
+      <p class="mt-5 space-y-1">
+        <a href={telHref(site.phone)} class="block text-ivory hover:underline">{site.phone}</a>
+        {site.whatsapp && <a href={whatsappHref(site.whatsapp)} target="_blank" rel="noopener" class="block hover:underline">WhatsApp {site.whatsapp}</a>}
+        <a href={`mailto:${site.email}`} class="block hover:underline">{site.email}</a>
+      </p>
     </div>
 
-    <div>
-      <nav class="flex flex-col gap-2">
-        {footerLinks.map((link) => (
-          <a href={link.href} class="text-sm text-gray-300 hover:text-white transition-colors">{link.label}</a>
+    <div class="lg:col-span-2">
+      <h2 class="eyebrow mb-5 !font-sans">Hours</h2>
+      <dl class="space-y-3 text-[0.95rem]">
+        {hours.map((h) => (
+          <div>
+            <dt class="text-ivory">{h.days}</dt>
+            <dd>{h.times}</dd>
+          </div>
         ))}
-      </nav>
+      </dl>
     </div>
+
+    <nav class="lg:col-span-2" aria-label="Footer">
+      <h2 class="eyebrow mb-5 !font-sans">Explore</h2>
+      <ul class="space-y-2.5 text-[0.95rem]">
+        {links.map((l) => (
+          <li><a href={l.url} class="hover:text-ivory hover:underline">{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
   </div>
 
-  <div class="border-t border-white/20 py-4 text-center">
-    <p class="text-sm text-gray-400">&copy; {new Date().getFullYear()} Prodenta. All Rights Reserved.</p>
+  <div class="rule">
+    <div class="wrap flex flex-col gap-3 py-6 text-sm md:flex-row md:items-center md:justify-between">
+      <p>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+      <ul class="flex gap-6">
+        {legal.map((l) => (
+          <li><a href={l.url} class="hover:text-ivory hover:underline">{l.label}</a></li>
+        ))}
+      </ul>
+    </div>
   </div>
 </footer>

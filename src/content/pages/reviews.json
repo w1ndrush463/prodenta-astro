@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "Patient Reviews",
+    "description": "Read what patients say about their care at ProDenta, a private dental practice in Battersea, London."
+  },
+  "heading": "Kind words from our patients",
+  "intro": "We are grateful to every patient who takes the time to share their experience.",
+  "image": "/src/assets/images/stock/smile-outdoors-white-top.jpg",
+  "imageAlt": "A woman smiling outdoors",
+  "reviews": [
+    {
+      "name": "Katy Williams",
+      "quote": "Fantastic experience. They really take the time to explain the treatments and make you feel relaxed.",
+      "featured": true
+    },
+    {
+      "name": "Samantha",
+      "quote": "Confident and experienced dentist who takes the time to sit down with you and explain treatments fully.",
+      "featured": true
+    },
+    {
+      "name": "Ruth",
+      "quote": "Shubhra is excellent, knowledgeable and friendly.",
+      "featured": false
+    },
+    {
+      "name": "Victoria",
+      "quote": "Excellent, extremely friendly private dentist practice.",
+      "featured": true
+    },
+    {
+      "name": "David",
+      "quote": "The impact has been just brilliant. I just feel fantastic every day.",
+      "featured": false
+    },
+    {
+      "name": "Matt",
+      "quote": "I just wanted to say thanks as my gums seem to be much better now you taught me that new brushing technique.",
+      "featured": false
+    },
+    {
+      "name": "Kathy",
+      "quote": "My teeth look fabulous. So pleased with your work.",
+      "featured": false
+    },
+    {
+      "name": "Charlie",
+      "quote": "I love my new white teeth, thank you so much. I have had lots of comments today.",
+      "featured": false
+    },
+    {
+      "name": "Belinda",
+      "quote": "I recommend them extremely highly.",
+      "featured": false
+    }
+  ]
+}

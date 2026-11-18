@@ -1,0 +1,46 @@
+---
+// Standard page opening: breadcrumb, large serif heading, intro and a tall image.
+import Img from './Img.astro';
+
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  intro?: string;
+  image?: string;
+  imageAlt?: string;
+  breadcrumbs?: { label: string; url?: string }[];
+  surface?: string;
+}
+const { eyebrow, heading, intro, image, imageAlt, breadcrumbs = [], surface = 'bg-sand' } = Astro.props;
+---
+
+<section class={surface}>
+  <div class="grid lg:grid-cols-12">
+    <div class="wrap flex flex-col justify-center py-14 lg:col-span-6 lg:max-w-none lg:py-24 lg:pl-[max(var(--spacing-gutter),calc((100vw-82rem)/2+var(--spacing-gutter)))] lg:pr-16">
+      {breadcrumbs.length > 0 && (
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex flex-wrap gap-x-2 text-xs font-medium uppercase tracking-[0.16em] text-muted">
+            {breadcrumbs.map((b, i) => (
+              <li class="flex gap-2">
+                {b.url ? <a href={b.url} class="hover:text-ink">{b.label}</a> : <span aria-current="page" class="text-ink">{b.label}</span>}
+                {i < breadcrumbs.length - 1 && <span aria-hidden="true">/</span>}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      {eyebrow && <p class="eyebrow mb-5">{eyebrow}</p>}
+      <h1 class="text-display max-w-[13ch]">{heading}</h1>
+      {intro && <p class="mt-7 max-w-xl text-lead">{intro}</p>}
+      <slot />
+    </div>
+    <Img
+      src={image}
+      alt={imageAlt}
+      class="aspect-[4/3] lg:col-span-6 lg:aspect-auto lg:min-h-[36rem]"
+      sizes="(min-width: 1024px) 50vw, 100vw"
+      width={1000}
+      priority
+    />
+  </div>
+</section>

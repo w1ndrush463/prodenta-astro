@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const policies = await getCollection('policies');
+  return policies.map((entry) => ({ params: { policy: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const breadcrumbs = [{ label: 'Home', url: '/' }, { label: entry.data.title }];
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.summary} breadcrumbs={breadcrumbs}>
+  <section class="section">
+    <div class="wrap wrap-narrow">
+      <p class="eyebrow mb-6">Practice information</p>
+      <h1 class="text-display">{entry.data.title}</h1>
+      {entry.data.summary && <p class="mt-7 max-w-xl text-lead">{entry.data.summary}</p>}
+      <div class="prose-site mt-12 max-w-2xl border-t border-line pt-10">
+        <Content />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

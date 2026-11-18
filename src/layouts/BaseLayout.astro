@@ -1,35 +1,170 @@
 ---
+import '@fontsource-variable/cormorant-garamond/wght.css';
+import '@fontsource-variable/figtree/wght.css';
+import '../styles/global.css';
+import displayFont from '@fontsource-variable/cormorant-garamond/files/cormorant-garamond-latin-wght-normal.woff2?url';
+import bodyFont from '@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2?url';
+import { getImage } from 'astro:assets';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import MobileMenu from '../components/MobileMenu.astro';
-import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
-import '../styles/global.css';
+import { site as getSite, telHref } from '../lib/content';
+import { resolveImage } from '../lib/images';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
-  bodyClass?: string;
+  image?: string;
+  /** Extra JSON-LD objects for this page. */
+  schema?: object[];
+  breadcrumbs?: { label: string; url?: string }[];
+  noindex?: boolean;
+  /** Warmer palette for the aesthetics section. */
+  tone?: 'default' | 'aesthetics';
 }
 
-const { title, description = 'ProDenta: award-winning private dentist in Battersea. Cosmetic dentistry, Invisalign, teeth whitening & dental implants.', bodyClass = '' } = Astro.props;
+const site = await getSite();
+const {
+  title,
+  description,
+  image,
+  schema = [],
+  breadcrumbs,
+  noindex = false,
+  tone = 'default',
+} = Astro.props;
+
+const suffix = site.seo?.titleSuffix || site.name || 'ProDenta';
+const cleanTitle = (title || '').replace(/\s*[-|,]\s*ProDenta.*$/i, '').trim();
+const fullTitle = cleanTitle ? `${cleanTitle} | ${suffix}` : suffix;
+const metaDescription = description || site.seo?.defaultDescription || '';
+const origin = Astro.site ?? new URL(Astro.url.origin);
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', origin).href;
+
+const shareMeta = resolveImage(image) ?? resolveImage(site.seo?.shareImage);
+const share = shareMeta
+  ? await getImage({ src: shareMeta, width: 1200, height: 630, format: 'jpg', quality: 80 })
+  : undefined;
+const shareUrl = share ? new URL(share.src, origin).href : undefined;
+
+const dayMap: Record<string, string> = {
+  mon: 'Monday', tue: 'Tuesday', wed: 'Wednesday', thu: 'Thursday', fri: 'Friday', sat: 'Saturday', sun: 'Sunday',
+};
+const to24 = (t: string) => {
+  const m = /(\d{1,2})(?::(\d{2}))?\s*(am|pm)/i.exec(t);
+  if (!m) return undefined;
+  let h = Number(m[1]) % 12;
+  if (m[3].toLowerCase() === 'pm') h += 12;
+  return `${String(h).padStart(2, '0')}:${m[2] ?? '00'}`;
+};
+const openingHours = (site.hours ?? []).flatMap((h: { days: string; times: string }) => {
+  const [open, close] = (h.times ?? '').split(/\s+to\s+|\s*-\s*/i).map(to24);
+  if (!open || !close) return [];
+  const days = (h.days ?? '').toLowerCase().split(/[,&]|\band\b/).map((d) => dayMap[d.trim().slice(0, 3)]).filter(Boolean);
+  return days.length ? [{ '@type': 'OpeningHoursSpecification', dayOfWeek: days, opens: open, closes: close }] : [];
+});
+
+const business = {
+  '@context': 'https://schema.org',
+  '@type': 'Dentist',
+  '@id': `${new URL('/', origin).href}#practice`,
+  name: site.name,
+  description: site.seo?.defaultDescription,
+  url: new URL('/', origin).href,
+  telephone: site.phone,
+  email: site.email,
+  image: shareUrl,
+  priceRange: '££',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.address?.line1,
+    addressLocality: site.address?.city,
+    addressRegion: site.address?.area,
+    postalCode: site.address?.postcode,
+    addressCountry: 'GB',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 51.4605474, longitude: -0.1713876 },
+  openingHoursSpecification: openingHours,
+  sameAs: Object.values(site.social ?? {}).filter(Boolean),
+};
+const crumbs = breadcrumbs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((b, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: b.label,
+        item: b.url ? new URL(b.url, origin).href : canonical,
+      })),
+    }
+  : undefined;
+const graphs = [business, crumbs, ...schema].filter(Boolean);
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
-  <meta name="description" content={description}>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class={bodyClass}>
-  <Header />
-  <slot />
-  <Footer />
-  <MobileMenu />
-  <FloatingWhatsApp />
-</body>
+<!doctype html>
+<html lang="en-GB" class:list={[tone === 'aesthetics' && 'tone-aesthetics']}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#00364a" />
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={bodyFont} as="font" type="font/woff2" crossorigin />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonical} />
+    {shareUrl && <meta property="og:image" content={shareUrl} />}
+    {shareUrl && <meta property="og:image:width" content="1200" />}
+    {shareUrl && <meta property="og:image:height" content="630" />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {graphs.map((g) => <script type="application/ld+json" set:html={JSON.stringify(g)} />)}
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-ink focus:px-5 focus:py-3 focus:text-ivory">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+
+    <a
+      href={telHref(site.phone)}
+      class="fixed inset-x-0 bottom-0 z-40 flex items-center justify-center gap-2 bg-ink py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-ivory md:hidden"
+    >
+      <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" /></svg>
+      Call {site.phone}
+    </a>
+
+    <script>
+      const items = document.querySelectorAll('[data-reveal]');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                io.unobserve(e.target);
+              }
+            }
+          },
+          { rootMargin: '0px 0px -8% 0px' },
+        );
+        items.forEach((el) => io.observe(el));
+      } else {
+        items.forEach((el) => el.classList.add('is-visible'));
+      }
+    </script>
+  </body>
 </html>
