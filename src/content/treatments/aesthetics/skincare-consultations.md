@@ -1,77 +1,69 @@
 ---
-title: "Skincare Consultations"
+title: "Skincare consultations"
 category: "restore"
 order: 27
-summary: "Personalised skincare advice and planning"
-intro: "Expert guidance to help you achieve and maintain your best skin with customised treatment plans and professional product recommendations."
+summary: "A free skin assessment and treatment plan"
+intro: "A 30 to 45 minute appointment where we assess your skin and recommend treatments and products. The first consultation is free."
 image: "/src/assets/images/stock/skincare-products-neutral.jpg"
 imageAlt: "A selection of skincare products"
 price: "Free"
-priceNote: "Your initial skincare consultation is complimentary. We'll assess your skin, discuss your goals, and create a personalised treatment plan with no obligation."
+priceNote: "Your first skincare consultation is free, and there is no obligation to book treatment."
 facts:
   - label: "Consultation time"
-    value: "30-45 minutes"
+    value: "30 to 45 minutes"
   - label: "What you'll receive"
-    value: "Personalised treatment plan and product recommendations"
+    value: "A treatment plan and product recommendations"
   - label: "Cost"
-    value: "Complimentary initial consultation"
-  - label: "Follow-Up"
-    value: "Ongoing support and treatment adjustments as needed"
+    value: "First consultation is free"
+  - label: "Follow-up"
+    value: "Reviews and changes to your plan as needed"
 helpsWith:
-  - title: "Treatment planning"
-    text: "Understanding which treatments are right for your skin concerns and goals"
-  - title: "Product guidance"
-    text: "Professional advice on medical-grade skincare products and routines"
-  - title: "Skin education"
-    text: "Understanding your skin type, concerns, and how to maintain results"
+  - title: "Choosing a treatment"
+    text: "Working out which treatments suit your skin and what you want to change"
+  - title: "Skincare products and routine"
+    text: "Advice on medical-grade products and a routine to use at home"
+  - title: "Understanding your skin"
+    text: "Your skin type, your concerns and how to maintain results"
 stepsHeading: "What happens during your consultation?"
 steps:
   - title: ""
-    text: "Your skincare consultation typically lasts 30-45 minutes and includes a thorough assessment of your skin. We'll examine your skin type, texture, tone, and any specific concerns such as acne, pigmentation, fine lines, or sensitivity."
+    text: "The consultation lasts 30 to 45 minutes. We examine your skin type, texture and tone, and any concerns such as acne, pigmentation, fine lines or sensitivity."
   - title: ""
-    text: "We'll discuss your skincare goals, lifestyle factors, current skincare routine, and medical history. Based on this comprehensive assessment, we'll recommend suitable treatments from our range of facial aesthetics options, including chemical peels, microneedling, mesotherapy, and bio-remodelling treatments."
+    text: "We ask about your goals, lifestyle, current skincare routine and medical history. We then recommend suitable treatments, which may include chemical peels, microneedling, mesotherapy or bio-remodelling treatments."
   - title: ""
-    text: "You'll receive a personalised treatment plan outlining recommended procedures, expected timelines, and homecare advice. We'll also suggest professional-grade skincare products to support and maintain your treatment results."
+    text: "You leave with a treatment plan that sets out the recommended treatments, expected timelines and home care advice. We also suggest skincare products to support the results."
 benefits:
-  - title: "Welcome & discussion"
-    text: "We'll discuss your concerns, goals, and skincare history"
-  - title: "Skin analysis"
-    text: "Comprehensive assessment of your skin type, condition, and concerns"
-  - title: "Treatment recommendations"
-    text: "Personalised plan with suitable treatment options"
-  - title: "Product advice"
-    text: "Professional skincare product recommendations for home use"
-  - title: "Q&A"
-    text: "Time to ask questions and clarify any concerns about treatments"
+  - title: "Time for questions"
+    text: "There is time to ask about anything you are unsure of."
+  - title: "Advice that fits your budget"
+    text: "We take your budget into account and do not recommend treatments you do not need."
 faqs:
   - question: "Do I need to prepare for my consultation?"
-    answer: "No special preparation is needed. We recommend arriving with a clean face (no makeup if possible) so we can properly assess your skin. Bring a list of any current skincare products you're using and any questions you'd like to ask."
+    answer: "No special preparation is needed. Come with a clean face, without make-up if possible, and bring a list of the skincare products you use."
   - question: "Will I be pressured to book treatments?"
-    answer: "Absolutely not. Our consultations are pressure-free. We provide honest advice and recommendations, and you're welcome to take time to consider your options. There's no obligation to proceed with any treatment."
+    answer: "No. You are welcome to go away and think about the options, and there is no obligation to go ahead with anything."
   - question: "Can I start treatment on the same day?"
-    answer: "In some cases, yes. Depending on the recommended treatment and availability, we may be able to begin certain procedures during your consultation visit. However, some treatments require advance booking or preparation."
+    answer: "Sometimes. It depends on the treatment and availability, and some treatments need to be booked in advance or need preparation."
   - question: "How often should I have follow-up consultations?"
-    answer: "This depends on your treatment plan. We typically recommend review appointments every 3-6 months to assess progress and adjust your skincare plan as needed. Some patients prefer more frequent check-ins, especially when starting new treatments."
+    answer: "It depends on your treatment plan. We usually suggest a review every 3 to 6 months, and some patients come more often when starting a new treatment."
   - question: "What if I'm not sure what treatment I need?"
-    answer: "That's perfectly normal and exactly why we offer consultations! Many patients aren't sure which treatment is best for them. We'll guide you through the options and recommend the most suitable approach for your specific concerns and goals."
+    answer: "That is what the consultation is for. We go through the options and recommend the one that best fits your concerns."
 related:
   - "src/content/treatments/aesthetics/chemical-peels.md"
   - "src/content/treatments/aesthetics/microneedling.md"
   - "src/content/treatments/aesthetics/profhilo.md"
 gallery: []
 seo:
-  title: "Skincare Consultations"
-  description: "Personalised skincare consultations at ProDenta. Expert advice, customised treatment plans, and professional product recommendations for your unique skin needs."
+  title: "Skincare consultations in Battersea"
+  description: "Free skincare consultations in Battersea. In 30 to 45 minutes we assess your skin and give you a treatment plan and product recommendations."
 ---
 
 ## What is a skincare consultation?
 
-A skincare consultation is a comprehensive assessment of your skin health, concerns, and aesthetic goals. During this personalised session, our experienced practitioners evaluate your skin type, identify concerns, and create a tailored treatment plan to help you achieve your desired results.
+A skincare consultation is an appointment to assess your skin and talk about what you would like to change. We look at your skin type and any concerns, and ask about your lifestyle and skincare history.
 
-At ProDenta, we take time to understand your lifestyle, skincare history, and objectives. Whether you're dealing with acne, ageing, pigmentation, or simply want to maintain healthy skin, we'll recommend the most suitable treatments and homecare products for your unique needs.
+You then get a plan covering suitable treatments and products to use at home. It can be for acne, ageing or pigmentation, or for keeping healthy skin in good condition.
 
-## Why choose ProDenta for your skincare consultation?
+## Skincare consultations at ProDenta
 
-At ProDenta, we believe that effective skincare starts with understanding. Our experienced aesthetic practitioners have extensive training in skin health, facial aesthetics, and advanced treatment techniques.
-
-We offer honest, evidence-based advice tailored to your individual needs and budget. We'll never recommend unnecessary treatments, instead, we focus on what will genuinely benefit your skin and help you achieve your goals.
+Our advice is based on evidence and takes your budget into account. We do not recommend treatments you do not need.

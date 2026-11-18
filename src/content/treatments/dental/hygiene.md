@@ -1,85 +1,75 @@
 ---
-title: "Dental Hygiene"
+title: "Dental hygiene"
 category: "maintain"
 order: 13
-summary: "Professional cleaning and gum care"
-intro: "Professional teeth cleaning and gum care. Prevent disease and maintain a fresh, healthy smile."
+summary: "Scale and polish with a hygienist"
+intro: "A hygienist cleans your teeth above and below the gum line, removes tartar and surface stains, and checks your gums."
 image: "/src/assets/images/stock/laughing-curly-hair.jpg"
-imageAlt: "A woman laughing with a healthy smile"
+imageAlt: "A woman laughing"
 price: "Price on consultation"
-priceNote: "Regular hygiene appointments are an affordable investment in your long-term dental health. Contact us for our current hygiene pricing."
+priceNote: "Please contact us for current hygiene prices."
 facts:
   - label: "Appointment duration"
-    value: "30-45 minutes typically"
+    value: "Usually 30 to 45 minutes"
   - label: "Recommended frequency"
-    value: "Every 3-6 months"
-  - label: "Comfort level"
-    value: "Gentle and pain-free"
-  - label: "Long-Term benefits"
-    value: "Prevents disease, saves money"
+    value: "Every 3 to 6 months"
+  - label: "Comfort"
+    value: "Usually comfortable; inflamed gums can feel sensitive"
+  - label: "Long-term benefits"
+    value: "Lower risk of gum disease and decay"
 helpsWith:
   - title: "Gum disease"
-    text: "Prevent gingivitis and periodontitis"
+    text: "Removing plaque and tartar lowers the risk of gingivitis and periodontitis."
   - title: "Tooth decay"
-    text: "Remove plaque before cavities form"
+    text: "Plaque is cleaned away from places a toothbrush misses."
   - title: "Bad breath"
-    text: "Eliminate bacteria causing halitosis"
+    text: "Cleaning removes the bacteria that often cause it."
   - title: "Surface staining"
-    text: "Polish away tea, coffee, and wine stains"
+    text: "Polishing lifts stains from tea, coffee and red wine."
 stepsHeading: "What happens during a hygiene appointment?"
 steps:
   - title: "Assessment"
-    text: "Your hygienist will examine your teeth and gums, checking for signs of gum disease, cavities, and areas needing extra attention."
-  - title: "Scale & polish"
-    text: "Using specialist instruments, we remove hardened plaque (tartar/calculus) from above and below the gum line."
+    text: "The hygienist looks at your teeth and gums and checks for signs of gum disease or decay."
+  - title: "Scaling"
+    text: "We remove hardened plaque, called tartar or calculus, from above and below the gum line."
   - title: "Polishing"
-    text: "Your teeth are polished with a special paste to remove surface stains and smooth the enamel."
-  - title: "Personalised advice"
-    text: "We'll provide tailored recommendations for your home care routine."
-  - title: ""
-    text: "Most appointments take 30-45 minutes. We recommend visiting every 3-6 months."
+    text: "Your teeth are polished with a paste that removes surface stains and leaves the enamel smooth."
+  - title: "Advice for home"
+    text: "We show you where your brushing is missing and suggest changes to your routine."
 benefits:
-  - title: "Prevent gum disease"
-    text: "Early removal of plaque prevents gingivitis and periodontitis"
-  - title: "Reduce cavities"
-    text: "Professional cleaning removes bacteria that cause tooth decay"
-  - title: "Fresh breath"
-    text: "Eliminate odour-causing bacteria for lasting confidence"
-  - title: "Early detection"
-    text: "Hygienists spot problems before they become serious"
-  - title: "Save money"
-    text: "Prevention is far cheaper than treating advanced dental disease"
-  - title: "Brighter smile"
-    text: "Polish away surface stains for a naturally whiter appearance"
+  - title: "Problems spotted early"
+    text: "The hygienist can pick up early signs of gum disease or decay and refer you to the dentist."
+  - title: "The same hygienist over time"
+    text: "Seeing the same person means they get to know your mouth and can tell when something has changed."
+  - title: "It is not whitening"
+    text: "Polishing removes surface stains but does not change the natural colour of your teeth."
 faqs:
   - question: "How often should I see the hygienist?"
-    answer: "Most patients benefit from hygiene appointments every 3-6 months. However, frequency depends on your individual needs. If you have gum disease, we may recommend more frequent visits initially."
+    answer: "Most people come every 3 to 6 months. If you have gum disease we may suggest more frequent visits at first."
   - question: "Is dental hygiene treatment painful?"
-    answer: "No. Most patients find hygiene appointments comfortable and pain-free. You may feel slight sensitivity during tartar removal, especially if you have gum inflammation, but this is temporary."
+    answer: "Most people find it comfortable. You may feel some sensitivity while tartar is removed, particularly if your gums are inflamed, but it passes quickly."
   - question: "Will hygiene appointments whiten my teeth?"
-    answer: "Hygiene appointments remove surface stains, making your teeth look brighter and cleaner. However, this isn't the same as teeth whitening, which changes the underlying tooth colour."
+    answer: "They remove surface stains, so your teeth will look cleaner and often brighter. Changing the underlying colour needs teeth whitening, which is a separate treatment."
   - question: "Can I skip hygiene appointments if I brush well?"
-    answer: "No. Even with excellent brushing and flossing, plaque hardens into tartar over time, which can only be removed by a dental professional."
+    answer: "We would not recommend it. Even with good brushing and flossing, some plaque hardens into tartar, and tartar can only be removed with professional instruments."
   - question: "What happens if I have gum disease?"
-    answer: "If we detect gum disease, we'll discuss a treatment plan. Early-stage gum disease (gingivitis) can often be reversed with improved home care and more frequent hygiene visits."
+    answer: "We will talk you through a treatment plan. Early gum disease (gingivitis) can often be reversed with better cleaning at home and more frequent hygiene visits."
 related:
   - "src/content/treatments/dental/check-ups.md"
   - "src/content/treatments/dental/teeth-whitening.md"
   - "src/content/treatments/dental/new-patients.md"
 gallery: []
 seo:
-  title: "Dental Hygiene"
-  description: "Professional dental hygiene at ProDenta Battersea. Deep cleaning, scale and polish, gum care. Maintain your oral health."
+  title: "Dental hygienist in Battersea"
+  description: "Hygienist appointments in Battersea: scale and polish, gum checks and advice on cleaning at home. Visits usually take 30 to 45 minutes."
 ---
 
-## What is dental hygiene?
+## What is a hygiene appointment?
 
-Dental hygiene appointments are professional cleaning sessions with our experienced hygienists, designed to keep your teeth and gums healthy. Regular hygiene visits are essential for preventing gum disease, tooth decay, and maintaining fresh breath.
+A hygiene appointment is a professional clean with one of our hygienists. Plaque that stays on the teeth hardens into tartar, which brushing cannot shift. The hygienist removes it, polishes away surface stains and checks the health of your gums.
 
-During your appointment, we remove hardened plaque (tartar) that cannot be removed by brushing alone, polish your teeth to remove surface stains, and provide personalised advice on improving your home care routine.
+Most appointments take 30 to 45 minutes, and we suggest coming every 3 to 6 months.
 
-## Why choose dental hygiene at ProDenta?
+## What to expect from us
 
-At ProDenta, our experienced dental hygienists are dedicated to helping you maintain excellent oral health. With gentle, thorough techniques and the latest equipment, we make every hygiene appointment comfortable and effective.
-
-We believe in building long-term relationships with our patients. Your hygienist will get to know your oral health history and provide personalised advice.
+You will usually see the same hygienist each time, so they know your history. They will also show you how to clean the areas you tend to miss, because what you do at home between visits matters more than the appointment itself.

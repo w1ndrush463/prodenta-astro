@@ -16,9 +16,9 @@ const initials = name.replace(/^Dr\.?\s+/i, '').split(/[\s-]+/).map((w) => w[0])
 ---
 
 {has ? (
-  <Img src={photo} alt={name} class={className} sizes={sizes} width={600} position="center 20%" priority={priority} />
+  <Img src={photo} alt={name} class={`shape-soft ${className}`} sizes={sizes} width={600} position="center 20%" priority={priority} />
 ) : (
-  <div class:list={['flex items-center justify-center bg-stone', className]} role="img" aria-label={name}>
-    <span class="font-display text-6xl text-ink/75" aria-hidden="true">{initials}</span>
+  <div class:list={['shape-soft flex items-center justify-center bg-mist', className]} role="img" aria-label={name}>
+    <span class="font-display text-5xl text-teal" aria-hidden="true">{initials}</span>
   </div>
 )}

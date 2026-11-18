@@ -5,14 +5,12 @@ group: "Visiting specialists"
 order: 4
 photo: ""
 expertise:
-  - "Complex Root Canal Treatment"
-  - "Microscopic Endodontics"
-  - "Dental Trauma Management"
-  - "Endodontic Retreatment"
+  - "Complex root canal treatment"
+  - "Microscopic endodontics"
+  - "Dental trauma management"
+  - "Endodontic retreatment"
 ---
 
-Dr. Amar Lal-Sarin graduated from the University of Birmingham in 2011 and completed his MClinDent in Endodontology at the prestigious Eastman Dental Institute. He has also passed the Membership in Endodontics examination from the Royal College of Surgeons of Edinburgh.
+Amar graduated from the University of Birmingham in 2011 and completed an MClinDent in endodontology at the Eastman Dental Institute. He holds the Membership in Endodontics of the Royal College of Surgeons of Edinburgh.
 
-Dr. Lal-Sarin specialises in complex root canal treatments, including cases involving challenging diagnosis, dental trauma, and retreatment of failed root canals. His expertise with microscopic endodontics ensures the highest success rates.
-
-He uses the latest techniques and equipment to provide pain-free treatment and save teeth that might otherwise need extraction.
+He sees patients who need complex root canal treatment, including retreatment of earlier root fillings and teeth damaged by trauma, and he works with an operating microscope.

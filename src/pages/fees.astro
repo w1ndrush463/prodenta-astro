@@ -19,40 +19,38 @@ const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replac
   <PageHero heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
 
   <nav class="border-b border-line" aria-label="On this page">
-    <ul class="wrap flex gap-8 overflow-x-auto py-4 text-xs font-semibold uppercase tracking-[0.16em] text-ink">
-      {plans.length > 0 && <li class="shrink-0"><a href="#membership" class="hover:text-clay">Membership</a></li>}
-      {tables.map((t) => <li class="shrink-0"><a href={`#${anchor(t.heading)}`} class="hover:text-clay">{t.heading}</a></li>)}
+    <ul class="wrap flex gap-7 overflow-x-auto py-3.5 font-medium text-ink">
+      {plans.length > 0 && <li class="shrink-0"><a href="#membership" class="underline-offset-4 hover:underline">Membership</a></li>}
+      {tables.map((t) => <li class="shrink-0"><a href={`#${anchor(t.heading)}`} class="underline-offset-4 hover:underline">{t.heading}</a></li>)}
     </ul>
   </nav>
 
   <!-- Offers and ways to pay -->
   <section class="section">
-    <div class="wrap grid gap-16 lg:grid-cols-12 lg:gap-20">
+    <div class="wrap grid gap-14 lg:grid-cols-12">
       {offers.length > 0 && (
-        <div class="lg:col-span-6" data-reveal>
-          <p class="eyebrow mb-5">Offers</p>
+        <div class="lg:col-span-6">
           <h2 class="text-title">{p.offersHeading || 'Current offers'}</h2>
-          <ul class="mt-10 border-t border-ink/80">
+          <ul class="mt-6 border-t border-line">
             {offers.map((o) => (
-              <li class="flex items-baseline justify-between gap-6 border-b border-line py-6">
+              <li class="flex items-baseline justify-between gap-6 border-b border-line py-5">
                 <div>
-                  <h3 class="text-[1.6rem] leading-tight">{o.title}</h3>
+                  <h3 class="font-sans text-lg font-semibold">{o.title}</h3>
                   <p class="mt-1 text-muted">{o.text}</p>
                 </div>
-                <p class="shrink-0 font-display text-3xl text-ink">{o.price}</p>
+                <p class="shrink-0 font-display text-2xl text-ink">{o.price}</p>
               </li>
             ))}
           </ul>
         </div>
       )}
       {payment.length > 0 && (
-        <div class="lg:col-span-5 lg:col-start-8" data-reveal>
-          <p class="eyebrow mb-5">Ways to pay</p>
-          <div class="space-y-8">
+        <div class="lg:col-span-5 lg:col-start-8">
+          <div class="shape-soft space-y-7 bg-mist p-7 lg:p-9">
             {payment.map((x) => (
               <div>
                 <h3 class="text-subtitle">{x.title}</h3>
-                <p class="mt-3">{x.text}</p>
+                <p class="mt-2">{x.text}</p>
               </div>
             ))}
           </div>
@@ -63,55 +61,50 @@ const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replac
 
   <!-- Membership plans -->
   {plans.length > 0 && (
-    <section id="membership" class="section bg-sand">
+    <section id="membership" class="section bg-mist">
       <div class="wrap">
-        <div class="max-w-2xl" data-reveal>
-          <p class="eyebrow mb-5">Membership</p>
+        <div class="max-w-2xl">
           <h2 class="text-title">{p.plansHeading}</h2>
-          <p class="mt-5 text-lead">{p.plansIntro}</p>
+          <p class="mt-4">{p.plansIntro}</p>
         </div>
-        <div class="mt-14 grid border-t border-ink/80 sm:grid-cols-2 lg:grid-cols-4">
-          {plans.map((plan, i) => (
-            <article class:list={['border-b border-ink/15 py-9 sm:px-8 lg:border-b-0', i > 0 && 'lg:border-l lg:border-ink/15', i % 2 === 1 && 'sm:border-l sm:border-ink/15', 'first:sm:pl-0']}>
-              <p class="eyebrow">{plan.audience}</p>
-              <h3 class="mt-3 text-[1.9rem] leading-tight">{plan.name}</h3>
-              <p class="mt-4 flex items-baseline gap-2 text-ink">
-                <span class="font-display text-5xl">{plan.price}</span>
-                <span class="text-sm text-muted">{plan.period}</span>
-              </p>
-              <ul class="mt-7 space-y-2.5 text-[0.95rem]">
-                {(plan.features ?? []).map((f) => (
-                  <li class="flex gap-3"><span class="mt-[0.7em] h-px w-3 shrink-0 bg-clay" aria-hidden="true"></span>{f}</li>
-                ))}
+        <div class="mt-9 grid gap-5 md:grid-cols-2">
+          {plans.map((plan) => (
+            <article class="shape-soft bg-white p-7 lg:p-8">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                <h3 class="text-2xl">{plan.name}</h3>
+                <p class="text-ink"><span class="font-display text-2xl">{plan.price}</span> <span class="text-muted">{plan.period}</span></p>
+              </div>
+              <p class="text-muted">{plan.audience}</p>
+              <ul class="mt-4 list-disc space-y-1 pl-5 text-[0.975rem]">
+                {(plan.features ?? []).map((f) => <li>{f}</li>)}
               </ul>
             </article>
           ))}
         </div>
-        <p class="mt-10"><a href="/contact" class="btn">Ask about joining</a></p>
+        <p class="mt-8"><a href="/contact" class="btn">Ask about joining</a></p>
       </div>
     </section>
   )}
 
   <!-- Fee lists -->
   {tables.map((table) => (
-    <section id={anchor(table.heading)} class="section border-b border-line">
-      <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16">
+    <section id={anchor(table.heading)} class="section border-b border-line last-of-type:border-b-0">
+      <div class="wrap grid gap-10 lg:grid-cols-12">
         <div class="lg:col-span-4">
-          <div class="lg:sticky lg:top-32" data-reveal>
-            <p class="eyebrow mb-5">Fee guide</p>
+          <div class="lg:sticky lg:top-28">
             <h2 class="text-title">{table.heading}</h2>
-            {table.intro && <p class="mt-5 max-w-xs text-muted">{table.intro}</p>}
+            {table.intro && <p class="mt-3 max-w-xs text-muted">{table.intro}</p>}
           </div>
         </div>
-        <div class="space-y-14 lg:col-span-8">
+        <div class="space-y-12 lg:col-span-8">
           {table.groups.map((g) => {
             const hasMember = g.rows.some((r) => r.memberPrice);
             return (
               <div class="overflow-x-auto">
                 <table class="w-full text-left">
-                  <caption class="pb-4 text-left font-display text-[1.75rem] text-ink">{g.name}</caption>
+                  <caption class="pb-3 text-left font-display text-2xl text-ink">{g.name}</caption>
                   <thead>
-                    <tr class="border-y border-ink/80 text-xs uppercase tracking-[0.16em] text-ink">
+                    <tr class="border-b-[1.5px] border-teal/50 text-sm text-teal">
                       <th scope="col" class="py-3 pr-4 font-semibold">Treatment</th>
                       <th scope="col" class="w-36 py-3 pr-4 text-right font-semibold">Fee</th>
                       {hasMember && <th scope="col" class="w-36 py-3 text-right font-semibold">Members</th>}
@@ -120,9 +113,9 @@ const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replac
                   <tbody>
                     {g.rows.map((r) => (
                       <tr class="border-b border-line">
-                        <th scope="row" class="py-4 pr-4 font-normal text-body">{r.treatment}</th>
-                        <td class="py-4 pr-4 text-right text-ink">{r.price}</td>
-                        {hasMember && <td class="py-4 text-right text-clay">{r.memberPrice}</td>}
+                        <th scope="row" class="py-3.5 pr-4 font-normal text-body">{r.treatment}</th>
+                        <td class="py-3.5 pr-4 text-right font-semibold text-ink">{r.price}</td>
+                        {hasMember && <td class="py-3.5 text-right text-ink">{r.memberPrice}</td>}
                       </tr>
                     ))}
                   </tbody>
@@ -137,7 +130,7 @@ const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replac
 
   {p.note && (
     <section class="section-tight">
-      <p class="wrap wrap-narrow text-center text-muted">{p.note}</p>
+      <p class="wrap wrap-narrow text-muted">{p.note}</p>
     </section>
   )}
 

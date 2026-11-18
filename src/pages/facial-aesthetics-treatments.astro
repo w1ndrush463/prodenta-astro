@@ -11,11 +11,11 @@ const breadcrumbs = [{ label: 'Home', url: '/' }, { label: p.heading }];
 ---
 
 <BaseLayout title={p.seo?.title} description={p.seo?.description} image={p.image} breadcrumbs={breadcrumbs} tone="aesthetics">
-  <PageHero heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} surface="bg-blush" />
+  <PageHero heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} surface="bg-shell" />
 
-  <nav class="sticky top-[4.5rem] z-30 border-b border-line bg-ivory/95 backdrop-blur-sm lg:top-[5.25rem]" aria-label="Treatment categories">
-    <ul class="wrap flex gap-8 overflow-x-auto py-4 text-xs font-semibold uppercase tracking-[0.16em] text-ink">
-      {groups.map((g) => <li class="shrink-0"><a href={`#${g.id}`} class="hover:text-clay">{g.title}</a></li>)}
+  <nav class="sticky top-[4.25rem] z-30 border-b border-line bg-white lg:top-20" aria-label="Treatment categories">
+    <ul class="wrap flex gap-7 overflow-x-auto py-3.5 font-medium text-ink">
+      {groups.map((g) => <li class="shrink-0"><a href={`#${g.id}`} class="underline-offset-4 hover:underline">{g.title}</a></li>)}
     </ul>
   </nav>
 

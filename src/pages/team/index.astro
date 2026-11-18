@@ -16,19 +16,19 @@ const breadcrumbs = [{ label: 'Home', url: '/' }, { label: 'Team' }];
 ---
 
 <BaseLayout title={p.seo?.title} description={p.seo?.description} image={p.image} breadcrumbs={breadcrumbs}>
-  <PageHero eyebrow="Our team" heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
+  <PageHero heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
 
   {groups.map((g) => (
     <section class="section-tight border-b border-line last-of-type:border-b-0">
       <div class="wrap">
-        <h2 class="text-title" data-reveal>{g.name}</h2>
-        <ul class="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 lg:gap-x-12">
+        <h2 class="text-title">{g.name}</h2>
+        <ul class="mt-9 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 lg:gap-x-12">
           {g.members.map((m) => (
             <li>
               <a href={`/team/${m.id}`} class="group block">
                 <Portrait photo={m.data.photo} name={m.data.name} />
-                <h3 class="mt-5 text-[1.6rem] leading-tight group-hover:text-clay">{m.data.name}</h3>
-                <p class="mt-1 text-sm text-muted">{m.data.role}</p>
+                <h3 class="mt-4 font-sans text-lg font-semibold underline-offset-4 group-hover:underline">{m.data.name}</h3>
+                <p class="text-muted">{m.data.role}</p>
               </a>
             </li>
           ))}

@@ -4,39 +4,39 @@
     "description": "Treatment fees, payment options and membership plans at ProDenta, a private dental practice in Battersea, London."
   },
   "heading": "Fees and membership",
-  "intro": "Clear pricing, with flexible ways to pay and membership plans that reward regular care.",
+  "intro": "Our fees for dental and aesthetic treatment, the ways you can pay and the membership plans.",
   "image": "/src/assets/images/stock/clinic-shelves-hallway.jpg",
   "imageAlt": "A bright clinic hallway",
   "offersHeading": "Current offers",
   "offers": [
     {
-      "title": "New patient special",
+      "title": "New patient offer",
       "price": "£195",
       "text": "Full examination and hygiene clean"
     },
     {
       "title": "Over 40s special",
       "price": "Limited time",
-      "text": "Take control of your smile with our special package"
+      "text": "Ask the practice for details"
     },
     {
-      "title": "£65 OTC teeth whitening",
+      "title": "Home whitening kit",
       "price": "£65",
-      "text": "Professional at-home whitening kit"
+      "text": "An at-home teeth whitening kit"
     }
   ],
   "payment": [
     {
       "title": "Pay as you go",
-      "text": "Pay for treatment at the time of your appointment. We accept all major credit and debit cards."
+      "text": "Pay for treatment at your appointment. We take all major credit and debit cards."
     },
     {
       "title": "Spread the cost",
-      "text": "For more extensive treatment we offer payment plans so you can spread the cost over a period that suits you. Ask the team about interest-free and low-cost finance."
+      "text": "For longer courses of treatment you can pay in instalments. Ask the team about interest-free and low-cost finance."
     }
   ],
   "plansHeading": "Membership plans",
-  "plansIntro": "Join a plan for routine care, discounted treatment fees and worldwide emergency cover.",
+  "plansIntro": "A monthly plan covers your routine check-ups and hygiene visits and gives a discount on treatment.",
   "plans": [
     {
       "name": "ProDenta Plus",
@@ -96,7 +96,7 @@
   "tables": [
     {
       "heading": "Adult treatment costs",
-      "intro": "View our full list of treatment fees. Membership plan holders enjoy discounted rates on all treatments.",
+      "intro": "Members of a plan pay the lower fee where one is shown.",
       "groups": [
         {
           "name": "Maintain",
@@ -287,7 +287,7 @@
     },
     {
       "heading": "Children's treatment costs",
-      "intro": "Affordable dental care for children of all ages, with membership discounts available.",
+      "intro": "Fees for children's dentistry.",
       "groups": [
         {
           "name": "Maintain",
@@ -373,7 +373,7 @@
     },
     {
       "heading": "Facial aesthetics pricing",
-      "intro": "Professional facial aesthetic treatments carried out by our experienced dental practitioners.",
+      "intro": "Fees for facial aesthetic treatments.",
       "groups": [
         {
           "name": "Enhance",
@@ -488,5 +488,5 @@
       ]
     }
   ],
-  "note": "Fees are a guide. You will always receive a written treatment plan and estimate before any treatment begins."
+  "note": "Fees are a guide. You will be given a written treatment plan and estimate before treatment begins."
 }

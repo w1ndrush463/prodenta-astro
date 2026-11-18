@@ -1,77 +1,71 @@
 ---
-title: "Hair Loss Treatment"
+title: "Hair loss treatment"
 category: "restore"
 order: 26
-summary: "Minoxidil and microneedling for hair restoration"
-intro: "Evidence-based topical treatments and microneedling therapy to promote hair growth and reduce hair thinning for men and women."
+summary: "Minoxidil and scalp microneedling for thinning hair"
+intro: "Topical minoxidil, with optional scalp microneedling, for men and women with thinning hair or pattern hair loss. It needs ongoing use to keep working."
 image: "/src/assets/images/stock/scalp-treatment.jpg"
 imageAlt: "A scalp treatment being carried out"
 price: "From £150"
-priceNote: "Initial consultation and treatment plan from £150. Microneedling sessions from £200. Medical-grade minoxidil products available. Treatment packages and ongoing care plans can be discussed during consultation."
+priceNote: "The initial consultation and treatment plan is from £150, and microneedling sessions are from £200. We can talk through packages at your consultation."
 facts:
   - label: "Treatment time"
-    value: "Daily application + optional 30-45 min microneedling sessions"
+    value: "Daily application, plus optional 30 to 45 minute microneedling sessions"
   - label: "Results visible"
-    value: "Initial results at 3-4 months, optimal at 6-12 months"
+    value: "First results at 3 to 4 months, fuller results at 6 to 12 months"
   - label: "Duration"
-    value: "Ongoing treatment required to maintain results"
+    value: "Ongoing treatment needed to maintain results"
   - label: "Microneedling frequency"
-    value: "Every 4-6 weeks for enhanced results"
+    value: "Every 4 to 6 weeks"
 helpsWith:
   - title: "Pattern hair loss"
-    text: "Male and female pattern baldness, receding hairline, and crown thinning"
-  - title: "Hair thinning & density"
-    text: "Reduced hair density, fine hair, and overall scalp coverage concerns"
-  - title: "Weakened follicles"
-    text: "Dormant hair follicles, slow growth, and poor scalp circulation"
+    text: "Male and female pattern hair loss, including a receding hairline and thinning at the crown"
+  - title: "Thinning hair"
+    text: "Reduced hair density and finer hair across the scalp"
+  - title: "Slow regrowth"
+    text: "Follicles that have become dormant or slow to grow"
 stepsHeading: "How does the treatment work?"
 steps:
   - title: ""
-    text: "<strong>Minoxidil Therapy:</strong> Medical-grade minoxidil solution is applied topically to the scalp. It works by widening blood vessels, improving blood flow to hair follicles, and prolonging the anagen (growth) phase of the hair cycle. This encourages thicker, healthier hair growth and can reactivate dormant follicles."
+    text: "Minoxidil solution is applied to the scalp. It widens blood vessels, improves blood flow to the hair follicles and lengthens the growth phase of the hair cycle."
   - title: ""
-    text: "<strong>Scalp Microneedling:</strong> Fine needles create controlled micro-injuries in the scalp, triggering the body's natural healing response. This stimulates collagen production, increases blood flow, and enhances the absorption of topical treatments. When combined with minoxidil, microneedling can significantly improve treatment efficacy."
+    text: "Scalp microneedling uses fine needles to make tiny, controlled injuries in the scalp. This increases blood flow and helps topical treatments absorb, and it can make minoxidil work better."
   - title: ""
-    text: "Treatment typically involves regular application of prescribed minoxidil solutions, with optional microneedling sessions every 4-6 weeks. Results begin to appear after 3-4 months of consistent treatment, with optimal results at 6-12 months."
+    text: "You apply minoxidil regularly at home and can add microneedling sessions every 4 to 6 weeks. Results start to show after 3 to 4 months of consistent use, with the best results at 6 to 12 months."
 benefits:
-  - title: "Consultation"
-    text: "Comprehensive scalp assessment and discussion of hair loss patterns and goals"
-  - title: "Treatment plan"
-    text: "Personalised protocol including minoxidil concentration and application schedule"
-  - title: "Microneedling session"
-    text: "Optional scalp microneedling treatment (30-45 minutes)"
-  - title: "Homecare guidance"
-    text: "Detailed instructions for daily minoxidil application and scalp care"
-  - title: "Minimal discomfort"
-    text: "Topical anaesthetic available for microneedling sessions"
+  - title: "Scalp assessment"
+    text: "We examine your scalp and the pattern of hair loss before recommending anything."
+  - title: "A plan to follow at home"
+    text: "We set the minoxidil concentration and application schedule and explain how to apply it."
+  - title: "Follow-up appointments"
+    text: "We check your progress and adjust the plan if needed."
 faqs:
   - question: "Is minoxidil safe for long-term use?"
-    answer: "Yes, minoxidil is MHRA-approved and has been extensively studied for decades. When used as directed, it's safe for long-term use. Some patients may experience minor side effects like scalp irritation, which typically resolves. We'll monitor your progress and adjust treatment as needed."
+    answer: "Minoxidil has been studied for decades and can be used long term when applied as directed. Some people get scalp irritation, which usually settles."
   - question: "How long before I see results?"
-    answer: "Most patients notice initial improvements after 3-4 months of consistent daily application. Significant results typically appear at 6-12 months. Hair growth is gradual, and patience is essential. We'll track your progress through regular follow-up appointments."
+    answer: "Most patients notice a change after 3 to 4 months of daily use, and fuller results at 6 to 12 months. Hair grows slowly, so it takes patience."
   - question: "What happens if I stop treatment?"
-    answer: "Hair loss treatments like minoxidil require ongoing use to maintain results. If treatment is discontinued, the benefits will gradually reverse over several months, and hair loss patterns may return to their pre-treatment state."
+    answer: "Minoxidil only works while you use it. If you stop, the benefit fades over several months and hair loss may return to how it was before treatment."
   - question: "Is scalp microneedling painful?"
-    answer: "Most patients experience minimal discomfort during scalp microneedling. We can apply a topical anaesthetic to ensure comfort. Some mild tenderness or redness may occur for 24-48 hours post-treatment, but this is temporary."
+    answer: "Most patients feel little discomfort, and we can apply anaesthetic cream first. The scalp may be tender or red for 24 to 48 hours afterwards."
   - question: "Can women use these treatments?"
-    answer: "Absolutely. Both minoxidil and scalp microneedling are effective for women experiencing hair thinning or pattern hair loss. We'll tailor the treatment concentration and protocol to your specific needs and hair loss pattern."
+    answer: "Yes. Minoxidil and scalp microneedling are both used for women with thinning hair or pattern hair loss, and we adjust the concentration to suit."
 related:
   - "src/content/treatments/aesthetics/microneedling.md"
   - "src/content/treatments/aesthetics/mesotherapy.md"
   - "src/content/treatments/aesthetics/skincare-consultations.md"
 gallery: []
 seo:
-  title: "Hair Loss Treatment"
-  description: "Topical hair loss treatments at ProDenta. Minoxidil therapy and microneedling for men and women to promote hair growth and reduce hair thinning."
+  title: "Hair loss treatment in Battersea"
+  description: "Hair loss treatment in Battersea using topical minoxidil and scalp microneedling, for men and women. First results usually show at 3 to 4 months."
 ---
 
 ## What is hair loss treatment?
 
-Hair loss treatment at ProDenta combines proven topical therapies with advanced microneedling techniques to stimulate hair follicles, improve scalp health, and promote natural hair regrowth. We offer personalised treatment plans for both men and women experiencing hair thinning, pattern baldness, or reduced hair density.
+We treat thinning hair and pattern hair loss in men and women with topical minoxidil, with scalp microneedling as an optional addition. Minoxidil increases blood flow to the hair follicles and lengthens the growth phase of the hair.
 
-Our approach includes medical-grade minoxidil solutions and scalp microneedling to enhance absorption and stimulate follicle regeneration. These treatments work by increasing blood flow to hair follicles, prolonging the growth phase of hair, and encourageing dormant follicles to re-enter active growth.
+## Hair loss treatment at ProDenta
 
-## Why choose hair loss treatment at ProDenta?
+We start with a scalp assessment and give you a realistic idea of what to expect. Results take months, and treatment has to continue to maintain them.
 
-At ProDenta, we understand that hair loss can affect confidence and wellbeing. Our practitioners provide evidence-based treatments with realistic expectations and personalised care tailored to your specific hair loss pattern and needs.
-
-We use medical-grade products and professional microneedling techniques to optimise results. Our team takes time to educate you about the treatment process, expected timelines, and how to maximise effectiveness through proper application and scalp care.
+We explain how to apply minoxidil and look after your scalp at home, and we review your progress at follow-up appointments.

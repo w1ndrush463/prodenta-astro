@@ -1,77 +1,71 @@
 ---
-title: "Dermal Fillers"
+title: "Dermal fillers"
 category: "enhance"
 order: 18
-summary: "Restore volume and enhance facial contours"
-intro: "Restore lost volume, enhance facial contours, and achieve natural-looking rejuvenation with our expert dermal filler treatments."
+summary: "Hyaluronic acid injections for volume, lines and lips"
+intro: "Dermal fillers are hyaluronic acid gels injected under the skin to replace lost volume, soften deep lines or add shape to the lips."
 image: "/src/assets/images/stock/portrait-poised.jpg"
-imageAlt: "Portrait of a woman with smooth, natural-looking skin"
+imageAlt: "Portrait of a woman"
 price: "From £250"
-priceNote: "Price varies depending on the treatment area and amount of product required. Results typically last 6-18 months depending on the area treated."
+priceNote: "The price depends on the area and how much filler is needed. Results usually last 6 to 18 months, depending on the area."
 facts:
   - label: "Treatment time"
-    value: "30-45 minutes"
+    value: "30 to 45 minutes"
   - label: "Results visible"
-    value: "Immediate (optimal after 2-4 weeks)"
+    value: "Straight away, settling over 2 to 4 weeks"
   - label: "Duration"
-    value: "6-18 months depending on area"
+    value: "6 to 18 months, depending on area"
   - label: "Recovery"
-    value: "Minimal downtime, resume activities immediately"
+    value: "Swelling or bruising for a few days is possible"
 helpsWith:
   - title: "Volume loss"
-    text: "Hollowing in cheeks, temples, and under-eye areas due to ageing"
-  - title: "Deep lines & folds"
-    text: "Nasolabial folds, marionette lines, and other static wrinkles"
-  - title: "Thin or undefined lips"
-    text: "Lack of volume, definition, or symmetry in the lips"
+    text: "Hollowing in the cheeks, temples and under the eyes with age"
+  - title: "Deep lines and folds"
+    text: "Nose-to-mouth (nasolabial) folds, marionette lines and other lines that show when the face is at rest"
+  - title: "Lip volume and shape"
+    text: "Thin lips, or lips that lack definition or symmetry"
 stepsHeading: "How does the treatment work?"
 steps:
   - title: ""
-    text: "Dermal fillers are carefully injected beneath the skin's surface using ultra-fine needles or cannulas. The hyaluronic acid gel adds immediate volume, filling wrinkles and restoring contours. Because hyaluronic acid naturally attracts and retains water, it also hydrates the skin from within, improving overall texture and radiance."
+    text: "We inject the filler under the skin with a very fine needle or a cannula. The hyaluronic acid gel adds volume straight away, and because it holds water it also helps hydrate the skin."
   - title: ""
-    text: "The treatment typically takes 30-45 minutes. We may apply topical anaesthetic cream beforehand to maximise comfort, though many modern fillers contain built-in anaesthetic. Most patients describe only mild pressure or a slight pinching sensation during injection."
+    text: "Treatment takes 30 to 45 minutes. We can apply anaesthetic cream first, and many fillers contain local anaesthetic, so most patients feel mild pressure or a pinch."
   - title: ""
-    text: "Results are visible immediately and continue to improve over the following 2-4 weeks as the filler settles and any minor swelling subsides. Depending on the product used and treatment area, results typically last 6-18 months."
+    text: "You will see a difference straight away. The result settles over 2 to 4 weeks as any swelling goes down."
 benefits:
-  - title: "Consultation"
-    text: "We'll assess your facial structure, discuss your goals, and recommend appropriate treatment areas"
-  - title: "Treatment"
-    text: "Precise injections administered with fine needles or cannulas, taking 30-45 minutes"
-  - title: "Comfort"
-    text: "Topical anaesthetic applied beforehand; most fillers contain built-in anaesthetic"
-  - title: "Minimal downtime"
-    text: "Minor swelling or bruising may occur but typically resolves within days"
-  - title: "Results"
-    text: "Immediate visible improvement, optimal results after 2-4 weeks as filler settles"
+  - title: "Consultation first"
+    text: "We look at your face, talk through what you want and say which areas are worth treating."
+  - title: "Straight advice"
+    text: "We tell you what is achievable and only recommend treatment when it is appropriate."
+  - title: "Short recovery"
+    text: "Minor swelling or bruising is possible and usually clears within days."
 faqs:
   - question: "Are dermal fillers painful?"
-    answer: "Most patients experience minimal discomfort. We apply topical anaesthetic cream beforehand, and many modern fillers contain built-in anaesthetic. Most describe only mild pressure during injection."
+    answer: "Most patients feel mild pressure or a pinch. We apply anaesthetic cream beforehand, and many fillers contain local anaesthetic."
   - question: "How long do results last?"
-    answer: "Results typically last 6-18 months depending on the treatment area, product used, and individual metabolism. Lips tend to metabolise filler faster (6-9 months), while cheeks and deeper structures last longer (12-18 months)."
+    answer: "It depends on the area, the product and your metabolism. Lips tend to last 6 to 9 months, and cheeks 12 to 18 months."
   - question: "Are there any side effects?"
-    answer: "Common side effects include temporary swelling, redness, and bruising at injection sites, typically resolving within a few days. Serious complications are rare when performed by experienced practitioners."
+    answer: "Temporary swelling, redness and bruising at the injection sites are common and usually clear within a few days. Serious complications are rare."
   - question: "When will I see results?"
-    answer: "Results are visible immediately, though minor swelling may initially mask the final outcome. Optimal results appear after 2-4 weeks once any swelling subsides and the filler fully integrates with surrounding tissue."
-  - question: "Will I look overdone or unnatural?"
-    answer: "When administered by skilled practitioners with an artistic eye, fillers should enhance your natural features subtly. We specialise in creating balanced, age-appropriate results that look refreshed, never overdone."
+    answer: "You will see a change straight away, though swelling can hide the final result at first. It settles after 2 to 4 weeks."
+  - question: "Will I look overdone?"
+    answer: "We aim for a subtle, balanced result that suits your face and your age."
 related:
   - "src/content/treatments/aesthetics/wrinkle-reduction.md"
   - "src/content/treatments/aesthetics/profhilo.md"
   - "src/content/treatments/aesthetics/skincare-consultations.md"
 gallery: []
 seo:
-  title: "Dermal Fillers & Facial Contouring"
-  description: "Expert dermal filler treatments at ProDenta. Restore volume, enhance lips, smooth lines, and sculpt facial contours for natural, youthful results."
+  title: "Dermal fillers in Battersea"
+  description: "Dermal fillers in Battersea for volume loss, deep lines and lips. Treatment takes 30 to 45 minutes and results usually last 6 to 18 months."
 ---
 
 ## What are dermal fillers?
 
-Dermal fillers are injectable gel-based treatments that restore lost volume, smooth deep lines, enhance facial contours, and create a more youthful appearance. Primarily composed of hyaluronic acid, a naturally occurring substance in the skin, these fillers provide instant, visible results while stimulating your body's own collagen production.
+Dermal fillers are gels injected under the skin. Most are made of hyaluronic acid, a substance found naturally in the skin. They replace lost volume, soften deep lines and add shape to areas such as the lips and cheeks.
 
-At ProDenta, our skilled practitioners use premium dermal fillers to achieve beautifully natural results. Whether you're looking to restore volume loss from ageing, enhance your lips, define your cheekbones, or smooth nasolabial folds, we create personalised treatment plans tailored to your unique facial structure and aesthetic goals.
+The result shows straight away and fades gradually over the following months.
 
-## Why choose dermal fillers at ProDenta?
+## Dermal fillers at ProDenta
 
-At ProDenta, we believe in enhancing your natural beauty, not changing it. Our experienced practitioners have extensive training in facial anatomy and use advanced injection techniques to deliver beautifully subtle, natural-looking results.
-
-We use only premium, MHRA-approved hyaluronic acid fillers from trusted brands. Every treatment is personalised to your unique facial structure, skin type, and aesthetic goals. We'll provide honest advice about what's achievable and recommend treatments only when appropriate.
+We use hyaluronic acid fillers and plan each treatment around your face. If a filler will not give you the result you are after, we will tell you.

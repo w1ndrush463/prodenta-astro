@@ -2,76 +2,68 @@
 title: "Profhilo"
 category: "maintain"
 order: 20
-summary: "Bio-remodelling for skin firmness and hydration"
-intro: "Revolutionary bio-remodelling treatment that nourishes dermal cells and restores skin firmness for a naturally radiant complexion."
+summary: "Hyaluronic acid injections for skin firmness and hydration"
+intro: "Profhilo is an injectable hyaluronic acid treatment for skin that has lost firmness or hydration. It is given in 2 sessions, 4 weeks apart."
 image: "/src/assets/images/stock/skin-dewy-serum.jpg"
 imageAlt: "Close-up of hydrated, dewy skin"
 price: "£350 per session"
-priceNote: "A course of 2 sessions is recommended, 4 weeks apart. Maintenance treatments every 6 months help sustain results."
+priceNote: "We recommend a course of 2 sessions, 4 weeks apart. A maintenance treatment every 6 months helps keep the result."
 facts:
   - label: "Treatment time"
     value: "30 minutes per session"
   - label: "Results visible"
     value: "Gradual improvement over 4 weeks"
   - label: "Duration"
-    value: "Up to 6 months after treatment course"
+    value: "Up to 6 months after a course"
   - label: "Sessions required"
     value: "2 sessions, 4 weeks apart"
 helpsWith:
   - title: "Skin laxity"
-    text: "Loss of skin firmness and tightness, particularly on the face and neck"
-  - title: "Fine lines & wrinkles"
-    text: "Superficial lines and creases caused by dehydration and ageing"
+    text: "Loss of firmness, particularly on the face and neck"
+  - title: "Fine lines"
+    text: "Fine surface lines linked to dehydration and ageing"
   - title: "Dehydrated skin"
-    text: "Dull, dry skin lacking moisture and radiance"
+    text: "Dull, dry skin"
 stepsHeading: "How does the treatment work?"
 steps:
   - title: ""
-    text: "Profhilo contains one of the highest concentrations of hyaluronic acid on the market. When injected into the skin, it spreads evenly beneath the surface, releasing hyaluronic acid slowly to stimulate the production of collagen and elastin in four different types of skin cells."
+    text: "Profhilo has a high concentration of hyaluronic acid. Once injected it spreads under the skin and releases hyaluronic acid slowly, which stimulates collagen and elastin production."
   - title: ""
-    text: "The treatment is administered using the BAP (Bio Aesthetic Points) technique, five injection points on each side of the face, strategically placed to allow optimal diffusion of the product. The entire procedure takes about 30 minutes."
+    text: "We inject at five points on each side of the face, a method called the BAP (Bio Aesthetic Points) technique. The appointment takes about 30 minutes."
   - title: ""
-    text: "A typical treatment course consists of two sessions, four weeks apart. Results are visible after the first treatment and continue to improve over time, with effects lasting up to six months."
+    text: "A course is 2 sessions, 4 weeks apart. Some improvement shows after the first session, and the effect lasts up to 6 months."
 benefits:
-  - title: "Consultation"
-    text: "We'll assess your skin quality and discuss your aesthetic goals"
-  - title: "Treatment"
-    text: "Precise injections using the BAP technique, taking approximately 30 minutes"
-  - title: "Minimal discomfort"
-    text: "The treatment is well-tolerated with minimal discomfort"
-  - title: "No downtime"
-    text: "You can resume normal activities immediately after treatment"
-  - title: "Results"
-    text: "Gradual improvement over 4 weeks, with optimal results after the second session"
+  - title: "Consultation first"
+    text: "We look at your skin and talk through what you want before treatment."
+  - title: "Anaesthetic not usually needed"
+    text: "The needles are very fine and most patients tolerate the injections well."
+  - title: "Little downtime"
+    text: "Most people return to normal activities straight after treatment."
 faqs:
   - question: "Is Profhilo painful?"
-    answer: "Most patients find Profhilo very well-tolerated. The injections may cause slight discomfort, but the procedure is quick and uses very fine needles. No anaesthetic is typically required."
-  - question: "How long do results last?"
-    answer: "Results typically last up to 6 months after completing the initial 2-session course. Maintenance treatments every 6 months help sustain the skin improvement effects."
+    answer: "The injections can cause slight discomfort, but the needles are very fine and the procedure is quick. Anaesthetic is not usually needed."
   - question: "Are there any side effects?"
-    answer: "Side effects are minimal and temporary. You may experience slight redness, swelling, or small bumps at injection sites, which typically resolve within 24-48 hours."
+    answer: "You may have slight redness, swelling or small bumps where the injections went in. These usually settle within 24 to 48 hours."
   - question: "When will I see results?"
-    answer: "You'll notice gradual improvement over the 4 weeks between sessions. Optimal results are visible approximately 4 weeks after the second treatment, as collagen and elastin production increases."
+    answer: "Improvement is gradual over the 4 weeks between sessions. The full result shows about 4 weeks after the second session."
   - question: "How is Profhilo different from dermal fillers?"
-    answer: "Unlike dermal fillers, Profhilo doesn't add volume or change facial structure. Instead, it bio-remodels the skin from within, improving texture, firmness and hydration for a naturally rejuvenated appearance."
+    answer: "Fillers add volume and change shape. Profhilo does neither. It spreads through the skin and improves hydration, firmness and texture."
 related:
   - "src/content/treatments/aesthetics/sunekos.md"
   - "src/content/treatments/aesthetics/dermal-fillers.md"
   - "src/content/treatments/aesthetics/skincare-consultations.md"
 gallery: []
 seo:
-  title: "Profhilo Skin Treatment"
-  description: "Profhilo skin hydration and bio-remodelling treatment at ProDenta. Improve skin elasticity, firmness, and texture with this innovative injectable treatment."
+  title: "Profhilo in Battersea"
+  description: "Profhilo in Battersea: hyaluronic acid injections for skin firmness and hydration. A course is 2 sessions of about 30 minutes, 4 weeks apart."
 ---
 
 ## What is Profhilo?
 
-Profhilo is an innovative injectable skin remodelling treatment that hydrates skin from within. Unlike traditional dermal fillers, Profhilo doesn't add volume, instead, it stimulates your skin's natural production of collagen and elastin to restore firmness, elasticity and radiance.
+Profhilo is an injectable hyaluronic acid treatment that hydrates the skin and stimulates collagen and elastin. It does not add volume in the way a dermal filler does.
 
-At ProDenta, we use Profhilo to treat skin laxity and improve overall skin quality. This treatment is particularly effective for addressing the signs of ageing while maintaining a completely natural appearance. The result is healthy, glowing skin with improved texture and tone.
+We use it for skin laxity and general skin quality on the face and neck.
 
-## Why choose Profhilo at ProDenta?
+## Profhilo at ProDenta
 
-At ProDenta, we understand that healthy, radiant skin is the foundation of beauty. Our experienced practitioners are trained in the precise BAP injection technique required for optimal Profhilo results.
-
-We use only genuine Profhilo products and follow strict safety protocols to ensure your comfort and wellbeing. Every treatment plan is personalised to your unique skin concerns and aesthetic goals.
+Our practitioners are trained in the BAP injection technique that Profhilo requires, and we use genuine Profhilo. We see you for a consultation before treatment.

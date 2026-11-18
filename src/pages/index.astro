@@ -1,150 +1,132 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Img from '../components/Img.astro';
+import Shaped from '../components/Shaped.astro';
 import TreatmentMenu from '../components/TreatmentMenu.astro';
 import Booking from '../components/Booking.astro';
 import Visit from '../components/Visit.astro';
-import { page } from '../lib/content';
+import { page, site as getSite, telHref } from '../lib/content';
 
 const home = await page('home');
 const reviews = await page('reviews');
+const site = await getSite();
 const { hero = {}, welcome = {}, dental = {}, aesthetics = {}, offer = {}, reasons = {} } = home;
-const highlights: { title: string; text: string }[] = home.highlights ?? [];
+const hours: { days: string; times: string }[] = (site.hours ?? []).filter((h: { times: string }) => !/closed/i.test(h.times ?? ''));
 const all: { name: string; quote: string; featured?: boolean }[] = reviews.reviews ?? [];
 const quote = all.find((r) => r.featured) ?? all[0];
 ---
 
 <BaseLayout title={home.seo?.title} description={home.seo?.description} image={hero.image}>
-  <!-- Hero -->
-  <section class="bg-sand">
-    <div class="grid lg:grid-cols-12">
-      <div class="wrap flex flex-col justify-center py-16 lg:col-span-6 lg:max-w-none lg:py-28 lg:pl-[max(var(--spacing-gutter),calc((100vw-82rem)/2+var(--spacing-gutter)))] lg:pr-16">
-        {hero.eyebrow && <p class="eyebrow mb-6">{hero.eyebrow}</p>}
-        <h1 class="text-display max-w-[12ch]">{hero.heading}</h1>
-        <p class="mt-7 max-w-md text-lead">{hero.text}</p>
-        <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+  <!-- Opening -->
+  <section class="bg-mist">
+    <div class="wrap grid items-center gap-12 py-12 lg:grid-cols-12 lg:gap-8 lg:py-20">
+      <div class="lg:col-span-6">
+        <h1 class="text-display max-w-[13ch]">{hero.heading}</h1>
+        <p class="mt-6 max-w-lg text-lead">{hero.text}</p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
           {hero.primaryLabel && <a href={hero.primaryUrl || '/contact'} class="btn">{hero.primaryLabel}</a>}
-          {hero.secondaryLabel && <a href={hero.secondaryUrl || '/treatments'} class="link">{hero.secondaryLabel} <span aria-hidden="true">&rarr;</span></a>}
+          {hero.secondaryLabel && <a href={hero.secondaryUrl || '/treatments'} class="link">{hero.secondaryLabel}</a>}
         </div>
+
+        <dl class="mt-12 grid max-w-xl gap-x-10 gap-y-6 border-t border-ink/15 pt-7 text-[0.975rem] sm:grid-cols-2">
+          <div>
+            <dt class="label">Find us</dt>
+            <dd class="mt-1.5">
+              {site.address?.line1}<br />
+              {site.address?.area}, {site.address?.postcode}<br />
+              <a href={telHref(site.phone)} class="font-semibold text-ink">{site.phone}</a>
+            </dd>
+          </div>
+          <div>
+            <dt class="label">Open</dt>
+            <dd class="mt-1.5">
+              {hours.map((h) => <span class="block">{h.days}, {h.times}</span>)}
+            </dd>
+          </div>
+        </dl>
       </div>
-      <Img src={hero.image} alt={hero.imageAlt} class="aspect-[5/4] lg:col-span-6 lg:aspect-auto lg:min-h-[42rem]" sizes="(min-width: 1024px) 50vw, 100vw" width={1000} priority />
+      <Shaped src={hero.image} alt={hero.imageAlt} class="mx-auto w-full max-w-md lg:col-span-5 lg:col-start-8 lg:max-w-none" priority />
     </div>
   </section>
-
-  {highlights.length > 0 && (
-    <section class="border-b border-line" aria-label="At a glance">
-      <ul class="wrap grid divide-y divide-line md:grid-cols-3 md:divide-x md:divide-y-0">
-        {highlights.map((h) => (
-          <li class="py-7 md:px-10 md:py-10 md:first:pl-0 md:last:pr-0">
-            <p class="font-display text-2xl text-ink">{h.title}</p>
-            <p class="mt-1.5 text-muted">{h.text}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
 
   <!-- Welcome -->
   <section class="section">
-    <div class="wrap grid items-center gap-12 lg:grid-cols-12 lg:gap-20">
-      <Img src={welcome.image} alt={welcome.imageAlt} class="aspect-[4/5] lg:col-span-5" sizes="(min-width: 1024px) 40vw, 100vw" width={700} />
-      <div class="lg:col-span-6 lg:col-start-7" data-reveal>
-        {welcome.eyebrow && <p class="eyebrow mb-5">{welcome.eyebrow}</p>}
-        <h2 class="text-title max-w-[16ch]">{welcome.heading}</h2>
-        <div class="mt-8 space-y-5">
-          {(welcome.paragraphs ?? []).map((p: string, i: number) => <p class:list={[i === 0 && 'text-lead text-ink']}>{p}</p>)}
+    <div class="wrap">
+      <div class="grid gap-8 lg:grid-cols-12 lg:gap-12">
+        <h2 class="text-title lg:col-span-5">{welcome.heading}</h2>
+        <div class="lg:col-span-6 lg:col-start-7">
+          <div class="space-y-5">
+            {(welcome.paragraphs ?? []).map((p: string) => <p>{p}</p>)}
+          </div>
+          {welcome.linkLabel && <p class="mt-7"><a href={welcome.linkUrl || '/about'} class="link">{welcome.linkLabel}</a></p>}
         </div>
-        {welcome.linkLabel && <p class="mt-10"><a href={welcome.linkUrl || '/about'} class="link">{welcome.linkLabel} <span aria-hidden="true">&rarr;</span></a></p>}
       </div>
+      <Img src={welcome.image} alt={welcome.imageAlt} class="shape-soft mt-12 aspect-[4/3] sm:aspect-[21/9] lg:mt-16" sizes="(min-width: 1280px) 1150px, 92vw" width={1200} position="center 30%" />
     </div>
   </section>
 
-  <!-- Dental -->
-  <section class="section bg-sand">
-    <div class="wrap grid gap-12 lg:grid-cols-12 lg:gap-20">
-      <div class="lg:col-span-5">
-        <div class="lg:sticky lg:top-32" data-reveal>
-          {dental.eyebrow && <p class="eyebrow mb-5">{dental.eyebrow}</p>}
-          <h2 class="text-title">{dental.heading}</h2>
-          <p class="mt-5 max-w-sm text-lead">{dental.text}</p>
-          <Img src={dental.image} alt={dental.imageAlt} class="mt-10 aspect-[4/3]" sizes="(min-width: 1024px) 40vw, 100vw" width={700} />
-        </div>
+  <!-- Treatments -->
+  <section class="pb-[var(--spacing-section)]" aria-label="Treatments">
+    <div class="wrap grid gap-6 lg:grid-cols-2">
+      <div class="shape-soft bg-mist p-7 sm:p-10 lg:p-12">
+        <h2 class="text-title">{dental.heading}</h2>
+        <p class="mt-3 max-w-md">{dental.text}</p>
+        <div class="mt-9"><TreatmentMenu type="dental" compact /></div>
+        <p class="mt-9"><a href="/treatments" class="link">{dental.linkLabel || 'All dental treatments'}</a></p>
       </div>
-      <div class="lg:col-span-6 lg:col-start-7">
-        <TreatmentMenu type="dental" compact />
-        <p class="mt-10"><a href="/treatments" class="link">{dental.linkLabel || 'All dental treatments'} <span aria-hidden="true">&rarr;</span></a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Aesthetics -->
-  <section class="section bg-blush">
-    <div class="wrap grid gap-12 lg:grid-cols-12 lg:gap-20">
-      <div class="lg:order-2 lg:col-span-5 lg:col-start-8">
-        <div class="lg:sticky lg:top-32" data-reveal>
-          {aesthetics.eyebrow && <p class="eyebrow mb-5">{aesthetics.eyebrow}</p>}
-          <h2 class="text-title">{aesthetics.heading}</h2>
-          <p class="mt-5 max-w-sm text-lead">{aesthetics.text}</p>
-          <Img src={aesthetics.image} alt={aesthetics.imageAlt} class="mt-10 aspect-[4/5]" sizes="(min-width: 1024px) 40vw, 100vw" width={700} />
-        </div>
-      </div>
-      <div class="lg:order-1 lg:col-span-6">
-        <TreatmentMenu type="aesthetics" compact />
-        <p class="mt-10"><a href="/facial-aesthetics-treatments" class="link">{aesthetics.linkLabel || 'All aesthetic treatments'} <span aria-hidden="true">&rarr;</span></a></p>
+      <div class="shape-soft bg-shell p-7 sm:p-10 lg:p-12">
+        <h2 class="text-title">{aesthetics.heading}</h2>
+        <p class="mt-3 max-w-md">{aesthetics.text}</p>
+        <div class="mt-9"><TreatmentMenu type="aesthetics" compact /></div>
+        <p class="mt-9"><a href="/facial-aesthetics-treatments" class="link">{aesthetics.linkLabel || 'All aesthetic treatments'}</a></p>
       </div>
     </div>
   </section>
-
-  <!-- New patient offer -->
-  {offer.show !== false && offer.heading && (
-    <section class="on-dark bg-ink">
-      <div class="wrap grid items-end gap-10 py-20 lg:grid-cols-12 lg:py-28" data-reveal>
-        <div class="lg:col-span-7">
-          {offer.eyebrow && <p class="eyebrow mb-5">{offer.eyebrow}</p>}
-          <h2 class="text-title max-w-[18ch]">{offer.heading}</h2>
-          <p class="mt-6 max-w-lg text-lead">{offer.text}</p>
-        </div>
-        <div class="lg:col-span-4 lg:col-start-9 lg:text-right">
-          <p class="font-display text-[5.5rem] leading-none text-ivory">{offer.price}</p>
-          {offer.buttonLabel && <a href={offer.buttonUrl || '/contact'} class="btn btn-light mt-8">{offer.buttonLabel}</a>}
-        </div>
-      </div>
-    </section>
-  )}
 
   <!-- Patient quote -->
   {quote && (
-    <section class="section">
-      <figure class="wrap wrap-narrow text-center" data-reveal>
-        <p class="eyebrow mb-8">In our patients' words</p>
-        <blockquote class="font-display text-[clamp(1.9rem,1.3rem+2.6vw,3.25rem)] italic leading-[1.18] text-ink">
+    <section class="on-teal bg-teal">
+      <figure class="wrap grid gap-8 py-16 lg:grid-cols-12 lg:py-24">
+        <blockquote class="font-display text-[clamp(1.5rem,1.2rem+1.5vw,2.35rem)] leading-[1.3] text-white lg:col-span-9">
           &ldquo;{quote.quote}&rdquo;
         </blockquote>
-        <figcaption class="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-muted">{quote.name}</figcaption>
-        <p class="mt-10"><a href="/reviews" class="link">Read more reviews <span aria-hidden="true">&rarr;</span></a></p>
+        <figcaption class="lg:col-span-9">
+          <span class="font-semibold text-white">{quote.name}</span>, patient
+          <a href="/reviews" class="link ml-4">More reviews</a>
+        </figcaption>
       </figure>
     </section>
   )}
 
-  <!-- Why ProDenta -->
-  <section class="section border-t border-line">
-    <div class="wrap grid items-center gap-12 lg:grid-cols-12 lg:gap-20">
-      <div class="lg:col-span-6" data-reveal>
-        {reasons.eyebrow && <p class="eyebrow mb-5">{reasons.eyebrow}</p>}
-        <h2 class="text-title max-w-[15ch]">{reasons.heading}</h2>
-        <ol class="mt-10 border-t border-ink/80">
-          {(reasons.items ?? []).map((r: { title: string; text: string }, i: number) => (
-            <li class="grid grid-cols-[3rem_1fr] gap-4 border-b border-line py-6">
-              <span class="pt-1 text-sm tracking-widest text-clay" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-              <div>
-                <h3 class="text-2xl">{r.title}</h3>
-                <p class="mt-1 text-muted">{r.text}</p>
-              </div>
-            </li>
+  <!-- How we work -->
+  <section class="section">
+    <div class="wrap grid items-center gap-12 lg:grid-cols-12">
+      <Shaped src={reasons.image} alt={reasons.imageAlt} class="mx-auto w-full max-w-sm lg:col-span-4 lg:max-w-none" sizes="(min-width: 1024px) 30vw, 80vw" width={520} />
+      <div class="lg:col-span-7 lg:col-start-6">
+        <h2 class="text-title">{reasons.heading}</h2>
+        <dl class="mt-9 grid gap-x-12 gap-y-8 sm:grid-cols-2">
+          {(reasons.items ?? []).map((r: { title: string; text: string }) => (
+            <div>
+              <dt class="text-lg font-semibold text-ink">{r.title}</dt>
+              <dd class="mt-1.5 text-muted">{r.text}</dd>
+            </div>
           ))}
-        </ol>
+        </dl>
+
+        {offer.show !== false && offer.heading && (
+          <div class="shape-soft mt-12 flex flex-wrap items-center justify-between gap-x-10 gap-y-5 border-[1.5px] border-teal/40 p-6 sm:p-8">
+            <div class="max-w-sm">
+              {offer.eyebrow && <p class="label">{offer.eyebrow}</p>}
+              <h3 class="mt-1 text-2xl">{offer.heading}</h3>
+              <p class="mt-2 text-muted">{offer.text}</p>
+            </div>
+            <div class="flex items-center gap-6">
+              <p class="font-display text-5xl text-ink">{offer.price}</p>
+              {offer.buttonLabel && <a href={offer.buttonUrl || '/contact'} class="btn">{offer.buttonLabel}</a>}
+            </div>
+          </div>
+        )}
       </div>
-      <Img src={reasons.image} alt={reasons.imageAlt} class="aspect-[4/5] lg:col-span-5 lg:col-start-8" sizes="(min-width: 1024px) 40vw, 100vw" width={700} />
     </div>
   </section>
 

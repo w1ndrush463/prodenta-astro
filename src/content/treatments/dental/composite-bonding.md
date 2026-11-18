@@ -1,85 +1,81 @@
 ---
-title: "Composite Bonding"
+title: "Composite bonding"
 category: "enhance"
 order: 5
-summary: "Repair chips and reshape teeth with composite resin"
-intro: "Transform your smile with composite bonding. Fix chips, close gaps, and reshape teeth in a single appointment."
+summary: "Tooth-coloured resin to repair chips and reshape teeth"
+intro: "Composite bonding uses tooth-coloured resin to repair chips, close small gaps and reshape teeth. It is usually done in one visit."
 image: "/src/assets/images/stock/smile-profile-white.jpg"
 imageAlt: "Profile of a woman with a bright smile"
 price: "From £250 per tooth"
-priceNote: "Pricing varies based on the complexity and number of teeth treated. Most smile transformations are completed in a single appointment. Book a free consultation for a personalised quote."
+priceNote: "The price depends on how many teeth are treated and how much work each one needs. The consultation is free, and we give you a quote there."
 facts:
   - label: "Treatment duration"
-    value: "30-60 minutes per tooth"
+    value: "30 to 60 minutes per tooth"
   - label: "Appointments needed"
-    value: "Usually completed in one visit"
+    value: "Usually one visit"
   - label: "Recovery time"
-    value: "None, immediate normal function"
+    value: "None. You can use the tooth normally straight away"
   - label: "Results last"
-    value: "5-10 years with proper care"
+    value: "5 to 10 years with good care"
 helpsWith:
   - title: "Chipped or cracked teeth"
-    text: "Repair minor damage and restore tooth shape"
+    text: "Repairs minor damage and rebuilds the shape of the tooth."
   - title: "Gaps between teeth"
-    text: "Close small spaces for a more uniform smile"
-  - title: "Discolouration & staining"
-    text: "Cover stubborn stains that won't whiten"
-  - title: "Misshapen teeth"
-    text: "Reshape and lengthen worn or uneven teeth"
+    text: "Closes small spaces."
+  - title: "Stains that will not whiten"
+    text: "Covers discolouration that whitening cannot remove."
+  - title: "Worn or uneven teeth"
+    text: "Reshapes or lengthens them."
 stepsHeading: "How does composite bonding work?"
 steps:
-  - title: "Consultation & planning"
-    text: "We'll assess your teeth and discuss your smile goals. Digital photography helps us plan the precise shape, size, and colour of your bonding."
+  - title: "Consultation and planning"
+    text: "We look at your teeth and talk about what you want to change. We take photographs to plan the shape, size and colour of the bonding."
   - title: "Preparation"
-    text: "The tooth surface is gently cleaned and prepared with a conditioning gel. Unlike veneers, very little (if any) natural tooth structure needs to be removed."
-  - title: "Bonding application"
-    text: "The composite resin is carefully applied in layers and sculpted to create your desired tooth shape. Each layer is hardened using a special curing light."
-  - title: "Shaping & polishing"
-    text: "Once the resin has hardened, we meticulously shape and polish it to blend seamlessly with your natural teeth."
+    text: "We clean the tooth surface and apply a conditioning gel. Unlike veneers, very little natural tooth, if any, is removed."
+  - title: "Applying the resin"
+    text: "We apply the composite resin in layers and shape it by hand. Each layer is hardened with a curing light."
+  - title: "Shaping and polishing"
+    text: "Once the resin is hard, we trim and polish it so that it matches the teeth around it."
   - title: ""
-    text: "The entire process typically takes 30-60 minutes per tooth. Multiple teeth can be treated in one session."
+    text: "The process takes 30 to 60 minutes per tooth. Several teeth can be treated in one session."
 benefits:
-  - title: "Immediate results"
-    text: "Complete your smile transformation in just one appointment"
-  - title: "Minimally invasive"
-    text: "Preserves your natural tooth structure with little to no drilling"
-  - title: "Versatile"
-    text: "Fixes chips, gaps, stains, and shape issues all at once"
-  - title: "Natural appearance"
-    text: "Custom-shaded resin blends seamlessly with your teeth"
-  - title: "Affordable"
-    text: "More cost-effective than veneers or crowns"
-  - title: "Reversible"
-    text: "Unlike veneers, bonding can be adjusted or removed if needed"
+  - title: "One appointment"
+    text: "Bonding is usually finished in a single visit."
+  - title: "Little or no drilling"
+    text: "Most or all of your natural tooth is left as it is."
+  - title: "Can be changed later"
+    text: "Bonding can be adjusted or removed if you need it to be."
+  - title: "Less hard-wearing than porcelain"
+    text: "Bonding stains and wears more readily than porcelain veneers, and lasts 5 to 10 years."
 faqs:
   - question: "How long does composite bonding last?"
-    answer: "With proper care, composite bonding typically lasts 5-10 years. Longevity depends on factors like oral hygiene, diet, and habits such as nail-biting or teeth-grinding."
+    answer: "Typically 5 to 10 years with good care. It depends on your oral hygiene, your diet, and habits such as nail-biting or teeth-grinding."
   - question: "Is composite bonding painful?"
-    answer: "No. Composite bonding is generally pain-free and typically doesn't require anaesthetic. The procedure is minimally invasive, we rarely need to remove any natural tooth structure."
+    answer: "Usually not. We rarely need to remove any natural tooth, so most people do not need an anaesthetic."
   - question: "How do I care for bonded teeth?"
-    answer: "Care for bonded teeth just as you would natural teeth: brush twice daily, floss regularly, and attend routine dental check-ups. Avoid biting very hard foods with bonded teeth."
+    answer: "Look after them as you would your other teeth: brush twice a day, floss and come for routine check-ups. Avoid biting very hard foods with bonded teeth."
   - question: "Can composite bonding stain?"
-    answer: "Composite bonding is resistant to staining but not completely stain-proof. Over time, bonding may pick up slight discolouration from smoking, coffee, tea, or red wine. However, bonded teeth can be polished during routine hygiene appointments."
+    answer: "Yes, a little. Over time it can pick up some colour from smoking, coffee, tea or red wine. It can be polished at a routine hygiene appointment."
   - question: "What's the difference between bonding and veneers?"
-    answer: "Composite bonding is applied directly to your teeth in a single appointment without removing tooth structure. Veneers are thin porcelain shells made in a lab that require tooth preparation and multiple appointments. Bonding is more affordable and reversible, while veneers are more durable and stain-resistant."
+    answer: "Bonding is applied directly to the tooth in one appointment, without removing tooth structure. Veneers are thin porcelain shells made in a laboratory, and they need tooth preparation and more than one appointment. Bonding costs less and can be reversed. Veneers last longer and resist stains better."
 related:
   - "src/content/treatments/dental/teeth-whitening.md"
   - "src/content/treatments/dental/veneers.md"
   - "src/content/treatments/dental/clear-braces.md"
 gallery: []
 seo:
-  title: "Composite Bonding"
-  description: "Composite bonding at ProDenta Battersea. Fix chips, close gaps, and reshape teeth with minimally invasive cosmetic bonding. Same-day smile transformation."
+  title: "Composite bonding in Battersea"
+  description: "Composite bonding in Battersea from £250 per tooth. Tooth-coloured resin to repair chips, close small gaps and reshape teeth, usually in one visit."
 ---
 
 ## What is composite bonding?
 
-Composite bonding is a minimally invasive cosmetic dental treatment that uses tooth-coloured composite resin to repair, reshape, and enhance your teeth. It's one of the most versatile and affordable cosmetic treatments available, capable of transforming your smile in just one appointment.
+Composite bonding is a cosmetic treatment in which tooth-coloured resin is applied to a tooth, shaped and polished. It is used to repair chips, close small gaps, cover stains and even out the shape of teeth.
 
-The procedure involves applying a special dental resin to your teeth, which is then carefully sculpted and polished to match your natural smile. Unlike veneers, composite bonding typically requires little to no preparation of your natural teeth, making it a conservative and reversible option.
+Unlike veneers, bonding usually needs little or no preparation of the natural tooth, which is why it can be adjusted or removed later. It is not as durable as porcelain and typically lasts 5 to 10 years.
 
-## Why choose composite bonding at ProDenta?
+## Composite bonding at ProDenta
 
-At ProDenta, our experienced cosmetic dentists have perfected the art of composite bonding, delivering natural-looking smile transformations that enhance your confidence.
+Before we start we photograph your teeth, talk through what you would like to change, and show you what bonding can and cannot do.
 
-Our meticulous approach means we take the time to plan every detail of your treatment. We'll photograph your smile, discuss your aesthetic goals, and show you what's possible before we begin.
+The treatment itself takes 30 to 60 minutes per tooth, and several teeth can be done in the same session.

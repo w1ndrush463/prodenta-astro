@@ -1,37 +1,33 @@
 {
   "seo": {
     "title": "About the Practice",
-    "description": "Learn about ProDenta, a friendly private dental practice in Battersea with a patient-centred approach and a focus on prevention."
+    "description": "ProDenta is a private dental practice on St John's Hill, Battersea, with a focus on prevention and room for the whole family."
   },
-  "heading": "Dentistry that is friendly and stress free",
-  "intro": "Our philosophy is simple: keep dentistry as friendly and stress free as possible, and keep you comfortable while we achieve the best possible result.",
+  "heading": "About ProDenta",
+  "intro": "We try to keep dentistry friendly and free of stress, and to keep you comfortable while we work.",
   "image": "/src/assets/images/stock/waiting-room.jpg",
   "imageAlt": "A calm, modern waiting area",
   "storyHeading": "Prevention is better than cure",
   "story": [
-    "We believe strongly in the old adage that prevention is better than cure. Good oral hygiene and the right brushing technique make an enormous difference, so we take a long-term approach to your care.",
-    "When you need more than routine care, we provide comprehensive treatment and specialist referral within the practice. Children are very welcome, and we enjoy helping them build good habits early.",
-    "We use high-quality dental materials and take time to help you understand your current dental health and how to avoid future problems."
+    "It is an old saying and we believe it. Good brushing and regular hygiene visits prevent most of the problems we see, so we spend time on both and plan your care over years, not single appointments.",
+    "When you need more than routine care, most of it can be done here, including treatment by our visiting specialists. Children are welcome, and it helps to bring them early so that good habits start young.",
+    "We will always explain the state of your teeth and gums in plain terms and tell you what you can do to avoid trouble later."
   ],
   "storyImage": "/src/assets/images/stock/dentist-welcoming-patient.jpg",
   "storyImageAlt": "A dentist welcoming a patient",
-  "valuesHeading": "What we believe in",
+  "valuesHeading": "What you can expect",
   "values": [
     {
-      "title": "Patient-centred care",
-      "text": "We focus on keeping you comfortable while achieving the best possible results for your oral health."
+      "title": "Your options, explained",
+      "text": "You will know what we recommend, what the alternatives are and what each costs before treatment starts."
     },
     {
-      "title": "Clear communication",
-      "text": "You will always be fully informed about your options, every step of the way."
+      "title": "Room for families",
+      "text": "We see children and adults, and we are used to nervous patients of any age."
     },
     {
-      "title": "A family-friendly welcome",
-      "text": "Children and adults alike are looked after in a cheerful, relaxed environment."
-    },
-    {
-      "title": "Trust",
-      "text": "We want you to feel confident coming back for regular care and maintenance."
+      "title": "Care over the long term",
+      "text": "We would like to see you regularly for check-ups, so that small problems stay small."
     }
   ]
 }

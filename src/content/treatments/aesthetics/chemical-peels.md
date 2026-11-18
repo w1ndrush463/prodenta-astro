@@ -1,77 +1,71 @@
 ---
-title: "Chemical Peels"
+title: "Chemical peels"
 category: "restore"
 order: 24
-summary: "Customised peel solutions for your skin"
-intro: "Tailored peel solutions to improve skin tone, texture, and clarity for a refreshed, radiant complexion."
+summary: "Skin peels for tone, texture and marks"
+intro: "A chemical peel uses an acid solution to remove the outer layer of dead skin. We choose the type and strength after looking at your skin."
 image: "/src/assets/images/stock/facial-mask-brush.jpg"
 imageAlt: "A treatment being brushed onto the skin"
 price: "From £150"
-priceNote: "Price varies based on peel type, strength, and treatment area. Course packages available for ongoing skin maintenance."
+priceNote: "The price depends on the type and strength of peel and the area treated. Courses are available."
 facts:
   - label: "Treatment time"
-    value: "15-30 minutes per session"
+    value: "15 to 30 minutes per session"
   - label: "Results visible"
-    value: "1-4 weeks depending on peel depth"
+    value: "1 to 4 weeks, depending on peel depth"
   - label: "Duration"
-    value: "3-6 months depending on peel type"
+    value: "3 to 6 months, depending on peel type"
   - label: "Peeling phase"
-    value: "3-7 days depending on peel depth"
+    value: "3 to 7 days, depending on peel depth"
 helpsWith:
-  - title: "Pigmentation & sun damage"
-    text: "Dark spots, melasma, and uneven skin tone from sun exposure"
-  - title: "Acne & scarring"
-    text: "Active acne, post-inflammatory marks, and acne scarring"
-  - title: "Fine lines & dull skin"
-    text: "Signs of ageing, rough texture, and lacklustre complexion"
+  - title: "Pigmentation and sun damage"
+    text: "Dark spots, melasma and uneven tone from sun exposure"
+  - title: "Acne and acne scarring"
+    text: "Active acne, marks left after spots, and acne scars"
+  - title: "Fine lines and dull skin"
+    text: "Fine lines and rough texture"
 stepsHeading: "How does the treatment work?"
 steps:
   - title: ""
-    text: "After cleansing your skin, we apply the selected peel solution evenly across treatment areas. The acidic formula works by breaking down bonds between dead skin cells, allowing them to slough off. Depending on the peel strength, penetration depth varies from superficial (epidermis only) to medium-depth (upper dermis)."
+    text: "We cleanse your skin and apply the peel solution, which loosens the bonds between dead skin cells so they shed. Superficial peels act on the outer layer of skin only, and medium-depth peels reach the upper dermis."
   - title: ""
-    text: "Application takes 15-30 minutes. You may feel tingling, warmth, or mild stinging, normal sensations that indicate the peel is working. Some peels are neutralised in-clinic, while others continue working at home with specific aftercare protocols."
+    text: "Application takes 15 to 30 minutes, and tingling, warmth or mild stinging is normal. Some peels are neutralised in the clinic and others stay on, with aftercare to follow at home."
   - title: ""
-    text: "Peeling typically begins 2-3 days post-treatment and lasts 3-7 days depending on peel depth. As damaged layers shed, renewed skin emerges. Results continue improving over weeks as collagen remodelling occurs. Multiple treatments may be recommended for optimal results."
+    text: "Peeling usually starts 2 to 3 days later and lasts 3 to 7 days, depending on the depth of the peel. Some people need more than one treatment."
 benefits:
-  - title: "Consultation"
-    text: "We'll assess your skin type and concerns to select the most appropriate peel formulation and strength"
-  - title: "Application"
-    text: "Peel solution applied evenly to clean skin, taking 15-30 minutes"
-  - title: "Sensation"
-    text: "Tingling or warmth during application; well-tolerated by most patients"
-  - title: "Peeling phase"
-    text: "3-7 days of visible peeling depending on peel depth; minimal social downtime with proper aftercare"
-  - title: "Results"
-    text: "Improvement in tone and texture visible within 1-4 weeks depending on peel depth"
+  - title: "Peel chosen at consultation"
+    text: "We look at your skin type and concerns before choosing the peel and its strength."
+  - title: "Preparation and aftercare advice"
+    text: "We tell you how to prepare your skin beforehand and how to look after it while it peels."
+  - title: "Single peel or a course"
+    text: "You can have a one-off peel or a course for ongoing maintenance."
 faqs:
   - question: "Are chemical peels painful?"
-    answer: "During application, you may experience tingling, warmth, or stinging sensations. Intensity varies with peel strength, superficial peels cause minimal discomfort, while medium-depth peels may be more intense but remain tolerable."
+    answer: "You may feel tingling, warmth or stinging while the peel is on. Superficial peels cause little discomfort. Medium-depth peels sting more, but most people tolerate them."
   - question: "How long do results last?"
-    answer: "Results typically last 3-6 months depending on peel type and depth. Superficial peels may require more frequent maintenance, while medium-depth peels provide longer-lasting improvement. Regular treatments maintain optimal skin health."
+    answer: "Results usually last 3 to 6 months, depending on the type and depth of peel. Superficial peels need repeating more often."
   - question: "What should I expect during the peeling phase?"
-    answer: "Peeling typically begins 2-3 days post-treatment. Superficial peels may cause light flaking, while deeper peels produce more obvious peeling lasting up to a week. Never pick at peeling skin, let it shed naturally to avoid scarring."
+    answer: "Peeling usually starts 2 to 3 days after treatment. A superficial peel may cause light flaking, and a deeper peel causes more obvious peeling for up to a week. Do not pick at the skin, as this can cause scarring."
   - question: "When will I see results?"
-    answer: "Superficial peels show improvement within 1-2 weeks. Medium-depth peels take 3-4 weeks for full results as new skin emerges and collagen remodelling occurs. Results continue improving over following months."
+    answer: "Superficial peels show an improvement within 1 to 2 weeks. Medium-depth peels take 3 to 4 weeks."
   - question: "Which peel is right for me?"
-    answer: "The appropriate peel depends on your skin type, concerns, and tolerance. During consultation, we'll assess your skin and recommend suitable options, from gentle lactic acid peels to stronger TCA peels, ensuring safe, effective treatment."
+    answer: "It depends on your skin type, what you want to treat and how much peeling you can manage. Options range from mild lactic acid peels to stronger TCA peels, and we recommend one at your consultation."
 related:
   - "src/content/treatments/aesthetics/microneedling.md"
   - "src/content/treatments/aesthetics/perfect-peel.md"
   - "src/content/treatments/aesthetics/skincare-consultations.md"
 gallery: []
 seo:
-  title: "Chemical Peels"
-  description: "Customised chemical peel treatments at ProDenta. Improve skin tone, texture, and clarity with tailored peel solutions for your specific skin concerns."
+  title: "Chemical peels in Battersea"
+  description: "Chemical peels in Battersea for pigmentation, acne marks, fine lines and dull skin. Application takes 15 to 30 minutes and peeling lasts 3 to 7 days."
 ---
 
 ## What are chemical peels?
 
-Chemical peels use controlled application of acidic solutions to exfoliate dead skin cells and stimulate regeneration. By removing damaged outer layers, peels reveal fresh, healthy skin underneath while triggering your body's healing response to produce new collagen and elastin.
+A chemical peel is an acid solution applied to the skin to remove dead cells from the surface. The skin peels over the following days, and the newer skin underneath is smoother and more even in tone.
 
-At ProDenta, we offer a range of chemical peel treatments tailored to different skin types and concerns. From gentle superficial peels for brightening and refreshing to medium-depth peels for more significant concerns like pigmentation and scarring, we'll recommend the appropriate strength and formulation for your specific needs and goals.
+We offer superficial peels for brightening and medium-depth peels for pigmentation and scarring.
 
-## Why choose chemical peels at ProDenta?
+## Chemical peels at ProDenta
 
-At ProDenta, we understand that not all skin is the same. We take time to assess your skin type, concerns, and tolerance before recommending the appropriate peel formulation and strength. Our practitioners are trained in various peel systems to offer tailored solutions.
-
-We provide thorough pre-treatment guidance on skin preparation and comprehensive aftercare instructions to optimise results and minimise complications. We'll help you choose between single treatments for specific events or course-based approaches for ongoing skin maintenance.
+We look at your skin type and what you want to treat before recommending a peel, and we explain how to prepare your skin and care for it afterwards. Stronger peels mean more visible peeling, so it helps to tell us about any events you have coming up.

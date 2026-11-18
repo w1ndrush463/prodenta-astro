@@ -1,85 +1,77 @@
 ---
-title: "Porcelain Veneers"
+title: "Porcelain veneers"
 category: "enhance"
 order: 4
-summary: "Porcelain veneers for a perfect smile"
-intro: "Transform your smile with premium porcelain veneers. Ultra-thin, custom-crafted for a natural, Hollywood smile."
+summary: "Thin porcelain covers for front teeth"
+intro: "A veneer is a thin layer of porcelain bonded to the front of a tooth to change its colour or shape."
 image: "/src/assets/images/stock/smile-lips-closeup.jpg"
-imageAlt: "Close-up of a natural, even smile"
+imageAlt: "Close-up of an even smile"
 price: "Price on consultation"
-priceNote: "Veneer pricing depends on the number of teeth treated, the complexity of your case, and the specific materials used. We offer transparent pricing and flexible payment plans. Book a free consultation for a personalised treatment plan and detailed quote."
+priceNote: "The price depends on the number of teeth, the complexity of your case and the materials used. The consultation is free, and you can pay in instalments."
 facts:
   - label: "Total timeline"
-    value: "2-3 weeks from start to finish"
+    value: "2 to 3 weeks from start to finish"
   - label: "Appointments needed"
-    value: "2 main appointments plus consultation"
+    value: "2 main appointments plus a consultation"
   - label: "Recovery time"
-    value: "None, normal function immediately"
+    value: "None; you can eat and speak normally straight away"
   - label: "Results last"
-    value: "10-15+ years with proper care"
+    value: "10 to 15 years or more with good care"
 helpsWith:
   - title: "Severe discolouration"
-    text: "Cover deep stains that don't respond to whitening"
-  - title: "Chips & wear"
-    text: "Restore damaged or worn teeth completely"
-  - title: "Gaps & spacing"
-    text: "Close spaces for a uniform smile line"
+    text: "Deep stains that whitening has not shifted."
+  - title: "Chips and wear"
+    text: "Teeth that are chipped or worn down at the edges."
+  - title: "Gaps and spacing"
+    text: "Small spaces between front teeth."
   - title: "Misshapen teeth"
-    text: "Create perfectly proportioned, symmetrical teeth"
+    text: "Teeth that are uneven in size or shape."
   - title: "Minor misalignment"
-    text: "Improve appearance of slightly crooked teeth"
+    text: "Slightly crooked teeth, where you would rather not have braces."
 stepsHeading: "How do veneers work?"
 steps:
-  - title: "Consultation & smile design"
-    text: "We'll discuss your aesthetic goals and create a bespoke smile design. Digital imageing allows you to preview your new smile before treatment begins."
+  - title: "Consultation and design"
+    text: "We talk about what you want to change and plan the shape and colour of the veneers. Digital imaging lets you see a preview before you commit."
   - title: "Preparation (first appointment)"
-    text: "A very thin layer of enamel (typically 0.5mm) is gently removed from the front of your teeth. We'll take detailed impressions sent to our specialist dental laboratory. Temporary veneers are fitted to protect your teeth."
-  - title: "Custom fabrication"
-    text: "Your veneers are meticulously hand-crafted by master ceramists over 2-3 weeks."
+    text: "We remove a thin layer of enamel, typically 0.5mm, from the front of each tooth and take impressions for the laboratory. You wear temporary veneers in the meantime."
+  - title: "Making the veneers"
+    text: "A dental laboratory makes your veneers by hand. This takes 2 to 3 weeks."
   - title: "Fitting (second appointment)"
-    text: "Your custom veneers are carefully bonded to your teeth using a strong dental adhesive. We'll check the fit, colour, and bite before final bonding."
+    text: "We check the fit, colour and bite with you, then bond the veneers to your teeth with dental adhesive."
 benefits:
-  - title: "Superior aesthetics"
-    text: "Porcelain's translucency creates the most natural, lifelike appearance"
-  - title: "Highly stain-resistant"
-    text: "Maintains colour and brightness for 10-15+ years"
-  - title: "Exceptional durability"
-    text: "Stronger and longer-lasting than composite alternatives"
-  - title: "Comprehensive transformation"
-    text: "Address multiple cosmetic concerns simultaneously"
-  - title: "Custom-crafted"
-    text: "Each veneer individually made to your specifications"
-  - title: "Biocompatible"
-    text: "Gentle on gums and compatible with oral tissues"
+  - title: "Looks like enamel"
+    text: "Porcelain is slightly translucent and reflects light in a similar way to natural enamel."
+  - title: "Resists staining"
+    text: "Porcelain picks up far less stain from coffee, tea and red wine than natural teeth do."
+  - title: "Lasts longer than composite"
+    text: "Porcelain is harder wearing than composite bonding and usually lasts 10 to 15 years or more."
+  - title: "It cannot be undone"
+    text: "Enamel is removed to fit a veneer, so the tooth will always need one, and veneers do eventually need replacing."
 faqs:
   - question: "How long do porcelain veneers last?"
-    answer: "With proper care and maintenance, porcelain veneers typically last 10-15 years or longer. Many patients enjoy their veneers for 20+ years. Longevity depends on factors like oral hygiene, regular dental visits, and avoiding teeth-grinding."
+    answer: "Typically 10 to 15 years, sometimes longer. It depends on how well you look after your teeth, whether you come for regular check-ups and whether you grind your teeth."
   - question: "Will getting veneers hurt?"
-    answer: "No. The veneer preparation process is typically pain-free, though we may use local anaesthetic to ensure complete comfort. Only a very thin layer of enamel is removed."
+    answer: "Preparing the teeth is not usually painful, because only a thin layer of enamel is removed. We can use local anaesthetic so you do not feel it."
   - question: "Are veneers reversible?"
-    answer: "Traditional veneers are considered a permanent treatment because a thin layer of enamel is removed. However, \"no-prep\" or minimal-prep veneers remove very little or no tooth structure and may be reversible."
+    answer: "Standard veneers are permanent, because a thin layer of enamel is removed and does not grow back. No-prep or minimal-prep veneers remove little or no enamel and may be reversible, but they do not suit everyone."
   - question: "Can veneers stain like natural teeth?"
-    answer: "No. Porcelain veneers are highly resistant to staining and will not discolour like natural teeth. You can enjoy coffee, tea, red wine without worrying about your veneers changing colour."
-  - question: "How much do veneers cost?"
-    answer: "Veneer costs vary depending on the number of teeth being treated, the complexity of your case, and the materials used. We offer transparent pricing and flexible payment plans. Book a free consultation for a detailed, personalised quote."
+    answer: "Porcelain is much more resistant to staining than natural enamel, so coffee, tea and red wine are unlikely to change its colour. The teeth around the veneers can still stain."
 related:
   - "src/content/treatments/dental/teeth-whitening.md"
   - "src/content/treatments/dental/composite-bonding.md"
   - "src/content/treatments/dental/clear-braces.md"
 gallery: []
 seo:
-  title: "Porcelain Veneers Battersea"
-  description: "Premium porcelain veneers in Battersea. Transform your smile with custom-crafted veneers. Last 10-15+ years. Free consultation. Book today."
+  title: "Porcelain veneers in Battersea"
+  description: "Porcelain veneers in Battersea. Two appointments over 2 to 3 weeks, and veneers typically last 10 to 15 years. The consultation is free."
 ---
 
 ## What are porcelain veneers?
 
-Porcelain veneers are ultra-thin shells of medical-grade ceramic that are bonded to the front surface of your teeth to create a beautiful, natural-looking smile. They're the gold standard in cosmetic dentistry, offering unparalleled aesthetics and durability.
+Porcelain veneers are thin ceramic shells bonded to the front surface of the teeth. They are used to change the colour, shape or size of teeth, most often the ones that show when you smile.
 
-Each veneer is custom-crafted in a specialist dental laboratory to match your desired shape, size, and colour. Porcelain has unique light-reflecting properties that mimic natural tooth enamel, creating a translucent, lifelike appearance. With proper care, porcelain veneers can last 10-15 years or longer.
+Each veneer is made in a dental laboratory to the shape and shade we agree with you. Porcelain reflects light much as enamel does, so a well-made veneer is hard to tell from a natural tooth.
 
-## Why choose veneers at ProDenta?
+## Is it the right treatment for me?
 
-At ProDenta, we understand that veneers are a significant investment in your smile and confidence. That's why we work exclusively with the finest dental laboratories and use only premium-grade porcelain materials.
-
-Our cosmetic dentists take a bespoke approach to every smile design. We'll spend time understanding your aesthetic preferences, facial features, and personality to create veneers that look natural on you.
+Veneers are a big decision because the preparation is permanent. At the consultation we look at your teeth and talk through what you want to change. Sometimes whitening, composite bonding or braces will do the job with less work on the teeth, and we will say so if that is the case.

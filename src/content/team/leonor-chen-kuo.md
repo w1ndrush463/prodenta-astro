@@ -6,14 +6,12 @@ order: 5
 photo: "/src/assets/images/team/leonor-chen-kuo.jpg"
 expertise:
   - "Orthodontics"
-  - "Invisalign & Clear Aligners"
-  - "Fixed Braces"
-  - "Facial Aesthetics"
-  - "Smile Design"
+  - "Invisalign and clear aligners"
+  - "Fixed braces"
+  - "Facial aesthetics"
+  - "Smile design"
 ---
 
-Dr. Leonor Chen-Kuo earned her Bachelor of Dental Science from the University of Melbourne and completed her Diploma in Orthodontics from the Royal College of Surgeons UK. With over 17 years of experience, she has helped create over 5,000 beautiful smiles.
+Leonor qualified in dentistry at the University of Melbourne and holds the Diploma in Orthodontics of the Royal College of Surgeons. She has worked in orthodontics for more than 17 years.
 
-Dr. Chen-Kuo is passionate about orthodontics and facial aesthetics, currently pursuing a Masters in Facial Ageing and Aesthetic Medicine. She offers a full range of orthodontic treatments including traditional braces, clear aligners, and Invisalign.
-
-Her artistic eye and attention to detail ensure not just straight teeth, but balanced, beautiful smiles that enhance facial aesthetics.
+She provides fixed braces, clear aligners and Invisalign, and she is studying for a Masters in Facial Ageing and Aesthetic Medicine.

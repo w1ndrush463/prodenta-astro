@@ -2,69 +2,68 @@
 
 /* ------------------------------------------------------------------
    Design tokens. Change these to restyle the whole site.
+   Colours are taken from the ProDenta logo teal; shapes echo its
+   rounded tooth outlines.
    ------------------------------------------------------------------ */
 @theme {
-  --font-display: "Cormorant Garamond Variable", "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-sans: "Figtree Variable", Figtree, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Tenor Sans", "Optima", "Gill Sans", "Segoe UI", sans-serif;
+  --font-sans: "Hanken Grotesk Variable", "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --color-ink: #00364a;        /* brand deep teal: headings, buttons */
-  --color-ink-soft: #1c4f62;
-  --color-body: #3b4649;       /* body text */
-  --color-muted: #5f6a6d;      /* secondary text (AA on ivory) */
-  --color-ivory: #fbf8f3;      /* page background */
-  --color-sand: #f3ede3;       /* alternate surface */
-  --color-stone: #e6ddd0;      /* deeper surface */
-  --color-line: #dcd3c5;       /* hairlines */
-  --color-blush: #f5e9e2;      /* aesthetics surface */
-  --color-clay: #8c5a44;       /* accent text */
-  --color-mist: #a9c9d3;       /* accent on dark */
+  --color-ink: #173f4a;        /* deep teal: headings, buttons */
+  --color-ink-soft: #24525f;
+  --color-teal: #33616f;       /* the logo colour */
+  --color-body: #34454a;       /* body text */
+  --color-muted: #586a6f;      /* secondary text (AA on white and mist) */
+  --color-paper: #ffffff;      /* page background */
+  --color-mist: #e6efed;       /* pale teal surface */
+  --color-fog: #d3e1de;        /* deeper teal surface, image placeholders */
+  --color-line: #cfdcd9;       /* dividers */
+  --color-shell: #f7e9e1;      /* aesthetics surface */
+  --color-coral: #a8502f;      /* accent text */
+  --color-pale: #cfe3e0;       /* accent on teal */
 
-  --text-display: clamp(2.9rem, 1.6rem + 5.6vw, 5.75rem);
-  --text-display--line-height: 0.98;
-  --text-title: clamp(2.2rem, 1.5rem + 2.8vw, 3.6rem);
-  --text-title--line-height: 1.04;
-  --text-subtitle: clamp(1.65rem, 1.35rem + 1.2vw, 2.25rem);
-  --text-subtitle--line-height: 1.12;
-  --text-lead: clamp(1.1rem, 1.02rem + 0.35vw, 1.3rem);
+  --text-display: clamp(2.4rem, 1.5rem + 3.9vw, 4.5rem);
+  --text-display--line-height: 1.06;
+  --text-title: clamp(1.9rem, 1.45rem + 1.9vw, 2.9rem);
+  --text-title--line-height: 1.12;
+  --text-subtitle: clamp(1.45rem, 1.25rem + 0.8vw, 1.9rem);
+  --text-subtitle--line-height: 1.2;
+  --text-lead: clamp(1.1rem, 1.03rem + 0.3vw, 1.25rem);
   --text-lead--line-height: 1.6;
 
-  --spacing-gutter: clamp(1.25rem, 4vw, 3.5rem);
-  --spacing-section: clamp(4.5rem, 3rem + 7vw, 9rem);
+  --spacing-gutter: clamp(1.25rem, 4vw, 3rem);
+  --spacing-section: clamp(4rem, 2.75rem + 5.5vw, 7.5rem);
+
+  --radius-soft: 1.5rem;
 }
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: 6rem;
   }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-  }
   body {
-    background: var(--color-ivory);
+    background: var(--color-paper);
     color: var(--color-body);
     font-family: var(--font-sans);
     font-size: 1.0625rem;
-    line-height: 1.7;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-ink);
-    letter-spacing: -0.012em;
     text-wrap: balance;
   }
   p { text-wrap: pretty; }
-  ::selection { background: var(--color-ink); color: var(--color-ivory); }
+  ::selection { background: var(--color-teal); color: #fff; }
   :focus-visible {
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
+    border-radius: 4px;
   }
-  .on-dark :focus-visible { outline-color: var(--color-ivory); }
+  .on-teal :focus-visible { outline-color: #fff; }
   summary { cursor: pointer; list-style: none; }
   summary::-webkit-details-marker { display: none; }
 }
@@ -73,104 +72,91 @@
   /* Page width + side gutters */
   .wrap {
     width: 100%;
-    max-width: 82rem;
+    max-width: 78rem;
     margin-inline: auto;
     padding-inline: var(--spacing-gutter);
   }
-  .wrap-narrow { max-width: 58rem; }
+  .wrap-narrow { max-width: 52rem; }
   .section { padding-block: var(--spacing-section); }
   .section-tight { padding-block: calc(var(--spacing-section) * 0.6); }
 
-  /* Small letter-spaced label above headings */
-  .eyebrow {
+  /* Small label for list headings, table headings and form labels */
+  .label {
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-clay);
+    color: var(--color-teal);
   }
-  .on-dark .eyebrow { color: var(--color-mist); }
+  .on-teal .label { color: var(--color-pale); }
 
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    min-height: 3.25rem;
-    padding: 0.85rem 1.9rem;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    line-height: 1.2;
-    color: var(--color-ivory);
-    background: var(--color-ink);
-    border: 1px solid var(--color-ink);
-    border-radius: 2px;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-  }
-  .btn:hover { background: var(--color-ink-soft); border-color: var(--color-ink-soft); }
-  .btn-outline { background: transparent; color: var(--color-ink); }
-  .btn-outline:hover { background: var(--color-ink); color: var(--color-ivory); }
-  .btn-light { background: var(--color-ivory); border-color: var(--color-ivory); color: var(--color-ink); }
-  .btn-light:hover { background: transparent; color: var(--color-ivory); border-color: var(--color-ivory); }
-
-  /* Text link with a fine underline */
-  .link {
-    display: inline-flex;
-    align-items: center;
     gap: 0.5rem;
-    font-size: 0.8125rem;
+    min-height: 3rem;
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-ink);
-    padding-bottom: 0.35rem;
-    border-bottom: 1px solid currentColor;
-    transition: gap 0.25s ease, opacity 0.25s ease;
+    line-height: 1.2;
+    color: #fff;
+    background: var(--color-ink);
+    border: 1.5px solid var(--color-ink);
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
-  .link:hover { gap: 0.85rem; }
-  .on-dark .link { color: var(--color-ivory); }
+  .btn:hover { background: var(--color-teal); border-color: var(--color-teal); }
+  .btn-outline { background: transparent; color: var(--color-ink); }
+  .btn-outline:hover { background: var(--color-ink); border-color: var(--color-ink); color: #fff; }
+  .btn-light { background: #fff; border-color: #fff; color: var(--color-ink); }
+  .btn-light:hover { background: var(--color-mist); border-color: var(--color-mist); color: var(--color-ink); }
 
-  .rule { border-top: 1px solid var(--color-line); }
-  .on-dark { color: color-mix(in srgb, var(--color-ivory) 86%, transparent); }
-  .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { color: var(--color-ivory); }
-  .on-dark .rule { border-color: color-mix(in srgb, var(--color-ivory) 22%, transparent); }
+  /* Text link */
+  .link {
+    font-weight: 600;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.3em;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    transition: text-decoration-color 0.2s ease;
+  }
+  .link:hover { text-decoration-color: currentColor; }
+  .on-teal .link { color: #fff; }
+
+  .on-teal { color: color-mix(in srgb, #fff 90%, transparent); }
+  .on-teal h1, .on-teal h2, .on-teal h3, .on-teal h4 { color: #fff; }
+
+  /* The rounded "tooth" outline from the logo, used to shape feature photos */
+  .shape-tooth { border-radius: 46% 46% 2.25rem 2.25rem / 30% 30% 2.25rem 2.25rem; }
+  .shape-soft { border-radius: var(--radius-soft); }
 
   /* Long-form text coming from the CMS rich-text editor */
-  .prose-site > * + * { margin-top: 1.15em; }
+  .prose-site > * + * { margin-top: 1.1em; }
   .prose-site h2 {
     font-size: var(--text-subtitle);
     line-height: var(--text-subtitle--line-height);
-    margin-top: 2.2em;
+    margin-top: 2em;
   }
   .prose-site h2:first-child { margin-top: 0; }
-  .prose-site h3 { font-size: 1.5rem; line-height: 1.2; margin-top: 1.8em; }
-  .prose-site a { color: var(--color-ink); text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+  .prose-site h3 { font-size: 1.3rem; line-height: 1.3; margin-top: 1.7em; }
+  .prose-site a { color: var(--color-ink); text-decoration: underline; text-underline-offset: 0.2em; }
   .prose-site ul { list-style: disc; padding-left: 1.2em; }
   .prose-site ol { list-style: decimal; padding-left: 1.2em; }
   .prose-site li + li { margin-top: 0.4em; }
   .prose-site strong { color: var(--color-ink); font-weight: 600; }
 
   /* Form fields */
-  .field label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-ink); margin-bottom: 0.5rem; }
+  .field label { display: block; font-size: 0.9375rem; font-weight: 600; color: var(--color-ink); margin-bottom: 0.4rem; }
   .field input, .field select, .field textarea {
     width: 100%;
-    padding: 0.8rem 0;
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid var(--color-ink);
-    border-radius: 0;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1.5px solid var(--color-line);
+    border-radius: 0.75rem;
     color: var(--color-ink);
     font: inherit;
   }
+  .field input:hover, .field select:hover, .field textarea:hover { border-color: var(--color-teal); }
   .field textarea { min-height: 7rem; resize: vertical; }
-  .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline-offset: 4px; }
-}
-
-/* Gentle reveal on scroll (only when JS is running and motion is allowed) */
-@media (prefers-reduced-motion: no-preference) {
-  .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.9s ease, transform 0.9s ease; }
-  .js [data-reveal].is-visible { opacity: 1; transform: none; }
 }

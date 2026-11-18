@@ -1,85 +1,79 @@
 ---
-title: "Dental Crowns"
+title: "Dental crowns"
 category: "repair"
 order: 10
-summary: "Restore damaged teeth with custom crowns"
-intro: "Restore damaged teeth with dental crowns. Custom-made, natural-looking crowns to protect and strengthen your teeth."
+summary: "A cap that covers and protects a damaged tooth"
+intro: "A crown is a cap made to fit over a damaged or weakened tooth. It takes two appointments, with 2 to 3 weeks between them while the crown is made."
 image: "/src/assets/images/stock/smile-closeup-natural.jpg"
 imageAlt: "Close-up of a healthy, natural smile"
 price: "From £800 per crown"
-priceNote: "Crown pricing depends on the material used and complexity of your case. We offer both high-quality porcelain and metal-ceramic options. Book a consultation for a personalised quote."
+priceNote: "The price depends on the material and on how much work the tooth needs. We offer porcelain and metal-ceramic crowns."
 facts:
   - label: "Total timeline"
-    value: "2-3 weeks for permanent crown"
+    value: "2 to 3 weeks for the permanent crown"
   - label: "Appointments needed"
-    value: "2 appointments plus initial consultation"
+    value: "2 appointments, plus an initial consultation"
   - label: "Recovery time"
-    value: "Immediate function, minor sensitivity possible"
+    value: "You can use the tooth straight away. Minor sensitivity is possible"
   - label: "Longevity"
-    value: "10-15+ years with proper maintenance"
+    value: "10 to 15 years or more with good care"
 helpsWith:
   - title: "Large fillings"
-    text: "Protect teeth with extensive filling material"
-  - title: "After root canal"
-    text: "Strengthen and protect root-treated teeth"
+    text: "Protects a tooth that is mostly filling."
+  - title: "Root-treated teeth"
+    text: "Strengthens a tooth after root canal treatment."
   - title: "Cracked or broken teeth"
-    text: "Restore severely damaged or fractured teeth"
+    text: "Restores a tooth that is badly damaged or fractured."
   - title: "Weakened teeth"
-    text: "Reinforce teeth at risk of breaking"
-  - title: "Cosmetic improvements"
-    text: "Cover severely discoloured or misshapen teeth"
+    text: "Reinforces a tooth that is at risk of breaking."
+  - title: "Discoloured or misshapen teeth"
+    text: "Covers a tooth that is badly discoloured or an awkward shape."
 stepsHeading: "How do crowns work?"
 steps:
-  - title: "Assessment & planning"
-    text: "We'll examine your tooth and take X-rays to assess the extent of damage. We'll discuss your options and match the colour to your natural teeth."
+  - title: "Assessment and planning"
+    text: "We examine the tooth and take X-rays to see how much damage there is. We talk through your options and choose a colour that matches your other teeth."
   - title: "Tooth preparation (first appointment)"
-    text: "The damaged tooth is carefully shaped to create space for the crown. Detailed impressions are taken and sent to our specialist laboratory. A temporary crown is fitted."
-  - title: "Custom fabrication"
-    text: "Your crown is meticulously crafted by skilled ceramists over 2-3 weeks."
+    text: "We shape the tooth to make room for the crown, then take impressions and send them to the dental laboratory. You leave with a temporary crown."
+  - title: "Making the crown"
+    text: "The laboratory makes your crown, which takes 2 to 3 weeks."
   - title: "Crown fitting (second appointment)"
-    text: "Your temporary crown is removed and the permanent crown is carefully fitted and adjusted before being permanently cemented."
+    text: "We remove the temporary crown, then fit and adjust the permanent one before cementing it in place."
 benefits:
-  - title: "Restore full function"
-    text: "Eat and bite normally with complete confidence and strength"
-  - title: "Long-Lasting protection"
-    text: "Durable solution lasting 10-15+ years with proper care"
-  - title: "Natural appearance"
-    text: "Modern porcelain matches your teeth perfectly for seamless results"
-  - title: "Prevent further damage"
-    text: "Protect weakened teeth from breaking or deteriorating"
-  - title: "Save your tooth"
-    text: "Avoid extraction by reinforcing and preserving natural teeth"
-  - title: "Versatile solution"
-    text: "Suitable for both functional restoration and cosmetic enhancement"
+  - title: "Normal biting and chewing"
+    text: "Once fitted, a crowned tooth can be used like any other tooth."
+  - title: "Keeps the tooth"
+    text: "A crown can save a tooth that might otherwise have to be taken out."
+  - title: "Colour-matched"
+    text: "Porcelain is matched to the shade of the teeth beside it."
+  - title: "The tooth has to be reshaped"
+    text: "Some of the tooth is removed to make room for the crown, and this cannot be undone."
 faqs:
   - question: "How long do dental crowns last?"
-    answer: "With proper care, dental crowns typically last 10-15 years or longer. Many crowns can last 20+ years. Longevity depends on oral hygiene, regular dental check-ups, and avoiding habits like teeth grinding."
+    answer: "Typically 10 to 15 years, and some last 20 years or more. It depends on your oral hygiene, regular check-ups and habits such as teeth grinding."
   - question: "Is getting a crown painful?"
-    answer: "No. Crown preparation is performed under local anaesthetic, so you won't feel pain during treatment. Some minor sensitivity may occur initially but typically subsides within a few weeks."
+    answer: "We numb the tooth with local anaesthetic first, so you should not feel pain during the preparation. The tooth can be a little sensitive afterwards, which usually settles within a few weeks."
   - question: "What's the difference between a crown and a veneer?"
-    answer: "A crown covers the entire tooth, providing strength and protection. A veneer is a thin shell that covers only the front surface, primarily for cosmetic enhancement. Your dentist will recommend the most appropriate option."
+    answer: "A crown covers the whole tooth and adds strength. A veneer is a thin shell over the front surface only, and is mainly cosmetic. We will tell you which is more suitable for your tooth."
   - question: "How do I care for my crown?"
-    answer: "Care for crowned teeth just as you would natural teeth: brush twice daily, floss regularly, and attend routine check-ups. Avoid chewing very hard foods directly on the crown."
-  - question: "How much do dental crowns cost?"
-    answer: "Dental crowns typically start from £800. Pricing varies depending on the material used and the complexity of your case. We offer transparent pricing and payment plans."
+    answer: "Look after it as you would your other teeth: brush twice a day, floss and come for routine check-ups. Avoid chewing very hard foods directly on the crown."
 related:
   - "src/content/treatments/dental/root-canal.md"
   - "src/content/treatments/dental/dental-implants.md"
   - "src/content/treatments/dental/veneers.md"
 gallery: []
 seo:
-  title: "Dental Crowns"
-  description: "Dental crowns at ProDenta Battersea. Restore damaged teeth with custom crowns. Natural-looking, durable restorations."
+  title: "Dental crowns in Battersea"
+  description: "Dental crowns in Battersea from £800. A porcelain or metal-ceramic cap to protect a damaged tooth, fitted over two appointments."
 ---
 
-## What are dental crowns?
+## What is a dental crown?
 
-A dental crown is a custom-made cap that completely covers a damaged, weakened, or heavily restored tooth. Crowns restore both the function and appearance of your tooth, protecting it from further damage while looking completely natural.
+A crown is a cap that covers the whole of a tooth that is damaged, weakened or heavily filled. It protects the tooth from further damage and gives it back its shape.
 
-Modern crowns are typically made from high-quality porcelain or ceramic materials that mimic the translucency and colour of natural tooth enamel. With proper care, crowns can last 10-15 years or longer.
+Most crowns are made from porcelain or ceramic, which can be matched to the colour of your other teeth. With good care a crown lasts 10 to 15 years or longer.
 
-## Why choose crowns at ProDenta?
+## Crowns at ProDenta
 
-At ProDenta, we pride ourselves on delivering high-quality crown restorations that combine exceptional durability with beautiful, natural aesthetics.
+We start by examining the tooth and taking X-rays, then go through the options with you, including the choice between porcelain and metal-ceramic.
 
-Our experienced dentists take a meticulous approach to crown preparation and fitting. We'll carefully assess your tooth structure, discuss all your options, and ensure your crown is precisely colour-matched.
+The crown is made in a dental laboratory from impressions of your tooth. You wear a temporary crown for the 2 to 3 weeks this takes.

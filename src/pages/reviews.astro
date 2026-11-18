@@ -10,15 +10,15 @@ const breadcrumbs = [{ label: 'Home', url: '/' }, { label: 'Reviews' }];
 ---
 
 <BaseLayout title={p.seo?.title} description={p.seo?.description} image={p.image} breadcrumbs={breadcrumbs}>
-  <PageHero eyebrow="Reviews" heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
+  <PageHero heading={p.heading} intro={p.intro} image={p.image} imageAlt={p.imageAlt} breadcrumbs={breadcrumbs} />
 
   <section class="section">
-    <ul class="wrap columns-1 gap-x-16 md:columns-2">
+    <ul class="wrap columns-1 gap-x-6 md:columns-2">
       {reviews.map((r) => (
-        <li class="mb-12 break-inside-avoid border-t border-ink/80 pt-8">
+        <li class="shape-soft mb-6 break-inside-avoid bg-mist p-7 lg:p-9">
           <figure>
-            <blockquote class="font-display text-[1.9rem] italic leading-[1.2] text-ink">&ldquo;{r.quote}&rdquo;</blockquote>
-            <figcaption class="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted">{r.name}</figcaption>
+            <blockquote class="text-lg text-ink">&ldquo;{r.quote}&rdquo;</blockquote>
+            <figcaption class="mt-4 font-semibold text-teal">{r.name}</figcaption>
           </figure>
         </li>
       ))}

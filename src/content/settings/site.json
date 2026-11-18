@@ -50,16 +50,16 @@
     "facebook": "https://www.facebook.com/prodentabattersea"
   },
   "booking": {
-    "heading": "Ready when you are",
-    "text": "Book an appointment or a free consultation and we will take care of the rest. New patients are always welcome.",
+    "heading": "Book a visit",
+    "text": "Send a booking request or call the practice and we'll confirm a time with you. New patients are welcome.",
     "buttonLabel": "Book an appointment",
     "image": "/src/assets/images/stock/smile-soft-portrait.jpg",
     "imageAlt": "A woman smiling softly"
   },
-  "footerNote": "ProDenta is a private dental practice in Battersea, London, caring for families and individuals with general, cosmetic and specialist dentistry alongside facial aesthetics.",
+  "footerNote": "Private dentistry and facial aesthetics on St John's Hill, Battersea.",
   "seo": {
     "titleSuffix": "ProDenta Battersea",
-    "defaultDescription": "ProDenta is a boutique private dental practice in Battersea, London, offering general and cosmetic dentistry, Invisalign, teeth whitening, implants and facial aesthetics.",
+    "defaultDescription": "ProDenta is a private dental practice on St John's Hill, Battersea. General and cosmetic dentistry, Invisalign, implants and facial aesthetics.",
     "shareImage": "/src/assets/images/stock/smile-warm-closeup.jpg"
   }
 }

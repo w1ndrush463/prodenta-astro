@@ -2,76 +2,72 @@
 title: "Microneedling"
 category: "restore"
 order: 23
-summary: "Collagen induction to improve scars and texture"
-intro: "Stimulate your skin's natural healing response to reduce scarring, improve texture, and achieve lasting rejuvenation."
+summary: "Fine-needle treatment for scars and skin texture"
+intro: "Microneedling uses fine needles to make tiny punctures in the skin, which prompts it to produce collagen. We use it for acne scars, texture and fine lines."
 image: "/src/assets/images/stock/skin-device-treatment.jpg"
 imageAlt: "A skin treatment being carried out in clinic"
 price: "From £200"
-priceNote: "A course of 3-6 sessions is recommended, spaced 4-6 weeks apart, for optimal collagen induction and skin renewal results."
+priceNote: "We usually recommend a course of 3 to 6 sessions, 4 to 6 weeks apart."
 facts:
   - label: "Treatment time"
-    value: "30-60 minutes"
+    value: "30 to 60 minutes"
   - label: "Results visible"
-    value: "4-6 weeks"
+    value: "4 to 6 weeks"
   - label: "Duration"
-    value: "Results improve over months"
+    value: "Results build over several months"
   - label: "Recovery"
-    value: "24-48 hours redness"
+    value: "Redness for 24 to 48 hours"
 helpsWith:
-  - title: "Acne & scarring"
-    text: "Atrophic acne scars, pitted skin, and post-inflammatory marks"
-  - title: "Texture & pores"
-    text: "Rough skin texture, enlarged pores, and uneven surface"
-  - title: "Fine lines & wrinkles"
-    text: "Early signs of ageing and loss of skin firmness"
+  - title: "Acne scarring"
+    text: "Indented (atrophic) acne scars and marks left after spots"
+  - title: "Texture and pores"
+    text: "Rough or uneven skin texture and enlarged pores"
+  - title: "Fine lines"
+    text: "Early fine lines and loss of firmness"
+  - title: "Stretch marks"
+    text: "Microneedling can also be used on stretch marks"
 stepsHeading: "How does the treatment work?"
 steps:
   - title: ""
-    text: "A medical-grade microneedling device with fine, sterile needles is moved across the skin, creating controlled micro-channels. This triggers your body's healing cascade, flooding the area with growth factors and stimulating fibroblasts to produce fresh collagen and elastin."
+    text: "We move a microneedling device with fine, sterile needles across the skin to make tiny channels. The skin responds by producing new collagen and elastin."
   - title: ""
-    text: "The treatment takes 30-60 minutes depending on the area treated. We apply topical anaesthetic cream beforehand to maximise comfort. Most patients describe a scratching or vibrating sensation rather than pain."
+    text: "Treatment takes 30 to 60 minutes, depending on the area. We apply anaesthetic cream beforehand, and most patients describe a scratching or vibrating feeling."
   - title: ""
-    text: "Skin appears pink or red immediately after, similar to mild sunburn. This subsides within 24-48 hours. Results develop gradually over 4-6 weeks as new collagen forms. A course of 3-6 sessions spaced 4-6 weeks apart is typically recommended."
+    text: "Your skin will be pink or red afterwards, like mild sunburn, for 24 to 48 hours. Results develop over 4 to 6 weeks as new collagen forms."
 benefits:
-  - title: "Consultation"
-    text: "We'll assess your skin concerns and create a personalised treatment plan"
-  - title: "Preparation"
-    text: "Topical anaesthetic applied 20-30 minutes before treatment"
-  - title: "Treatment"
-    text: "Medical-grade microneedling device moved across treatment areas for 30-60 minutes"
-  - title: "Sensation"
-    text: "Scratching or vibrating feeling; well-tolerated with anaesthetic"
-  - title: "Recovery"
-    text: "24-48 hours of redness; results develop over 4-6 weeks"
+  - title: "Numbing cream beforehand"
+    text: "We apply anaesthetic cream 20 to 30 minutes before treatment."
+  - title: "Single-use needle cartridges"
+    text: "Every treatment uses a sterile, single-use needle cartridge."
+  - title: "Needle depth set for your skin"
+    text: "We assess your skin and set the needle depth and intensity for what we are treating."
 faqs:
   - question: "Is microneedling painful?"
-    answer: "Most patients find microneedling very tolerable. We apply topical anaesthetic cream 20-30 minutes before treatment to minimise discomfort. Most describe a scratching or vibrating sensation rather than pain."
+    answer: "Most patients find it tolerable. We apply anaesthetic cream 20 to 30 minutes beforehand, and the usual description is a scratching or vibrating feeling."
   - question: "How many sessions do I need?"
-    answer: "A course of 3-6 sessions spaced 4-6 weeks apart is typically recommended. The number of sessions depends on your skin concerns, mild texture issues may improve in 3 sessions, while deeper scarring may require 6 or more."
+    answer: "We usually recommend 3 to 6 sessions, 4 to 6 weeks apart. Mild texture problems may improve in 3 sessions, and deeper scarring may need 6 or more."
   - question: "What is the downtime after microneedling?"
-    answer: "Skin will appear pink or red for 24-48 hours, similar to mild sunburn. Most patients can return to normal activities the next day. We recommend avoiding makeup for 24 hours and direct sun exposure for a few days post-treatment."
+    answer: "Your skin will look pink or red for 24 to 48 hours, like mild sunburn, and most patients are back to normal activities the next day. Avoid make-up for 24 hours and direct sun for a few days."
   - question: "When will I see results?"
-    answer: "Initial improvements in skin texture and tone may be noticeable within 2 weeks. However, the full benefits of collagen remodelling develop over 4-6 weeks after each session, with cumulative improvement throughout your treatment course."
+    answer: "You may notice a change in texture and tone within 2 weeks. The fuller effect develops over 4 to 6 weeks after each session and builds through the course."
   - question: "Can microneedling help with acne scars?"
-    answer: "Yes, microneedling is one of the most effective treatments for atrophic (indented) acne scars. By stimulating collagen production in the scarred areas, the skin gradually fills in and smooths out over multiple sessions."
+    answer: "Yes, it is used for indented (atrophic) acne scars. It stimulates collagen in the scarred areas, so the skin gradually fills in and smooths over several sessions."
 related:
   - "src/content/treatments/aesthetics/chemical-peels.md"
   - "src/content/treatments/aesthetics/profhilo.md"
   - "src/content/treatments/aesthetics/skincare-consultations.md"
 gallery: []
 seo:
-  title: "Microneedling Treatment"
-  description: "Microneedling at ProDenta. Collagen induction therapy to reduce scars, improve texture, and rejuvenate skin for a naturally youthful glow."
+  title: "Microneedling in Battersea"
+  description: "Microneedling in Battersea for acne scars, skin texture and fine lines. Sessions take 30 to 60 minutes, with redness for 24 to 48 hours afterwards."
 ---
 
 ## What is microneedling?
 
-Microneedling, also known as collagen induction therapy, uses fine needles to create thousands of tiny, controlled micro-injuries in the skin. This triggers your body's natural wound healing response, stimulating the production of collagen and elastin, the proteins responsible for firm, youthful skin.
+Microneedling, also called collagen induction therapy, uses fine needles to make thousands of tiny, controlled injuries in the skin. As the skin heals it produces collagen and elastin, the proteins that keep it firm.
 
-At ProDenta, we use medical-grade microneedling devices to treat acne scarring, stretch marks, enlarged pores, fine lines, and uneven skin texture. Unlike topical treatments that only reach the skin's surface, microneedling works at a deeper level to create lasting improvement from within.
+We use it for acne scarring, stretch marks, enlarged pores, fine lines and uneven texture.
 
-## Why choose microneedling at ProDenta?
+## Microneedling at ProDenta
 
-At ProDenta, we use medical-grade microneedling devices operated by trained practitioners who understand skin anatomy and healing. This isn't a DIY derma-roller treatment, our professional equipment and expertise deliver superior, safer results.
-
-We follow strict hygiene protocols using sterile, single-use needle cartridges. We'll assess your skin thoroughly to determine the appropriate needle depth and treatment intensity for your specific concerns.
+We use a medical-grade device with sterile, single-use needle cartridges. We assess your skin first and set the needle depth and intensity for what we are treating.

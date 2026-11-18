@@ -7,11 +7,10 @@ const site = await getSite();
 
 <BaseLayout title="Thank you" noindex>
   <section class="section">
-    <div class="wrap wrap-narrow text-center">
-      <p class="eyebrow mb-6">Request received</p>
+    <div class="wrap wrap-narrow">
       <h1 class="text-display">{p.successHeading || 'Thank you'}</h1>
-      <p class="mx-auto mt-7 max-w-xl text-lead">{p.successText}</p>
-      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-5">
+      <p class="mt-6 max-w-xl text-lead">{p.successText}</p>
+      <div class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-5">
         <a href="/" class="btn">Back to home</a>
         <a href={telHref(site.phone)} class="link">Call {site.phone}</a>
       </div>

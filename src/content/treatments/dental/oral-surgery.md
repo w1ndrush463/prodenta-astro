@@ -1,85 +1,79 @@
 ---
-title: "Oral Surgery"
+title: "Oral surgery"
 category: "restore"
 order: 3
-summary: "Expert surgical dental procedures performed with precision and care"
-intro: "Expert surgical dental procedures performed with precision and care. From wisdom teeth removal to complex extractions."
+summary: "Wisdom teeth, extractions and minor surgery"
+intro: "Surgical dental procedures, including wisdom tooth removal and difficult extractions, carried out under local anaesthetic with sedation if you want it."
 image: "/src/assets/images/stock/clinic-room-light.jpg"
-imageAlt: "A bright, modern treatment room"
+imageAlt: "A bright treatment room"
 price: "Price on consultation"
-priceNote: "Oral surgery costs depend on the complexity of the procedure, whether sedation is required, and your specific needs. Simple extractions start from around £150. We provide transparent quotes after your consultation."
+priceNote: "The cost depends on the procedure and whether you have sedation. Simple extractions start from around £150. We give you a quote after your consultation."
 facts:
   - label: "Procedure duration"
-    value: "30 minutes to 2 hours depending on complexity"
+    value: "30 minutes to 2 hours, depending on complexity"
   - label: "Anaesthesia"
-    value: "Local anaesthetic with sedation options available"
+    value: "Local anaesthetic, with sedation available"
   - label: "Recovery time"
-    value: "3-7 days for most procedures"
-  - label: "Follow-Up"
+    value: "3 to 7 days for most procedures"
+  - label: "Follow-up"
     value: "Check-up appointments to monitor healing"
 helpsWith:
-  - title: "Wisdom teeth removal"
-    text: "Extract problematic wisdom teeth causing pain or crowding"
-  - title: "Complex extractions"
-    text: "Remove damaged, broken, or impacted teeth"
+  - title: "Wisdom tooth removal"
+    text: "For wisdom teeth that cause pain, infection or crowding."
+  - title: "Difficult extractions"
+    text: "Teeth that are badly damaged, broken or impacted."
   - title: "Bone grafting"
-    text: "Rebuild bone for dental implants or jaw support"
+    text: "Rebuilding bone, usually before a dental implant."
   - title: "Apicoectomy"
-    text: "Remove infected tissue from tooth root tips"
-  - title: "Cyst & lesion removal"
-    text: "Surgically remove cysts, tumours, or abnormal tissue"
+    text: "Removing infected tissue from the tip of a tooth root."
+  - title: "Cyst and lesion removal"
+    text: "Surgical removal of cysts or other abnormal tissue."
 stepsHeading: "What to expect during oral surgery"
 steps:
-  - title: "Initial consultation"
-    text: "We'll conduct a thorough examination, including X-rays or scans, to assess your condition. We'll discuss the recommended procedure, explain what's involved, and answer all your questions."
-  - title: "Pre-Operative planning"
-    text: "You'll receive detailed instructions on how to prepare for your procedure, including guidance on eating, drinking, and medications."
+  - title: "Consultation"
+    text: "We examine you and take X-rays or scans. We explain the procedure we recommend and answer your questions."
+  - title: "Preparing for surgery"
+    text: "We give you instructions on eating, drinking and medication before the day."
   - title: "The procedure"
-    text: "On the day, we'll ensure you're comfortable and relaxed. The area will be thoroughly anaesthetised, and sedation provided if required."
-  - title: "Recovery & aftercare"
-    text: "You'll receive comprehensive aftercare instructions and any necessary medications. We'll schedule follow-up appointments to monitor healing."
+    text: "We numb the area with local anaesthetic and give sedation if you have chosen it."
+  - title: "Recovery and aftercare"
+    text: "You go home with aftercare instructions and any medication you need. We book follow-up appointments to check healing."
 benefits:
-  - title: "Experienced surgeons"
-    text: "Our dental surgeons have extensive training and experience in oral surgery procedures"
-  - title: "Sedation options"
-    text: "We offer sedation for nervous patients to ensure a comfortable, anxiety-free experience"
-  - title: "Modern techniques"
-    text: "Advanced surgical methods for precise treatment and faster healing"
-  - title: "Comprehensive care"
-    text: "From initial consultation through recovery, we're with you every step"
-  - title: "Emergency availability"
-    text: "Quick appointments for urgent surgical needs"
-  - title: "Comfortable environment"
-    text: "State-of-the-art facilities designed for your comfort and safety"
+  - title: "Sedation for nervous patients"
+    text: "We offer oral and IV sedation as well as local anaesthetic."
+  - title: "Urgent appointments"
+    text: "We try to see people who need urgent surgery quickly."
+  - title: "Follow-up included in your care"
+    text: "We see you again after surgery to check the area is healing."
+  - title: "Expect some soreness afterwards"
+    text: "Swelling and discomfort are normal for a few days, and most procedures need 3 to 7 days of recovery."
 faqs:
   - question: "Is oral surgery painful?"
-    answer: "No. All oral surgery procedures are performed under local anaesthetic, so you won't feel pain during treatment. After the procedure, you may have some discomfort as you heal, but this is manageable with prescribed pain medication."
+    answer: "We numb the area with local anaesthetic first, so you should feel pressure but not pain during the procedure. Expect some soreness while you heal, which pain relief usually controls."
   - question: "How long does recovery take?"
-    answer: "Recovery time varies depending on the procedure. Simple extractions may require only 2-3 days of rest, while more complex procedures typically need 5-7 days. Most patients can return to normal activities within a week."
+    answer: "It depends on the procedure. A simple extraction may need only 2 to 3 days of rest, and more involved surgery usually needs 5 to 7. Most people are back to normal activities within a week."
   - question: "Do you offer sedation for nervous patients?"
-    answer: "Yes. We offer various sedation options including oral sedation and IV sedation to help you feel relaxed and comfortable during your procedure."
+    answer: "Yes. We offer oral sedation and IV sedation to help you relax during the procedure."
   - question: "When should wisdom teeth be removed?"
-    answer: "Wisdom teeth should be removed if they're causing problems such as pain, infection, crowding, damage to adjacent teeth, or cyst formation. We'll only recommend it if there's a clear clinical reason."
+    answer: "When they cause problems such as pain, infection, crowding, damage to the next tooth or a cyst. We only recommend removal if there is a clear clinical reason."
   - question: "What should I eat after oral surgery?"
-    answer: "Stick to soft, cool foods for the first few days, things like yoghurt, smoothies, mashed potatoes, soup (not too hot), and scrambled eggs. Avoid hard, crunchy, spicy, or very hot foods. Don't use straws."
+    answer: "Soft, cool food for the first few days: yoghurt, smoothies, mashed potato, scrambled eggs, soup that is not too hot. Avoid hard, crunchy, spicy or very hot food, and do not use straws."
 related:
   - "src/content/treatments/dental/dental-implants.md"
   - "src/content/treatments/dental/emergency.md"
   - "src/content/treatments/dental/crowns.md"
 gallery: []
 seo:
-  title: "Oral Surgery"
-  description: "Expert oral surgery services at ProDenta Battersea. Wisdom teeth removal, tooth extractions, and surgical procedures performed with care and precision."
+  title: "Oral surgery in Battersea"
+  description: "Wisdom tooth removal, extractions and minor oral surgery in Battersea, under local anaesthetic with sedation available. Simple extractions from £150."
 ---
 
 ## What is oral surgery?
 
-Oral surgery encompasses a range of surgical dental procedures designed to treat conditions affecting the teeth, gums, jaw, and surrounding structures. These procedures go beyond routine dentistry, addressing more complex issues that require surgical intervention.
+Oral surgery covers dental procedures that involve surgery on the teeth, gums or jaw. The most common are wisdom tooth removal and extractions that are too difficult for a routine appointment. It also includes bone grafting, apicoectomy and the removal of cysts.
 
-At ProDenta, our experienced dental surgeons perform oral surgery procedures with precision and care. We use modern techniques and equipment to ensure the best possible outcomes while prioritising your comfort throughout.
+Procedures take between 30 minutes and 2 hours and are done under local anaesthetic.
 
-## Expert oral surgery in Battersea
+## If you are worried about surgery
 
-At ProDenta, we understand that the prospect of oral surgery can feel daunting. That's why we take a gentle, patient-centred approach to every procedure.
-
-We use the latest surgical techniques and equipment to deliver precise, effective treatment with minimal discomfort. Our practice is fully equipped for a wide range of oral surgery procedures.
+Many people are. At the consultation we explain exactly what the procedure involves and what recovery is likely to be like. If you are anxious, ask about sedation, which can be given as a tablet or through a vein.

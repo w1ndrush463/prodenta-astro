@@ -1,10 +1,10 @@
 {
   "seo": {
     "title": "Patient Reviews",
-    "description": "Read what patients say about their care at ProDenta, a private dental practice in Battersea, London."
+    "description": "What patients have said about their care at ProDenta, a private dental practice in Battersea."
   },
-  "heading": "Kind words from our patients",
-  "intro": "We are grateful to every patient who takes the time to share their experience.",
+  "heading": "Patient reviews",
+  "intro": "A few of the things patients have told us after their treatment.",
   "image": "/src/assets/images/stock/smile-outdoors-white-top.jpg",
   "imageAlt": "A woman smiling outdoors",
   "reviews": [

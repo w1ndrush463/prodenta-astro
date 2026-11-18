@@ -1,0 +1,22 @@
+---
+// A photo in the rounded "tooth" outline from the logo, with a second
+// outline offset behind it.
+import Img from './Img.astro';
+
+interface Props {
+  src?: string | null;
+  alt?: string;
+  class?: string;
+  ratio?: string;
+  sizes?: string;
+  width?: number;
+  priority?: boolean;
+  position?: string;
+}
+const { src, alt, class: className = '', ratio = 'aspect-[4/5]', sizes = '(min-width: 1024px) 40vw, 90vw', width = 640, priority = false, position } = Astro.props;
+---
+
+<div class:list={['relative pr-4 pt-4', className]}>
+  <div class="shape-tooth absolute bottom-4 left-4 right-0 top-0 border-[1.5px] border-teal/45" aria-hidden="true"></div>
+  <Img src={src} alt={alt} class={`shape-tooth relative ${ratio}`} sizes={sizes} width={width} priority={priority} position={position} />
+</div>

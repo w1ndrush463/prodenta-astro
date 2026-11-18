@@ -1,58 +1,39 @@
 {
   "seo": {
     "title": "Private Dentist in Battersea",
-    "description": "ProDenta is a boutique private dentist in Battersea. Cosmetic dentistry, Invisalign, teeth whitening, dental implants and facial aesthetics. New patients welcome."
+    "description": "ProDenta is a private dental practice on St John's Hill, Battersea. General and cosmetic dentistry, Invisalign, implants and facial aesthetics."
   },
   "hero": {
-    "eyebrow": "Private dentist, Battersea",
-    "heading": "Gentle, expert care for a smile you love",
-    "text": "A boutique dental and facial aesthetics practice on St. John's Hill. New patients are always welcome.",
+    "heading": "Your dentist on St John's Hill",
+    "text": "ProDenta is a private dental practice in Battersea. We look after teeth, gums and skin, and we're open until 8pm three evenings a week.",
     "image": "/src/assets/images/stock/smile-warm-closeup.jpg",
     "imageAlt": "A woman with a warm, natural smile",
     "primaryLabel": "Book an appointment",
     "primaryUrl": "/contact",
-    "secondaryLabel": "Explore treatments",
+    "secondaryLabel": "See treatments",
     "secondaryUrl": "/treatments"
   },
-  "highlights": [
-    {
-      "title": "An experienced team",
-      "text": "Dentists, a therapist and visiting specialists under one roof."
-    },
-    {
-      "title": "Flexible ways to pay",
-      "text": "Payment plans and membership options to spread the cost."
-    },
-    {
-      "title": "Hours that suit you",
-      "text": "Early, evening and Saturday appointments."
-    }
-  ],
   "welcome": {
-    "eyebrow": "Welcome",
-    "heading": "A boutique practice with a family feel",
+    "heading": "Prevention comes first here",
     "paragraphs": [
-      "ProDenta is a private dental practice in Battersea, on St. John's Hill opposite the St John's Therapy Centre and a 10 minute walk from both Clapham Junction and Wandsworth Town stations.",
-      "We want to keep you, your family and your friends healthy and happy. Every patient is treated in a friendly, cheerful environment with a focus on care and clear communication.",
-      "Our emphasis is on prevention, so we work closely with you to explain how dental disease occurs and how best to reduce your risk of problems."
+      "ProDenta is on St John's Hill, opposite the St John's Therapy Centre. Clapham Junction and Wandsworth Town stations are each about ten minutes away on foot.",
+      "Most of what we do is ordinary dentistry done carefully: check-ups, hygiene visits and fillings. We explain what we find and what your options are before anything is done, and we show you how to stop the same problem coming back."
     ],
-    "image": "/src/assets/images/stock/dentist-patient-conversation.jpg",
-    "imageAlt": "A dentist talking with a patient",
+    "image": "/src/assets/images/stock/clinic-surgery-wide.jpg",
+    "imageAlt": "One of the treatment rooms",
     "linkLabel": "About the practice",
     "linkUrl": "/about"
   },
   "dental": {
-    "eyebrow": "Dentistry",
-    "heading": "Dental treatments",
-    "text": "From routine check-ups to complete smile makeovers, all in one place.",
+    "heading": "Dentistry",
+    "text": "Check-ups and hygiene, straightening, whitening, crowns and implants.",
     "image": "/src/assets/images/stock/smile-deep-teal.jpg",
     "imageAlt": "A woman with a bright smile",
     "linkLabel": "All dental treatments"
   },
   "aesthetics": {
-    "eyebrow": "Skin and aesthetics",
-    "heading": "Facial aesthetics and skin health",
-    "text": "Subtle, natural-looking treatments delivered by clinicians who understand facial anatomy.",
+    "heading": "Skin and facial aesthetics",
+    "text": "Injectable and skin treatments, carried out by our clinicians after a consultation.",
     "image": "/src/assets/images/stock/skin-golden-light.jpg",
     "imageAlt": "A woman with healthy, glowing skin",
     "linkLabel": "All aesthetic treatments"
@@ -60,33 +41,32 @@
   "offer": {
     "show": true,
     "eyebrow": "New patient offer",
-    "heading": "Full examination and hygiene clean",
+    "heading": "Examination and hygiene visit",
     "price": "£195",
-    "text": "A comprehensive dental examination with a professional hygiene clean. The ideal first visit.",
-    "buttonLabel": "Book your first visit",
+    "text": "A full examination and a hygiene clean for new patients.",
+    "buttonLabel": "Book a first visit",
     "buttonUrl": "/contact"
   },
   "reasons": {
-    "eyebrow": "Why ProDenta",
-    "heading": "Care that is built around you",
+    "heading": "How we work",
     "image": "/src/assets/images/stock/waiting-room.jpg",
     "imageAlt": "A calm, modern waiting area",
     "items": [
       {
-        "title": "Patient-centred care",
-        "text": "A family-friendly environment with time to listen and explain."
+        "title": "Time to talk",
+        "text": "Appointments are long enough to explain what we've found and to answer your questions."
       },
       {
-        "title": "Prevention first",
-        "text": "We work with you to stop problems before they start."
+        "title": "Specialist treatment in-house",
+        "text": "Orthodontics, root canal treatment, implants and oral surgery are all done at the practice."
       },
       {
-        "title": "Specialists on hand",
-        "text": "Orthodontics, endodontics, implants and oral surgery in-house."
+        "title": "Evenings and Saturdays",
+        "text": "Open until 8pm on Mondays, Tuesdays and Thursdays, and from 9am to 3pm on Saturdays."
       },
       {
-        "title": "Appointments that fit",
-        "text": "Evening, weekend and out-of-hours appointments available."
+        "title": "Families welcome",
+        "text": "We see children and adults, and many of our patients come as a family."
       }
     ]
   }

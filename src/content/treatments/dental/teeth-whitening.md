@@ -1,81 +1,75 @@
 ---
-title: "Teeth Whitening"
+title: "Teeth whitening"
 category: "enhance"
 order: 6
-summary: "Professional whitening for a brighter smile"
-intro: "Brighten your smile with professional teeth whitening. In-chair and at-home options with minimal sensitivity."
+summary: "Whitening at home or in the chair"
+intro: "We offer two kinds of whitening: custom trays you wear at home for 2 to 3 weeks, or a single in-chair appointment."
 image: "/src/assets/images/stock/smile-deep-teal.jpg"
-imageAlt: "A woman with a bright white smile"
+imageAlt: "A woman with white teeth, smiling"
 price: "£395"
-priceNote: "Includes custom-fitted whitening trays, professional whitening gel, and two appointments. Achieve professional results in the comfort of your home over 2-3 weeks."
+priceNote: "This is the price for at-home whitening. It includes custom-fitted trays, whitening gel and two appointments."
 facts:
-  - label: "At-Home duration"
-    value: "2-3 weeks of daily use"
-  - label: "In-Chair duration"
-    value: "Single 60-90 minute appointment"
-  - label: "At-Home daily wear"
-    value: "1-2 hours per day"
+  - label: "At-home duration"
+    value: "2 to 3 weeks of daily use"
+  - label: "In-chair duration"
+    value: "A single 60 to 90 minute appointment"
+  - label: "At-home daily wear"
+    value: "1 to 2 hours per day"
   - label: "Results last"
-    value: "1-3 years with good oral hygiene"
+    value: "1 to 3 years with good oral hygiene"
 helpsWith:
-  - title: "Extrinsic staining"
-    text: "Surface stains from coffee, tea, red wine, and tobacco"
-  - title: "Intrinsic staining"
-    text: "Deeper discolouration from ageing and certain medications"
-  - title: "Age-Related yellowing"
-    text: "Natural darkening that occurs over time"
+  - title: "Surface staining"
+    text: "Stains from coffee, tea, red wine and tobacco."
+  - title: "Deeper discolouration"
+    text: "Colour changes within the tooth from ageing or certain medications."
+  - title: "Yellowing with age"
+    text: "Teeth naturally darken over time."
 stepsHeading: "Our whitening options"
 steps:
-  - title: "At-Home whitening (£395)"
-    text: "Our most popular option combines professional-grade results with the convenience of home treatment. We'll create custom-fitted whitening trays specifically for your teeth."
-  - title: "How it works"
-    text: "You'll visit us for two quick appointments (approximately 30 minutes each). At your first appointment, we'll take impressions for custom trays. At your second, we'll fit your trays and provide professional whitening gel. Wear for 1-2 hours daily, achieving results in 2-3 weeks."
-  - title: "In-Chair whitening (prevdent system)"
-    text: "For faster results with minimal sensitivity. This innovative approach delivers immediate brightening in a single appointment while protecting tooth enamel."
-  - title: "How it works"
-    text: "In one comfortable appointment (60-90 minutes), we'll apply professional-strength whitening gel to your teeth and activate it with a special light. You'll leave with noticeably whiter teeth the same day."
+  - title: "At-home whitening (£395)"
+    text: "This is the option most of our patients choose. We make trays that fit your teeth, and you whiten at home with gel we supply."
+  - title: "At-home whitening: what happens"
+    text: "There are two appointments of about 30 minutes. At the first we take impressions; at the second we fit your trays and give you the gel. You wear the trays for 1 to 2 hours a day for 2 to 3 weeks."
+  - title: "In-chair whitening (Prevdent system)"
+    text: "A quicker option, done in one appointment. The Prevdent system contains nano-hydroxyapatite, which helps to reduce sensitivity."
+  - title: "In-chair whitening: what happens"
+    text: "The appointment takes 60 to 90 minutes. We apply whitening gel to your teeth and activate it with a light, and your teeth are whiter when you leave."
 benefits:
-  - title: "Safe & effective"
-    text: "Professional-strength formulas deliver superior results under expert supervision"
-  - title: "Minimal sensitivity"
-    text: "Our Prevdent system uses nano-hydroxyapatite to protect enamel and reduce sensitivity"
-  - title: "Custom-Fitted"
-    text: "At-home trays are made specifically for your teeth for even, consistent results"
-  - title: "Long-Lasting"
-    text: "Professional whitening lasts significantly longer than over-the-counter products"
-  - title: "Affordable"
-    text: "At-home whitening from just £395 - competitive prices in South West London"
-  - title: "Expert care"
-    text: "Treatment supervised by experienced dental professionals"
+  - title: "Trays made for your teeth"
+    text: "Custom trays hold the gel evenly against the teeth and keep it away from your gums."
+  - title: "Supervised by a dentist"
+    text: "We check your teeth and gums are healthy before you start, and we are here if you get sensitivity."
+  - title: "It does not change crowns or fillings"
+    text: "Whitening only works on natural teeth, so existing crowns, veneers and fillings stay the colour they are."
+  - title: "It is not permanent"
+    text: "Results typically last 1 to 3 years, and how white your teeth go depends on their starting colour."
 faqs:
   - question: "Will teeth whitening damage my enamel?"
-    answer: "No. When performed by dental professionals, teeth whitening is completely safe. Our Prevdent system actually uses nano-hydroxyapatite to strengthen enamel during the whitening process."
+    answer: "Whitening carried out by a dental professional is safe for enamel. We check your teeth first and tell you if whitening is not suitable for you."
   - question: "Will my teeth be sensitive after whitening?"
-    answer: "Most patients experience little to no sensitivity with our advanced whitening systems. Our Prevdent in-chair whitening delivers near-zero sensitivity thanks to nano-hydroxyapatite technology."
+    answer: "Some people get sensitivity during whitening, and it normally passes once treatment stops. The Prevdent in-chair system contains nano-hydroxyapatite to keep it to a minimum."
   - question: "How long do whitening results last?"
-    answer: "With good oral hygiene and regular dental care, professional whitening results typically last 1-3 years. Avoiding staining foods and drinks will help maintain your brighter smile longer."
+    answer: "Typically 1 to 3 years with good oral hygiene. Cutting down on staining food and drink helps the result last longer."
   - question: "Can I whiten my teeth if I have crowns or veneers?"
-    answer: "Whitening treatments only work on natural tooth enamel, they won't change the colour of crowns, veneers, fillings, or other dental restorations. We'll assess your existing dental work during consultation."
+    answer: "Whitening only works on natural enamel. It will not change the colour of crowns, veneers or fillings, so we look at your existing dental work at the consultation and tell you what to expect."
   - question: "How white will my teeth get?"
-    answer: "Results vary based on your natural tooth colour and the type of staining present. Most patients see their teeth lighten by several shades. We'll discuss realistic expectations during your consultation."
+    answer: "It depends on your natural tooth colour and the kind of staining. Most people see their teeth lighten by several shades, and we will tell you what is realistic before you start."
 related:
   - "src/content/treatments/dental/composite-bonding.md"
   - "src/content/treatments/dental/veneers.md"
   - "src/content/treatments/dental/hygiene.md"
 gallery: []
 seo:
-  title: "Teeth Whitening Battersea"
-  description: "Professional teeth whitening in Battersea from £395. In-chair & home whitening. Minimal sensitivity. Brighten your smile up to 8 shades. Book today."
+  title: "Teeth whitening in Battersea"
+  description: "Teeth whitening in Battersea. At-home whitening with custom trays costs £395 and takes 2 to 3 weeks. In-chair whitening takes one appointment."
 ---
 
 ## What is professional teeth whitening?
 
-Professional teeth whitening is a safe, effective cosmetic dental treatment that brightens your smile by removing stains and discolouration. At ProDenta, we offer two professional whitening options: in-chair whitening for immediate results, and at-home whitening with custom-made trays.
+Whitening uses a bleaching gel to lighten the colour of your teeth. Dentists can use stronger gels than the ones sold in shops, and we check your teeth and gums first.
 
-Unlike over-the-counter products, professional whitening uses higher-concentration bleaching agents that are carefully controlled to deliver superior results while protecting your teeth and gums. Our advanced Prevdent system uses nano-hydroxyapatite technology to minimise sensitivity.
+We offer it in two ways. At-home whitening uses custom-made trays that you wear for 1 to 2 hours a day over 2 to 3 weeks. In-chair whitening is done in a single appointment of 60 to 90 minutes.
 
-## Why choose teeth whitening at ProDenta?
+## Which option should I choose?
 
-At ProDenta, we combine advanced whitening technology with affordable pricing to make professional teeth whitening accessible to everyone in South West London.
-
-We use the latest Prevdent whitening system for in-chair treatments, featuring nano-hydroxyapatite technology that strengthens enamel while whitening, delivering the near-zero sensitivity our patients love.
+At-home whitening costs £395 and is the one most people pick. It is gradual, so you can stop when you are happy with the shade. In-chair whitening suits people who want the result on the day. For in-chair treatment we use the Prevdent system, which contains nano-hydroxyapatite to reduce sensitivity.

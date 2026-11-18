@@ -1,85 +1,79 @@
 ---
-title: "Routine Check-ups"
+title: "Routine check-ups"
 category: "maintain"
 order: 14
-summary: "Regular examinations and preventative care"
-intro: "Keep your smile healthy with regular check-ups. Preventative care, early detection, and professional examinations."
+summary: "A dentist's examination of your teeth and gums"
+intro: "A check-up is an examination of your teeth, gums and mouth by a dentist. It takes 20 to 30 minutes, and most people need one every 6 to 12 months."
 image: "/src/assets/images/stock/dentist-patient-conversation.jpg"
 imageAlt: "A dentist talking with a patient in a bright surgery"
 price: "Price on consultation"
-priceNote: "Routine examination pricing varies depending on whether X-rays are needed. Contact us to discuss our competitive check-up fees or ask about our dental membership plans."
+priceNote: "The fee depends on whether you need X-rays. Call us for our current check-up fees, or ask about our dental membership plans."
 facts:
   - label: "Appointment duration"
-    value: "20-30 minutes typically"
+    value: "Usually 20 to 30 minutes"
   - label: "Recommended frequency"
-    value: "Every 6-12 months"
+    value: "Every 6 to 12 months"
   - label: "Pain level"
-    value: "None, routine examination only"
-  - label: "Long-Term benefits"
-    value: "Prevents disease, saves money"
+    value: "None. It is an examination only"
+  - label: "Long-term benefits"
+    value: "Problems found early are simpler and cheaper to treat"
 helpsWith:
   - title: "Tooth decay"
-    text: "Catch cavities early before they need extensive treatment"
+    text: "A cavity found early needs a smaller filling."
   - title: "Gum disease"
-    text: "Identify gingivitis and periodontitis in early stages"
-  - title: "Oral cancer screening"
-    text: "Early detection of mouth, tongue, and throat abnormalities"
-  - title: "Hidden problems"
-    text: "Detect issues like worn fillings, cracked teeth, bite problems"
+    text: "We look for gingivitis and periodontitis in their early stages."
+  - title: "Mouth cancer screening"
+    text: "We check the mouth, tongue and throat for anything unusual."
+  - title: "Problems you cannot see"
+    text: "Worn fillings, cracked teeth and bite problems are easy to miss at home."
 stepsHeading: "What happens during a check-up?"
 steps:
-  - title: "Medical history review"
-    text: "We'll discuss any changes to your general health, medications, or dental concerns."
-  - title: "Visual examination"
-    text: "We thoroughly examine every tooth, checking for decay, cracks, worn fillings, and other damage. We'll assess your gums and check your bite."
-  - title: "Oral cancer screening"
-    text: "We check your tongue, throat, lips, and soft tissues for any abnormalities."
-  - title: "X-rays (if needed)"
-    text: "Digital X-rays reveal problems invisible to the naked eye."
-  - title: "Treatment planning"
-    text: "If we identify any issues, we'll discuss them and create a plan that fits your needs and budget."
+  - title: "Medical history"
+    text: "We ask about any changes to your general health or medication, and about anything that is bothering you."
+  - title: "Examination"
+    text: "We look at every tooth for decay, cracks and worn fillings. We also check your gums and your bite."
+  - title: "Mouth cancer screening"
+    text: "We check your tongue, throat, lips and the soft tissues of your mouth."
+  - title: "X-rays, if needed"
+    text: "Digital X-rays show problems that cannot be seen by looking."
+  - title: "Treatment plan"
+    text: "If we find anything, we explain it and agree a plan with you that fits your needs and budget."
 benefits:
-  - title: "Early detection saves money"
-    text: "Small problems are much cheaper to fix than advanced decay or gum disease"
-  - title: "Prevent pain & emergencies"
-    text: "Catch issues before they become painful or require urgent treatment"
-  - title: "Preserve your natural teeth"
-    text: "Regular monitoring helps you keep your teeth for life"
-  - title: "Oral cancer screening"
-    text: "Early detection can be life-saving"
-  - title: "Professional advice"
-    text: "Get personalised guidance on improving your oral health"
-  - title: "Monitor existing work"
-    text: "Check fillings, crowns, and other restorations are functioning properly"
+  - title: "Lower cost over time"
+    text: "A small problem costs much less to fix than advanced decay or gum disease."
+  - title: "Fewer emergencies"
+    text: "Most problems can be found before they become painful."
+  - title: "A check on existing work"
+    text: "We check that your fillings, crowns and other dental work are still sound."
 faqs:
   - question: "How often should I have a dental check-up?"
-    answer: "Most patients should visit every 6-12 months. If you have gum disease, a history of decay, or other risk factors, we may recommend more frequent visits."
+    answer: "Most patients should come every 6 to 12 months. If you have gum disease or a history of decay, we may suggest coming more often."
   - question: "What happens if you find a problem during my check-up?"
-    answer: "If we identify any issues, we'll explain exactly what we've found, discuss your treatment options, and provide a clear treatment plan with costs. We'll never proceed without your informed consent."
+    answer: "We explain what we have found, go through your options and give you a treatment plan with costs. We do not start any treatment without your consent."
   - question: "Do I need X-rays at every check-up?"
-    answer: "No. We only take X-rays when clinically necessary. Most patients need X-rays every 1-2 years. We use digital X-rays which emit 90% less radiation than traditional film."
+    answer: "No. We take X-rays only when there is a clinical reason, which for most patients is every 1 to 2 years. Our X-rays are digital."
   - question: "What's the difference between a check-up and a hygiene appointment?"
-    answer: "A check-up is an examination by a dentist. A hygiene appointment is professional cleaning by a dental hygienist. Most patients need both."
+    answer: "A check-up is an examination by a dentist. A hygiene appointment is a professional clean by a dental hygienist. Most patients need both."
   - question: "Can I have a check-up if I'm nervous about the dentist?"
-    answer: "Absolutely. Our team is experienced in treating nervous patients. Check-ups are non-invasive, there's no drilling or injections, just a gentle look at your teeth and gums."
+    answer: "Yes. We see nervous patients regularly. A check-up involves no drilling and no injections, only a look at your teeth and gums."
 related:
   - "src/content/treatments/dental/hygiene.md"
   - "src/content/treatments/dental/new-patients.md"
   - "src/content/treatments/dental/emergency.md"
 gallery: []
 seo:
-  title: "Routine Check-ups"
-  description: "Regular dental check-ups at ProDenta Battersea. Preventative care to keep your smile healthy. Book your routine examination today."
+  title: "Dental check-ups in Battersea"
+  description: "Routine dental check-ups in Battersea. A 20 to 30 minute examination of your teeth and gums, with X-rays only when they are needed."
 ---
 
-## What are routine check-ups?
+## What is a routine check-up?
 
-A routine dental check-up is a comprehensive examination of your teeth, gums, and oral health. Regular check-ups are the foundation of preventative dentistry, allowing us to monitor your oral health and detect problems early.
+A check-up is an examination of your teeth, gums and mouth. We look for decay and gum disease, screen for mouth cancer, and check any fillings or crowns you already have. Most patients should have one every 6 to 12 months.
 
-During your check-up, we thoroughly examine your teeth for signs of decay, check your gums for disease, screen for oral cancer, and assess your overall dental health. Most patients should have a check-up every 6-12 months.
+The point of coming regularly is to find problems while they are small. Early decay or gum disease is simpler and cheaper to treat than the advanced kind.
 
-## Why choose ProDenta for your check-ups?
+## Check-ups at ProDenta
 
-At ProDenta, we believe in thorough, unhurried examinations. We take the time to discuss your concerns, explain any findings clearly, and answer all your questions.
+A check-up here takes 20 to 30 minutes. That leaves time to talk through anything that is worrying you and to explain what we find.
 
-We understand that some patients feel anxious about dental visits. Our friendly team creates a comfortable, welcoming environment where you can relax.
+If dental visits make you anxious, it may help to know that a check-up involves no drilling and no injections.

@@ -2,76 +2,68 @@
 title: "Sunekos"
 category: "maintain"
 order: 21
-summary: "Amino acid complex for skin regeneration"
-intro: "Advanced injectable treatment combining amino acids and hyaluronic acid to regenerate your skin's natural structure and vitality."
+summary: "Amino acid and hyaluronic acid skin injections"
+intro: "Sunekos is an injectable treatment that combines amino acids with hyaluronic acid to stimulate collagen and elastin. A course is 4 sessions."
 image: "/src/assets/images/stock/skin-freckles-flower.jpg"
-imageAlt: "Close-up of fresh, natural skin"
+imageAlt: "Close-up of skin with freckles"
 price: "From £250 per session"
-priceNote: "A course of 4 sessions is recommended, spaced 7-10 days apart. Maintenance sessions every 6-9 months help sustain results."
+priceNote: "We recommend a course of 4 sessions, 7 to 10 days apart. A maintenance session every 6 to 9 months helps keep the result."
 facts:
   - label: "Treatment time"
     value: "30 minutes per session"
   - label: "Results visible"
     value: "Gradual improvement over weeks"
   - label: "Duration"
-    value: "6-9 months after treatment course"
+    value: "6 to 9 months after a course"
   - label: "Sessions required"
-    value: "4 sessions, 7-10 days apart"
+    value: "4 sessions, 7 to 10 days apart"
 helpsWith:
-  - title: "Fine lines & wrinkles"
-    text: "Superficial lines caused by collagen depletion and skin ageing"
+  - title: "Fine lines"
+    text: "Fine surface lines linked to loss of collagen"
   - title: "Loss of elasticity"
-    text: "Reduced skin firmness and bounce due to elastin breakdown"
-  - title: "Dark circles & hollows"
-    text: "Under-eye darkness and volume loss creating a tired appearance"
+    text: "Skin that has become less firm"
+  - title: "Dark circles and hollows"
+    text: "Darkness and hollowing under the eyes"
 stepsHeading: "How does the treatment work?"
 steps:
   - title: ""
-    text: "Sunekos works through a unique amino acid complex that activates fibroblasts, the cells responsible for producing collagen and elastin. The treatment is injected into the dermis using micro-injections, where it stimulates the regeneration of your skin's natural support structure."
-  - title: "We offer two Sunekos formulations"
-    text: "Sunekos 1200 for delicate areas like the under-eye region and décolletage, and Sunekos Performa for areas requiring deeper structural support. The treatment takes approximately 30 minutes with minimal discomfort."
+    text: "Sunekos contains an amino acid complex that activates fibroblasts, the cells that make collagen and elastin. We inject it into the dermis with a series of small injections."
+  - title: "The two Sunekos formulations"
+    text: "Sunekos 1200 is for delicate areas such as under the eyes and the décolletage, and Sunekos Performa is for areas that need deeper support. A session takes about 30 minutes."
   - title: ""
-    text: "A typical course involves 4 sessions spaced 7-10 days apart. Results develop gradually as your skin regenerates, with improvements continuing for months after treatment. Effects can last up to 6-9 months."
+    text: "A course is 4 sessions, 7 to 10 days apart. Results develop gradually and last 6 to 9 months."
 benefits:
-  - title: "Consultation"
-    text: "We'll assess your skin concerns and recommend the appropriate Sunekos formulation"
-  - title: "Treatment"
-    text: "Precise micro-injections administered across treatment areas, taking approximately 30 minutes"
-  - title: "Minimal discomfort"
-    text: "Very fine needles ensure the treatment is well-tolerated"
-  - title: "No downtime"
-    text: "You can resume normal activities immediately after treatment"
-  - title: "Results"
-    text: "Gradual skin improvement developing over weeks, with ongoing benefits after the course"
+  - title: "Formulation chosen for the area"
+    text: "We assess your skin and choose Sunekos 1200 or Sunekos Performa for the area being treated."
+  - title: "Very fine needles"
+    text: "The injections use very fine needles and most patients tolerate them well."
+  - title: "Little downtime"
+    text: "Most people return to normal activities straight after treatment."
 faqs:
   - question: "Is Sunekos painful?"
-    answer: "Sunekos is generally well-tolerated. The micro-injections may cause slight discomfort, but the procedure is quick and uses very fine needles. Most patients find it comfortable."
-  - question: "How long do results last?"
-    answer: "Results typically last 6-9 months after completing the initial 4-session course. Maintenance treatments every 6-9 months help sustain the regenerative effects."
+    answer: "The injections can cause slight discomfort, but they are quick and use very fine needles. Most patients tolerate them well."
   - question: "Are there any side effects?"
-    answer: "Side effects are minimal and temporary. You may experience slight redness, swelling, or minor bruising at injection sites, which typically resolves within 24-48 hours."
+    answer: "You may have slight redness, swelling or minor bruising at the injection sites, which usually settles within 24 to 48 hours."
   - question: "When will I see results?"
-    answer: "Results develop gradually as your skin regenerates. You may notice initial improvements during the treatment course, with ongoing enhancement continuing for several weeks after completion."
+    answer: "Results come gradually. You may notice a change during the course, and improvement continues for several weeks after the last session."
   - question: "What's the difference between Sunekos 1200 and Sunekos Performa?"
-    answer: "Sunekos 1200 is ideal for delicate areas like the under-eye region, neck, and décolletage. Sunekos Performa contains additional hyaluronic acid for treating areas requiring deeper structural support like the face and hands."
+    answer: "Sunekos 1200 is for delicate areas such as under the eyes, the neck and the décolletage. Sunekos Performa contains more hyaluronic acid and is used where deeper support is needed, such as the face and hands."
 related:
   - "src/content/treatments/aesthetics/profhilo.md"
   - "src/content/treatments/aesthetics/microneedling.md"
   - "src/content/treatments/aesthetics/skincare-consultations.md"
 gallery: []
 seo:
-  title: "Sunekos Skin Rejuvenation Treatment"
-  description: "Sunekos skin rejuvenation at ProDenta. Advanced amino acid and hyaluronic acid treatment to restore skin elasticity, reduce fine lines, and improve overall skin quality."
+  title: "Sunekos skin injections in Battersea"
+  description: "Sunekos in Battersea: amino acid and hyaluronic acid injections for fine lines, skin elasticity and dark circles. A course is 4 sessions of 30 minutes."
 ---
 
 ## What is Sunekos?
 
-Sunekos is a revolutionary injectable treatment that combines hyaluronic acid with a patented amino acid complex to regenerate the skin's Extra Cellular Matrix (ECM). Available in two formulations, Sunekos 1200 and Sunekos Performa, this treatment stimulates natural collagen and elastin production to restore skin quality from within.
+Sunekos is an injectable treatment that combines hyaluronic acid with a patented amino acid complex. It stimulates the skin's own collagen and elastin, and comes in two formulations, Sunekos 1200 and Sunekos Performa.
 
-At ProDenta, we use Sunekos to address a wide range of skin concerns, from fine lines and loss of elasticity to dark circles and uneven texture. The result is naturally rejuvenated skin that looks healthier, firmer, and more radiant without changing your appearance.
+We use it for fine lines, loss of elasticity, dark circles and uneven texture. It improves skin quality and does not change the shape of your face.
 
-## Why choose Sunekos at ProDenta?
+## Sunekos at ProDenta
 
-At ProDenta, we're committed to offering the most advanced skin rejuvenation treatments available. Our practitioners are expertly trained in Sunekos injection techniques to ensure optimal product distribution and results.
-
-We use only genuine Sunekos products and carefully select the appropriate formulation for each patient's unique needs. Whether addressing delicate under-eye concerns or restoring facial skin quality, we create personalised treatment plans.
+We use genuine Sunekos and choose the formulation for the area being treated, including the delicate skin under the eyes. Our practitioners are trained in the injection technique.

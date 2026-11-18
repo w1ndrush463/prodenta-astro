@@ -81,7 +81,6 @@ content:
             label: Top of page
             type: object
             fields:
-              - { name: eyebrow, label: Small label, type: string, description: The small capital-letter line above the heading. }
               - { name: heading, label: Heading, type: string, required: true }
               - { name: text, label: Text, type: text }
               - { name: image, label: Photo, component: image }
@@ -90,15 +89,10 @@ content:
               - { name: primaryUrl, label: Main button link, type: string, description: "A page on this site, e.g. /contact" }
               - { name: secondaryLabel, label: Second link text, type: string }
               - { name: secondaryUrl, label: Second link, type: string }
-          - name: highlights
-            label: Three highlights
-            description: The row of three short points under the top photo.
-            component: titledList
           - name: welcome
             label: Welcome section
             type: object
             fields:
-              - { name: eyebrow, label: Small label, type: string }
               - { name: heading, label: Heading, type: string }
               - { name: paragraphs, label: Paragraphs, type: text, list: true }
               - { name: image, label: Photo, component: image }
@@ -110,7 +104,6 @@ content:
             description: The list of treatments is filled in automatically from the Treatments area.
             type: object
             fields:
-              - { name: eyebrow, label: Small label, type: string }
               - { name: heading, label: Heading, type: string }
               - { name: text, label: Text, type: text }
               - { name: image, label: Photo, component: image }
@@ -121,7 +114,6 @@ content:
             description: The list of treatments is filled in automatically from the Treatments area.
             type: object
             fields:
-              - { name: eyebrow, label: Small label, type: string }
               - { name: heading, label: Heading, type: string }
               - { name: text, label: Text, type: text }
               - { name: image, label: Photo, component: image }
@@ -132,7 +124,7 @@ content:
             type: object
             fields:
               - { name: show, label: Show this offer on the home page, type: boolean }
-              - { name: eyebrow, label: Small label, type: string }
+              - { name: eyebrow, label: Offer name, type: string, description: "e.g. New patient offer" }
               - { name: heading, label: Heading, type: string }
               - { name: price, label: Price, type: string, description: "e.g. £195" }
               - { name: text, label: Text, type: text }
@@ -142,7 +134,6 @@ content:
             label: Why ProDenta section
             type: object
             fields:
-              - { name: eyebrow, label: Small label, type: string }
               - { name: heading, label: Heading, type: string }
               - { name: items, label: Reasons, component: titledList }
               - { name: image, label: Photo, component: image }

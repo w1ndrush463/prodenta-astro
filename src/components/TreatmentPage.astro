@@ -41,7 +41,7 @@ const faqSchema = t.faqs.length
       })),
     }
   : undefined;
-const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
+const surface = type === 'aesthetics' ? 'bg-shell' : 'bg-mist';
 ---
 
 <BaseLayout
@@ -53,20 +53,20 @@ const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
   tone={type === 'aesthetics' ? 'aesthetics' : 'default'}
 >
   <PageHero heading={t.title} intro={t.intro} image={t.image} imageAlt={t.imageAlt} breadcrumbs={breadcrumbs} surface={surface}>
-    <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+    <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
       <a href="/contact" class="btn">Book a consultation</a>
-      {t.price && <p class="text-sm font-semibold uppercase tracking-[0.14em] text-ink">{t.price}</p>}
+      {t.price && <p class="font-semibold text-ink">{t.price}</p>}
     </div>
   </PageHero>
 
   <!-- Key facts -->
   {t.facts.length > 0 && (
     <section class="border-b border-line" aria-label="At a glance">
-      <dl class="wrap grid grid-cols-2 lg:grid-cols-4">
-        {t.facts.slice(0, 4).map((f, i) => (
-          <div class:list={['border-line py-7 pr-6 lg:py-9', i % 2 === 1 && 'border-l pl-6', i > 1 && 'border-t lg:border-t-0', i > 0 && 'lg:border-l lg:pl-10']}>
-            <dt class="eyebrow">{f.label}</dt>
-            <dd class="mt-2 font-display text-[1.45rem] leading-snug text-ink">{f.value}</dd>
+      <dl class="wrap grid grid-cols-2 gap-x-8 gap-y-6 py-8 lg:grid-cols-4 lg:py-10">
+        {t.facts.slice(0, 4).map((f) => (
+          <div>
+            <dt class="label">{f.label}</dt>
+            <dd class="mt-1 text-lg leading-snug text-ink">{f.value}</dd>
           </div>
         ))}
       </dl>
@@ -75,19 +75,19 @@ const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
 
   <!-- Overview -->
   <section class="section">
-    <div class="wrap grid gap-12 lg:grid-cols-12 lg:gap-20">
+    <div class="wrap grid gap-12 lg:grid-cols-12">
       <div class="prose-site lg:col-span-7">
         <Content />
       </div>
       {t.helpsWith.length > 0 && (
-        <aside class="lg:col-span-4 lg:col-start-9" data-reveal>
-          <div class:list={[surface, 'p-8 lg:sticky lg:top-32 lg:p-10']}>
+        <aside class="lg:col-span-4 lg:col-start-9">
+          <div class:list={[surface, 'shape-soft p-7 lg:sticky lg:top-28 lg:p-9']}>
             <h2 class="text-subtitle">It can help with</h2>
-            <ul class="mt-6">
+            <ul class="mt-5 space-y-4">
               {t.helpsWith.map((h) => (
-                <li class="border-t border-ink/15 py-4">
-                  <p class="font-medium text-ink">{h.title}</p>
-                  {h.text && <p class="text-[0.95rem] text-muted">{h.text}</p>}
+                <li>
+                  <p class="font-semibold text-ink">{h.title}</p>
+                  {h.text && <p class="text-[0.975rem]">{h.text}</p>}
                 </li>
               ))}
             </ul>
@@ -99,19 +99,16 @@ const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
 
   <!-- How it works -->
   {t.steps.length > 0 && (
-    <section class:list={['section', surface]}>
-      <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16">
-        <div class="lg:col-span-4" data-reveal>
-          <p class="eyebrow mb-5">What to expect</p>
-          <h2 class="text-title">{t.stepsHeading || 'How it works'}</h2>
-        </div>
-        <ol class="border-t border-ink/80 lg:col-span-8">
+    <section class="pb-[var(--spacing-section)]">
+      <div class="wrap">
+        <h2 class="text-title">{t.stepsHeading || 'What happens'}</h2>
+        <ol class="mt-8 grid gap-x-12 border-t border-line md:grid-cols-2">
           {t.steps.map((s, i) => (
-            <li class="grid grid-cols-[3rem_1fr] gap-4 border-b border-ink/15 py-7">
-              <span class="pt-1.5 text-sm tracking-widest text-clay" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <li class="flex gap-5 border-b border-line py-6">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-teal/50 font-semibold text-teal" aria-hidden="true">{i + 1}</span>
               <div>
-                {s.title && <h3 class="mb-2 text-[1.6rem] leading-tight">{s.title}</h3>}
-                <p class="max-w-2xl">{s.text}</p>
+                {s.title && <h3 class="mb-1.5 font-sans text-lg font-semibold">{s.title}</h3>}
+                <p>{s.text}</p>
               </div>
             </li>
           ))}
@@ -120,19 +117,18 @@ const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
     </section>
   )}
 
-  <!-- Benefits + price -->
+  <!-- Things to know + price -->
   {(t.benefits.length > 0 || t.price) && (
-    <section class="section">
-      <div class="wrap grid gap-14 lg:grid-cols-12 lg:gap-20">
+    <section class:list={['section', surface]}>
+      <div class="wrap grid gap-12 lg:grid-cols-12">
         {t.benefits.length > 0 && (
-          <div class="lg:col-span-7" data-reveal>
-            <p class="eyebrow mb-5">The benefits</p>
-            <h2 class="text-title max-w-[16ch]">Why patients choose it</h2>
-            <dl class="mt-10 grid gap-x-12 sm:grid-cols-2">
+          <div class="lg:col-span-7">
+            <h2 class="text-title">Good to know</h2>
+            <dl class="mt-8 space-y-6">
               {t.benefits.map((b) => (
-                <div class="border-t border-line py-5">
-                  <dt class="font-display text-2xl leading-tight text-ink">{b.title}</dt>
-                  <dd class="mt-1 text-muted">{b.text}</dd>
+                <div>
+                  <dt class="text-lg font-semibold text-ink">{b.title}</dt>
+                  <dd class="mt-1 max-w-xl">{b.text}</dd>
                 </div>
               ))}
             </dl>
@@ -140,13 +136,13 @@ const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
         )}
         {t.price && (
           <div class="lg:col-span-4 lg:col-start-9">
-            <div class="on-dark bg-ink p-8 lg:p-10">
-              <p class="eyebrow">Fees</p>
-              <p class="mt-4 font-display text-[2.6rem] leading-[1.05] text-ivory">{t.price}</p>
-              {t.priceNote && <p class="mt-5 text-[0.95rem]">{t.priceNote}</p>}
-              <div class="mt-8 flex flex-col items-start gap-5">
-                <a href="/contact" class="btn btn-light">Book a consultation</a>
-                <a href="/fees" class="link">See all fees</a>
+            <div class="shape-soft bg-white p-7 lg:p-9">
+              <p class="label">Fees</p>
+              <p class="mt-2 font-display text-[2rem] leading-[1.15] text-ink">{t.price}</p>
+              {t.priceNote && <p class="mt-4 text-[0.975rem]">{t.priceNote}</p>}
+              <div class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
+                <a href="/contact" class="btn">Book a consultation</a>
+                <a href="/fees" class="link">All fees</a>
               </div>
             </div>
           </div>
@@ -159,12 +155,11 @@ const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
   {gallery.length > 0 && (
     <section class="section border-t border-line">
       <div class="wrap">
-        <p class="eyebrow mb-5">Results</p>
         <h2 class="text-title">Before and after</h2>
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {gallery.map((g) => (
             <figure>
-              <Img src={g.image} alt={g.caption || `${t.title} result`} class="aspect-[4/3]" sizes="(min-width: 1024px) 33vw, 100vw" width={500} />
+              <Img src={g.image} alt={g.caption || `${t.title} result`} class="shape-soft aspect-[4/3]" sizes="(min-width: 1024px) 33vw, 100vw" width={500} />
               {g.caption && <figcaption class="mt-3 text-sm text-muted">{g.caption}</figcaption>}
             </figure>
           ))}
@@ -174,20 +169,19 @@ const surface = type === 'aesthetics' ? 'bg-blush' : 'bg-sand';
     </section>
   )}
 
-  <div class="border-t border-line"><Faqs faqs={t.faqs} /></div>
+  <Faqs faqs={t.faqs} />
 
   {related.length > 0 && (
-    <section class:list={['section-tight', surface]}>
+    <section class="pb-[var(--spacing-section)]">
       <div class="wrap">
-        <p class="eyebrow mb-8">You may also be interested in</p>
-        <ul class="grid gap-8 md:grid-cols-3">
+        <h2 class="text-subtitle">Related treatments</h2>
+        <ul class="mt-7 grid gap-8 md:grid-cols-3">
           {related.map((r) => (
             <li>
               <a href={urlOf(r)} class="group block">
-                <Img src={r.data.image} alt="" class="aspect-[4/3]" sizes="(min-width: 768px) 33vw, 100vw" width={450} />
-                <p class="mt-5 font-display text-[1.75rem] leading-tight text-ink">{r.data.title}</p>
-                <p class="mt-1 text-muted">{r.data.summary}</p>
-                <span class="link mt-4">Learn more <span aria-hidden="true">&rarr;</span></span>
+                <Img src={r.data.image} alt="" class="shape-soft aspect-[3/2]" sizes="(min-width: 768px) 33vw, 100vw" width={450} />
+                <p class="mt-4 text-lg font-semibold text-ink underline-offset-4 group-hover:underline">{r.data.title}</p>
+                <p class="mt-0.5 text-muted">{r.data.summary}</p>
               </a>
             </li>
           ))}
