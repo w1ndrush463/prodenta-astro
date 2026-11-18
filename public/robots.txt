@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prodenta-astro.netlify.app/sitemap-index.xml

@@ -1,0 +1,93 @@
+{
+  "seo": {
+    "title": "Private Dentist in Battersea",
+    "description": "ProDenta is a boutique private dentist in Battersea. Cosmetic dentistry, Invisalign, teeth whitening, dental implants and facial aesthetics. New patients welcome."
+  },
+  "hero": {
+    "eyebrow": "Private dentist, Battersea",
+    "heading": "Gentle, expert care for a smile you love",
+    "text": "A boutique dental and facial aesthetics practice on St. John's Hill. New patients are always welcome.",
+    "image": "/src/assets/images/stock/smile-warm-closeup.jpg",
+    "imageAlt": "A woman with a warm, natural smile",
+    "primaryLabel": "Book an appointment",
+    "primaryUrl": "/contact",
+    "secondaryLabel": "Explore treatments",
+    "secondaryUrl": "/treatments"
+  },
+  "highlights": [
+    {
+      "title": "An experienced team",
+      "text": "Dentists, a therapist and visiting specialists under one roof."
+    },
+    {
+      "title": "Flexible ways to pay",
+      "text": "Payment plans and membership options to spread the cost."
+    },
+    {
+      "title": "Hours that suit you",
+      "text": "Early, evening and Saturday appointments."
+    }
+  ],
+  "welcome": {
+    "eyebrow": "Welcome",
+    "heading": "A boutique practice with a family feel",
+    "paragraphs": [
+      "ProDenta is a private dental practice in Battersea, on St. John's Hill opposite the St John's Therapy Centre and a 10 minute walk from both Clapham Junction and Wandsworth Town stations.",
+      "We want to keep you, your family and your friends healthy and happy. Every patient is treated in a friendly, cheerful environment with a focus on care and clear communication.",
+      "Our emphasis is on prevention, so we work closely with you to explain how dental disease occurs and how best to reduce your risk of problems."
+    ],
+    "image": "/src/assets/images/stock/dentist-patient-conversation.jpg",
+    "imageAlt": "A dentist talking with a patient",
+    "linkLabel": "About the practice",
+    "linkUrl": "/about"
+  },
+  "dental": {
+    "eyebrow": "Dentistry",
+    "heading": "Dental treatments",
+    "text": "From routine check-ups to complete smile makeovers, all in one place.",
+    "image": "/src/assets/images/stock/smile-deep-teal.jpg",
+    "imageAlt": "A woman with a bright smile",
+    "linkLabel": "All dental treatments"
+  },
+  "aesthetics": {
+    "eyebrow": "Skin and aesthetics",
+    "heading": "Facial aesthetics and skin health",
+    "text": "Subtle, natural-looking treatments delivered by clinicians who understand facial anatomy.",
+    "image": "/src/assets/images/stock/skin-golden-light.jpg",
+    "imageAlt": "A woman with healthy, glowing skin",
+    "linkLabel": "All aesthetic treatments"
+  },
+  "offer": {
+    "show": true,
+    "eyebrow": "New patient offer",
+    "heading": "Full examination and hygiene clean",
+    "price": "£195",
+    "text": "A comprehensive dental examination with a professional hygiene clean. The ideal first visit.",
+    "buttonLabel": "Book your first visit",
+    "buttonUrl": "/contact"
+  },
+  "reasons": {
+    "eyebrow": "Why ProDenta",
+    "heading": "Care that is built around you",
+    "image": "/src/assets/images/stock/waiting-room.jpg",
+    "imageAlt": "A calm, modern waiting area",
+    "items": [
+      {
+        "title": "Patient-centred care",
+        "text": "A family-friendly environment with time to listen and explain."
+      },
+      {
+        "title": "Prevention first",
+        "text": "We work with you to stop problems before they start."
+      },
+      {
+        "title": "Specialists on hand",
+        "text": "Orthodontics, endodontics, implants and oral surgery in-house."
+      },
+      {
+        "title": "Appointments that fit",
+        "text": "Evening, weekend and out-of-hours appointments available."
+      }
+    ]
+  }
+}

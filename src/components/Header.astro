@@ -1,112 +1,183 @@
 ---
-import { site } from '../data/site';
-import { dentalDropdown, aestheticsDropdown, mainNavLinks } from '../data/navigation';
+import { Image } from 'astro:assets';
+import logo from '../assets/images/prodenta-logo.png';
+import { site as getSite, setting, groupedTreatments, telHref, urlOf } from '../lib/content';
+
+const site = await getSite();
+const nav = await setting('navigation');
+const [dental, aesthetics] = await Promise.all([groupedTreatments('dental'), groupedTreatments('aesthetics')]);
+
+const menus = [
+  { id: 'dental', label: 'Dental', all: 'All dental treatments', url: '/treatments', groups: dental },
+  { id: 'aesthetics', label: 'Aesthetics', all: 'All aesthetic treatments', url: '/facial-aesthetics-treatments', groups: aesthetics },
+];
+const links: { label: string; url: string }[] = nav.header ?? [];
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrent = (url: string) => path === url || path.startsWith(`${url}/`);
 ---
 
-<header class="sticky top-0 z-50 bg-white shadow-soft">
-  <div class="max-w-7xl mx-auto">
-    <!-- Top Bar -->
-    <div class="flex items-center justify-between px-4 md:px-8 py-3">
-      <a href="/" class="shrink-0">
-        <img src="/images/prodenta-logo blue.png" alt="ProDenta" class="h-10 md:h-12">
-      </a>
+<header class="sticky top-0 z-50 border-b border-line bg-ivory/95 backdrop-blur-sm" data-header>
+  <div class="wrap flex h-[4.5rem] items-center justify-between gap-6 lg:h-[5.25rem]">
+    <a href="/" class="shrink-0" aria-label={`${site.name} home`}>
+      <Image src={logo} alt={site.name} width={166} height={44} loading="eager" class="h-9 w-auto lg:h-11" />
+    </a>
 
-      <div class="hidden md:flex items-center gap-6">
-        <div class="text-sm">
-          <p class="font-semibold">Call us now: <a href={site.phoneHref} class="text-primary hover:text-secondary">{site.phone}</a></p>
-          <p class="font-semibold">WhatsApp us now: <a href={site.whatsappHref} class="text-primary hover:text-secondary">{site.whatsapp}</a></p>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href={site.social.instagram} target="_blank" aria-label="Instagram" class="opacity-70 hover:opacity-100 transition-opacity">
-            <img src="/icons/instagram.png" alt="Instagram" class="w-6 h-6">
-          </a>
-          <a href={site.social.facebook} target="_blank" aria-label="Facebook" class="opacity-70 hover:opacity-100 transition-opacity">
-            <img src="/icons/facebook.png" alt="Facebook" class="w-6 h-6">
-          </a>
-          <a href={site.emailHref} aria-label="Email" class="opacity-70 hover:opacity-100 transition-opacity">
-            <img src="/icons/mail.png" alt="Email" class="w-6 h-6">
-          </a>
-        </div>
-      </div>
-
-      <!-- Hamburger -->
-      <button class="md:hidden flex flex-col gap-1.5 p-2 hamburger-menu" onclick="toggleMobileMenu()" aria-label="Menu">
-        <span class="block w-6 h-0.5 bg-primary transition-all hamburger-line"></span>
-        <span class="block w-6 h-0.5 bg-primary transition-all hamburger-line"></span>
-        <span class="block w-6 h-0.5 bg-primary transition-all hamburger-line"></span>
-      </button>
-    </div>
-
-    <!-- Desktop Nav -->
-    <nav class="hidden md:block border-t border-border-light">
-      <ul class="flex items-center justify-center gap-0 px-4">
-        <!-- Dental Treatments Dropdown -->
-        <li class="relative group">
-          <a href={dentalDropdown.href} class="block px-4 py-3 text-xs font-display font-semibold uppercase tracking-wider text-primary hover:text-secondary transition-colors">
-            {dentalDropdown.label}
-          </a>
-          <div class="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block bg-white shadow-deep rounded-lg p-6 w-[min(700px,calc(100vw-2rem))] z-50">
-            <div class="grid grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
-              {dentalDropdown.columns.map((col) => (
-                <div>
-                  <h4 class="font-display font-semibold text-xs uppercase tracking-wider text-secondary mb-3">{col.heading}</h4>
-                  <ul class="space-y-2">
-                    {col.items.map((item) => (
-                      <li><a href={item.href} class="text-sm text-text-primary hover:text-primary transition-colors">{item.label}</a></li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+    <nav class="hidden lg:block" aria-label="Main">
+      <ul class="flex items-center gap-8 xl:gap-10">
+        {menus.map((m) => (
+          <li data-menu>
+            <button
+              type="button"
+              class="nav-link flex items-center gap-1.5"
+              aria-expanded="false"
+              aria-controls={`menu-${m.id}`}
+              data-menu-button
+            >
+              {m.label}
+              <svg viewBox="0 0 12 12" class="h-2.5 w-2.5 transition-transform" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m2 4 4 4 4-4" /></svg>
+            </button>
+            <div id={`menu-${m.id}`} class="menu-panel absolute inset-x-0 top-full hidden border-b border-line bg-ivory shadow-[0_24px_40px_-28px_rgba(0,54,74,0.35)]" data-menu-panel>
+              <div class="wrap grid gap-10 py-12" style={`grid-template-columns: repeat(${m.groups.length}, minmax(0, 1fr))`}>
+                {m.groups.map((g) => (
+                  <div>
+                    <p class="eyebrow mb-4">{g.title}</p>
+                    <ul class="space-y-2.5">
+                      {g.items.map((t) => (
+                        <li><a href={urlOf(t)} class="font-display text-[1.35rem] leading-tight text-ink hover:text-clay">{t.data.title}</a></li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div class="border-t border-line">
+                <div class="wrap py-5"><a href={m.url} class="link">{m.all} <span aria-hidden="true">&rarr;</span></a></div>
+              </div>
             </div>
-          </div>
-        </li>
-
-        <!-- Aesthetics Dropdown -->
-        <li class="relative group">
-          <a href={aestheticsDropdown.href} class="block px-4 py-3 text-xs font-display font-semibold uppercase tracking-wider text-primary hover:text-secondary transition-colors">
-            {aestheticsDropdown.label}
-          </a>
-          <div class="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block bg-white shadow-deep rounded-lg p-6 w-[min(500px,calc(100vw-2rem))] z-50">
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-              {aestheticsDropdown.columns.map((col) => (
-                <div>
-                  <h4 class="font-display font-semibold text-xs uppercase tracking-wider text-secondary mb-3">{col.heading}</h4>
-                  <ul class="space-y-2">
-                    {col.items.map((item) => (
-                      <li><a href={item.href} class="text-sm text-text-primary hover:text-primary transition-colors">{item.label}</a></li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </li>
-
-        {mainNavLinks.map((link) => (
-          <li>
-            <a href={link.href} class="block px-4 py-3 text-xs font-display font-semibold uppercase tracking-wider text-primary hover:text-secondary transition-colors">
-              {link.label}
-            </a>
           </li>
         ))}
-
-        <!-- Book Now -->
-        <li class="relative group">
-          <button class="px-5 py-2 bg-primary text-white text-xs font-display font-semibold uppercase tracking-wider rounded hover:bg-secondary transition-colors ml-2">
-            Book Now
-          </button>
-          <div class="absolute right-0 top-full hidden group-hover:block bg-white shadow-deep rounded-lg py-2 min-w-[220px] z-50">
-            <a href="/contact#appointment" class="block px-4 py-2 text-sm text-text-primary hover:bg-bg-alt hover:text-primary transition-colors">Book an Appointment</a>
-            <a href="/contact#consultation" class="block px-4 py-2 text-sm text-text-primary hover:bg-bg-alt hover:text-primary transition-colors">Book a Free Consultation</a>
-          </div>
-        </li>
-
-        <li>
-          <a href={site.phoneHref} class="px-5 py-2 bg-primary text-white text-xs font-display font-semibold uppercase tracking-wider rounded hover:bg-secondary transition-colors ml-2 inline-block">
-            Call Us
-          </a>
-        </li>
+        {links.map((l) => (
+          <li><a href={l.url} class="nav-link" aria-current={isCurrent(l.url) ? 'page' : undefined}>{l.label}</a></li>
+        ))}
       </ul>
     </nav>
+
+    <div class="flex items-center gap-5">
+      <a href={telHref(site.phone)} class="hidden text-sm font-medium tracking-wide text-ink xl:block">{site.phone}</a>
+      <a href="/contact" class="btn hidden !min-h-11 !px-6 !py-2.5 sm:inline-flex">Book</a>
+      <button type="button" class="-mr-2 flex h-11 w-11 items-center justify-center text-ink lg:hidden" aria-label="Open menu" data-mobile-open>
+        <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" /></svg>
+      </button>
+    </div>
   </div>
 </header>
+
+<dialog class="mobile-menu m-0 h-dvh max-h-none w-full max-w-none bg-ivory p-0 text-body" aria-label="Menu" data-mobile-menu>
+  <div class="flex h-full flex-col">
+    <div class="wrap flex h-[4.5rem] shrink-0 items-center justify-between border-b border-line">
+      <span class="eyebrow">Menu</span>
+      <button type="button" class="-mr-2 flex h-11 w-11 items-center justify-center text-ink" aria-label="Close menu" data-mobile-close>
+        <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19" /></svg>
+      </button>
+    </div>
+    <nav class="wrap flex-1 overflow-y-auto py-6" aria-label="Mobile">
+      {menus.map((m) => (
+        <details class="group border-b border-line">
+          <summary class="flex items-center justify-between py-4 font-display text-3xl text-ink">
+            {m.label}
+            <svg viewBox="0 0 12 12" class="h-3.5 w-3.5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="m2 4 4 4 4-4" /></svg>
+          </summary>
+          <div class="space-y-6 pb-6">
+            {m.groups.map((g) => (
+              <div>
+                <p class="eyebrow mb-2">{g.title}</p>
+                <ul>
+                  {g.items.map((t) => (
+                    <li><a href={urlOf(t)} class="block py-1.5 text-lg text-ink">{t.data.title}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <a href={m.url} class="link">{m.all}</a>
+          </div>
+        </details>
+      ))}
+      {links.map((l) => (
+        <a href={l.url} class="block border-b border-line py-4 font-display text-3xl text-ink">{l.label}</a>
+      ))}
+    </nav>
+    <div class="wrap grid shrink-0 grid-cols-2 gap-3 border-t border-line py-5">
+      <a href="/contact" class="btn">Book</a>
+      <a href={telHref(site.phone)} class="btn btn-outline">Call</a>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  .nav-link {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    padding-block: 0.5rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  .nav-link:hover,
+  .nav-link[aria-current='page'],
+  .nav-link[aria-expanded='true'] {
+    border-bottom-color: currentColor;
+  }
+  .nav-link[aria-expanded='true'] svg { transform: rotate(180deg); }
+  [data-menu-button][aria-expanded='true'] + .menu-panel { display: block; }
+  .mobile-menu::backdrop { background: rgb(0 54 74 / 0.3); }
+</style>
+
+<script>
+  // Desktop dropdowns: click or hover to open, Escape or click-away to close.
+  const menus = [...document.querySelectorAll<HTMLElement>('[data-menu]')];
+  const closeAll = (except?: HTMLElement) => {
+    for (const m of menus) {
+      if (m !== except) m.querySelector('[data-menu-button]')?.setAttribute('aria-expanded', 'false');
+    }
+  };
+  const hoverable = window.matchMedia('(hover: hover) and (pointer: fine)');
+  for (const m of menus) {
+    const button = m.querySelector<HTMLButtonElement>('[data-menu-button]')!;
+    let timer: number | undefined;
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      closeAll(m);
+      button.setAttribute('aria-expanded', String(!open));
+    });
+    m.addEventListener('mouseenter', () => {
+      if (!hoverable.matches) return;
+      window.clearTimeout(timer);
+      closeAll(m);
+      button.setAttribute('aria-expanded', 'true');
+    });
+    m.addEventListener('mouseleave', () => {
+      if (!hoverable.matches) return;
+      timer = window.setTimeout(() => button.setAttribute('aria-expanded', 'false'), 160);
+    });
+    m.addEventListener('focusout', (e) => {
+      if (!m.contains(e.relatedTarget as Node | null)) button.setAttribute('aria-expanded', 'false');
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const open = menus.find((m) => m.querySelector('[aria-expanded="true"]'));
+    if (open) {
+      closeAll();
+      open.querySelector<HTMLButtonElement>('[data-menu-button]')?.focus();
+    }
+  });
+  document.addEventListener('click', (e) => {
+    if (!menus.some((m) => m.contains(e.target as Node))) closeAll();
+  });
+
+  // Mobile menu uses a native <dialog>: focus trapping and Escape come free.
+  const dialog = document.querySelector<HTMLDialogElement>('[data-mobile-menu]');
+  document.querySelector('[data-mobile-open]')?.addEventListener('click', () => dialog?.showModal());
+  document.querySelector('[data-mobile-close]')?.addEventListener('click', () => dialog?.close());
+</script>

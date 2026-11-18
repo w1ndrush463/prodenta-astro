@@ -1,0 +1,645 @@
+# Pages CMS configuration (https://pagescms.org).
+# The site's words, prices, people and images are editable here.
+# Layout, colours and section order live in the code.
+
+media:
+  input: src/assets/images
+  output: /src/assets/images
+  categories: [image]
+  rename: safe
+
+settings:
+  hide: true
+
+# ---------------------------------------------------------------------------
+# Reusable field groups
+# ---------------------------------------------------------------------------
+components:
+  seo:
+    type: object
+    label: Search engine listing (advanced)
+    description: Optional. How this page appears in Google. Leave blank to use the page heading and intro.
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        description: Around 50 to 60 characters. The practice name is added automatically.
+        options: { maxlength: 70 }
+      - name: description
+        label: Description
+        type: text
+        description: One or two sentences, around 150 characters.
+        options: { maxlength: 180 }
+
+  image:
+    type: image
+    description: Landscape or portrait photo, ideally at least 1600px wide and under 2MB. It is resized automatically.
+
+  imageAlt:
+    type: string
+    label: Image description
+    description: A short description of the photo for people using screen readers, e.g. "A dentist talking with a patient".
+
+  titledList:
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{title}"
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: text, label: Text, type: text }
+
+  pageHeading:
+    type: string
+    label: Page heading
+    description: The large heading at the top of the page.
+    required: true
+
+  pageIntro:
+    type: text
+    label: Introduction
+    description: One or two sentences shown under the heading.
+
+# ---------------------------------------------------------------------------
+# Content
+# ---------------------------------------------------------------------------
+content:
+  # ============================ PAGES ====================================
+  - name: pages
+    label: Pages
+    type: group
+    items:
+      - name: home
+        label: Home page
+        type: file
+        path: src/content/pages/home.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - name: hero
+            label: Top of page
+            type: object
+            fields:
+              - { name: eyebrow, label: Small label, type: string, description: The small capital-letter line above the heading. }
+              - { name: heading, label: Heading, type: string, required: true }
+              - { name: text, label: Text, type: text }
+              - { name: image, label: Photo, component: image }
+              - { name: imageAlt, component: imageAlt }
+              - { name: primaryLabel, label: Main button text, type: string }
+              - { name: primaryUrl, label: Main button link, type: string, description: "A page on this site, e.g. /contact" }
+              - { name: secondaryLabel, label: Second link text, type: string }
+              - { name: secondaryUrl, label: Second link, type: string }
+          - name: highlights
+            label: Three highlights
+            description: The row of three short points under the top photo.
+            component: titledList
+          - name: welcome
+            label: Welcome section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small label, type: string }
+              - { name: heading, label: Heading, type: string }
+              - { name: paragraphs, label: Paragraphs, type: text, list: true }
+              - { name: image, label: Photo, component: image }
+              - { name: imageAlt, component: imageAlt }
+              - { name: linkLabel, label: Link text, type: string }
+              - { name: linkUrl, label: Link, type: string }
+          - name: dental
+            label: Dental treatments section
+            description: The list of treatments is filled in automatically from the Treatments area.
+            type: object
+            fields:
+              - { name: eyebrow, label: Small label, type: string }
+              - { name: heading, label: Heading, type: string }
+              - { name: text, label: Text, type: text }
+              - { name: image, label: Photo, component: image }
+              - { name: imageAlt, component: imageAlt }
+              - { name: linkLabel, label: Link text, type: string }
+          - name: aesthetics
+            label: Facial aesthetics section
+            description: The list of treatments is filled in automatically from the Treatments area.
+            type: object
+            fields:
+              - { name: eyebrow, label: Small label, type: string }
+              - { name: heading, label: Heading, type: string }
+              - { name: text, label: Text, type: text }
+              - { name: image, label: Photo, component: image }
+              - { name: imageAlt, component: imageAlt }
+              - { name: linkLabel, label: Link text, type: string }
+          - name: offer
+            label: Featured offer
+            type: object
+            fields:
+              - { name: show, label: Show this offer on the home page, type: boolean }
+              - { name: eyebrow, label: Small label, type: string }
+              - { name: heading, label: Heading, type: string }
+              - { name: price, label: Price, type: string, description: "e.g. £195" }
+              - { name: text, label: Text, type: text }
+              - { name: buttonLabel, label: Button text, type: string }
+              - { name: buttonUrl, label: Button link, type: string }
+          - name: reasons
+            label: Why ProDenta section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small label, type: string }
+              - { name: heading, label: Heading, type: string }
+              - { name: items, label: Reasons, component: titledList }
+              - { name: image, label: Photo, component: image }
+              - { name: imageAlt, component: imageAlt }
+          - { name: seo, component: seo }
+
+      - name: about
+        label: About page
+        type: file
+        path: src/content/pages/about.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: heading, component: pageHeading }
+          - { name: intro, component: pageIntro }
+          - { name: image, label: Top photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: storyHeading, label: Philosophy heading, type: string }
+          - { name: story, label: Philosophy paragraphs, type: text, list: true }
+          - { name: storyImage, label: Philosophy photo, component: image }
+          - { name: storyImageAlt, component: imageAlt }
+          - { name: valuesHeading, label: Values heading, type: string }
+          - { name: values, label: Values, component: titledList }
+          - { name: seo, component: seo }
+
+      - name: fees
+        label: Fees page
+        type: file
+        path: src/content/pages/fees.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: heading, component: pageHeading }
+          - { name: intro, component: pageIntro }
+          - { name: image, label: Top photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: offersHeading, label: Offers heading, type: string }
+          - name: offers
+            label: Current offers
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{title} ({price})" }
+            fields:
+              - { name: title, label: Offer name, type: string }
+              - { name: price, label: Price, type: string, description: "e.g. £195 or Limited time" }
+              - { name: text, label: Description, type: text }
+          - name: payment
+            label: Ways to pay
+            component: titledList
+          - { name: plansHeading, label: Membership heading, type: string }
+          - { name: plansIntro, label: Membership introduction, type: text }
+          - name: plans
+            label: Membership plans
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{name} ({price})" }
+            fields:
+              - { name: name, label: Plan name, type: string }
+              - { name: audience, label: Who it is for, type: string, description: "e.g. Adults, or Ages 7 to 17" }
+              - { name: price, label: Price, type: string, description: "e.g. £28.50" }
+              - { name: period, label: Billing period, type: string, description: "e.g. per month" }
+              - { name: features, label: What is included, type: string, list: true }
+          - name: tables
+            label: Fee lists
+            description: Each fee list has groups (e.g. Maintain, Repair), and each group has rows of treatments and prices.
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{heading}" }
+            fields:
+              - { name: heading, label: List heading, type: string, description: "e.g. Adult treatment costs" }
+              - { name: intro, label: Introduction, type: text }
+              - name: groups
+                label: Groups
+                type: object
+                list:
+                  collapsible: { collapsed: true, summary: "{name}" }
+                fields:
+                  - { name: name, label: Group name, type: string }
+                  - name: rows
+                    label: Treatments and prices
+                    type: object
+                    list:
+                      collapsible: { collapsed: true, summary: "{treatment}: {price}" }
+                    fields:
+                      - { name: treatment, label: Treatment, type: string }
+                      - { name: price, label: Fee, type: string }
+                      - { name: memberPrice, label: Member fee, type: string, description: Leave blank if there is no member price. }
+          - { name: note, label: Small print, type: text }
+          - { name: seo, component: seo }
+
+      - name: reviews
+        label: Reviews page
+        type: file
+        path: src/content/pages/reviews.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: heading, component: pageHeading }
+          - { name: intro, component: pageIntro }
+          - { name: image, label: Top photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - name: reviews
+            label: Patient reviews
+            description: Only publish reviews you have permission to share.
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{name}" }
+            fields:
+              - { name: name, label: Patient name, type: string, description: First name or initials is fine. }
+              - { name: quote, label: Review, type: text }
+              - { name: featured, label: Show this one on the home page, type: boolean, description: The first review ticked here is used on the home page. }
+          - { name: seo, component: seo }
+
+      - name: team-page
+        label: Team page (heading)
+        type: file
+        path: src/content/pages/team.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: heading, component: pageHeading }
+          - { name: intro, component: pageIntro }
+          - { name: image, label: Top photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: seo, component: seo }
+
+      - name: contact
+        label: Contact page
+        type: file
+        path: src/content/pages/contact.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: heading, component: pageHeading }
+          - { name: intro, component: pageIntro }
+          - { name: image, label: Top photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: formHeading, label: Form heading, type: string }
+          - { name: formText, label: Form introduction, type: text }
+          - { name: enquiryTypes, label: Options in the "How can we help?" menu, type: string, list: true }
+          - { name: successHeading, label: Thank-you page heading, type: string }
+          - { name: successText, label: Thank-you page message, type: text }
+          - { name: seo, component: seo }
+
+      - name: policies
+        label: Policy pages
+        type: collection
+        path: src/content/policies
+        filename: "{primary}.md"
+        view: { fields: [title], primary: title }
+        fields:
+          - { name: title, label: Page title, type: string, required: true }
+          - { name: summary, label: Short summary, type: text }
+          - name: body
+            label: Page content
+            type: rich-text
+            options: { media: false }
+
+  # ========================== TREATMENTS =================================
+  - name: treatments
+    label: Treatments
+    type: group
+    items:
+      - name: dental-treatments
+        label: Dental treatments
+        type: collection
+        path: src/content/treatments/dental
+        filename: "{primary}.md"
+        view:
+          fields: [title, category, price]
+          primary: title
+          sort: [order, title]
+          default: { sort: order, order: asc }
+        fields:
+          - { name: title, label: Treatment name, type: string, required: true }
+          - name: category
+            label: Category
+            type: select
+            description: Which group this treatment appears under in menus.
+            options:
+              values:
+                - { name: maintain, label: Maintain }
+                - { name: straighten, label: Straighten }
+                - { name: enhance, label: Enhance }
+                - { name: repair, label: Repair }
+                - { name: restore, label: Restore }
+          - { name: order, label: Order, type: number, description: Lower numbers appear first within the category. }
+          - { name: summary, label: One-line summary, type: string, description: Shown in treatment lists and menus., options: { maxlength: 90 } }
+          - { name: intro, label: Introduction, type: text, description: One or two sentences at the top of the page. }
+          - { name: image, label: Main photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: price, label: Price, type: string, description: 'e.g. "From £250 per tooth" or "Price on consultation".' }
+          - { name: priceNote, label: Price note, type: text, description: A short explanation shown under the price. }
+          - name: body
+            label: About this treatment
+            type: rich-text
+            description: The main description. Use Heading 2 for section headings.
+            options: { media: false }
+          - name: facts
+            label: Key facts
+            description: Up to four quick facts, e.g. Treatment time, Recovery.
+            type: object
+            list:
+              max: 4
+              collapsible: { collapsed: true, summary: "{label}: {value}" }
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: value, label: Value, type: string }
+          - { name: helpsWith, label: It can help with, component: titledList }
+          - { name: stepsHeading, label: Steps heading, type: string, description: 'e.g. "How does it work?"' }
+          - { name: steps, label: Treatment steps, description: Shown as a numbered list. The title is optional., component: titledList }
+          - { name: benefits, label: Benefits, component: titledList }
+          - name: faqs
+            label: Questions and answers
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{question}" }
+            fields:
+              - { name: question, label: Question, type: string }
+              - { name: answer, label: Answer, type: text }
+          - name: related
+            label: Related treatments
+            description: Up to three treatments suggested at the bottom of the page.
+            type: reference
+            options:
+              collection: dental-treatments
+              multiple: true
+              max: 3
+              search: "fields.title"
+              value: "{path}"
+              label: "{fields.title}"
+          - name: gallery
+            label: Results gallery (before and after)
+            description: Optional. Only add genuine photos of your own patients, with their written consent. The section stays hidden while this is empty.
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{caption}" }
+            fields:
+              - { name: image, label: Photo, component: image }
+              - { name: caption, label: Caption, type: string }
+          - { name: seo, component: seo }
+
+      - name: aesthetic-treatments
+        label: Aesthetic treatments
+        type: collection
+        path: src/content/treatments/aesthetics
+        filename: "{primary}.md"
+        view:
+          fields: [title, category, price]
+          primary: title
+          sort: [order, title]
+          default: { sort: order, order: asc }
+        fields:
+          - { name: title, label: Treatment name, type: string, required: true }
+          - name: category
+            label: Category
+            type: select
+            description: Which group this treatment appears under in menus.
+            options:
+              values:
+                - { name: enhance, label: Enhance }
+                - { name: maintain, label: Maintain }
+                - { name: restore, label: Restore }
+          - { name: order, label: Order, type: number, description: Lower numbers appear first within the category. }
+          - { name: summary, label: One-line summary, type: string, description: Shown in treatment lists and menus., options: { maxlength: 90 } }
+          - { name: intro, label: Introduction, type: text, description: One or two sentences at the top of the page. }
+          - { name: image, label: Main photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: price, label: Price, type: string, description: 'e.g. "From £250" or "Price on consultation".' }
+          - { name: priceNote, label: Price note, type: text, description: A short explanation shown under the price. }
+          - name: body
+            label: About this treatment
+            type: rich-text
+            description: The main description. Use Heading 2 for section headings.
+            options: { media: false }
+          - name: facts
+            label: Key facts
+            description: Up to four quick facts, e.g. Treatment time, Recovery.
+            type: object
+            list:
+              max: 4
+              collapsible: { collapsed: true, summary: "{label}: {value}" }
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: value, label: Value, type: string }
+          - { name: helpsWith, label: It can help with, component: titledList }
+          - { name: stepsHeading, label: Steps heading, type: string, description: 'e.g. "How does it work?"' }
+          - { name: steps, label: Treatment steps, description: Shown as a numbered list. The title is optional., component: titledList }
+          - { name: benefits, label: Benefits, component: titledList }
+          - name: faqs
+            label: Questions and answers
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{question}" }
+            fields:
+              - { name: question, label: Question, type: string }
+              - { name: answer, label: Answer, type: text }
+          - name: related
+            label: Related treatments
+            description: Up to three treatments suggested at the bottom of the page.
+            type: reference
+            options:
+              collection: aesthetic-treatments
+              multiple: true
+              max: 3
+              search: "fields.title"
+              value: "{path}"
+              label: "{fields.title}"
+          - name: gallery
+            label: Results gallery (before and after)
+            description: Optional. Only add genuine photos of your own patients, with their written consent. The section stays hidden while this is empty.
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{caption}" }
+            fields:
+              - { name: image, label: Photo, component: image }
+              - { name: caption, label: Caption, type: string }
+          - { name: seo, component: seo }
+
+      - name: treatments-page
+        label: Dental treatments page (heading)
+        type: file
+        path: src/content/pages/treatments.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: heading, component: pageHeading }
+          - { name: intro, component: pageIntro }
+          - { name: image, label: Top photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: seo, component: seo }
+
+      - name: aesthetics-page
+        label: Aesthetics page (heading)
+        type: file
+        path: src/content/pages/aesthetics.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: heading, component: pageHeading }
+          - { name: intro, component: pageIntro }
+          - { name: image, label: Top photo, component: image }
+          - { name: imageAlt, component: imageAlt }
+          - { name: seo, component: seo }
+
+      - name: categories
+        label: Category names
+        type: file
+        path: src/content/settings/categories.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - name: dental
+            label: Dental categories
+            description: The order here is the order used in menus. Please do not change the ID.
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{title}" }
+            fields:
+              - { name: id, label: ID, type: string, readonly: true }
+              - { name: title, label: Name, type: string }
+              - { name: text, label: Short description, type: text }
+          - name: aesthetics
+            label: Aesthetics categories
+            description: The order here is the order used in menus. Please do not change the ID.
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{title}" }
+            fields:
+              - { name: id, label: ID, type: string, readonly: true }
+              - { name: title, label: Name, type: string }
+              - { name: text, label: Short description, type: text }
+
+  # ============================== TEAM ===================================
+  - name: team
+    label: Team
+    type: collection
+    path: src/content/team
+    filename: "{primary}.md"
+    view:
+      fields: [name, role, group]
+      primary: name
+      sort: [order, name]
+      default: { sort: order, order: asc }
+    fields:
+      - { name: name, label: Name, type: string, required: true }
+      - { name: role, label: Role or qualifications, type: string }
+      - name: group
+        label: Team group
+        type: select
+        options:
+          values: [Dentists and therapists, Visiting specialists, Dental nurses, Practice team]
+      - { name: order, label: Order, type: number, description: Lower numbers appear first. }
+      - name: photo
+        label: Photo
+        type: image
+        description: A head-and-shoulders portrait works best. Initials are shown if there is no photo.
+        options: { path: src/assets/images/team }
+      - { name: expertise, label: Areas of interest, type: string, list: true }
+      - name: body
+        label: Biography
+        type: rich-text
+        options: { media: false }
+
+  # ========================== SITE SETTINGS ==============================
+  - name: site-settings
+    label: Site settings
+    type: group
+    items:
+      - name: site
+        label: Contact details and opening hours
+        type: file
+        path: src/content/settings/site.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - { name: name, label: Practice name, type: string }
+          - { name: phone, label: Phone number, type: string }
+          - { name: whatsapp, label: WhatsApp number, type: string, description: UK mobile number. Leave blank to hide WhatsApp links. }
+          - { name: email, label: Email address, type: string }
+          - name: address
+            label: Address
+            type: object
+            fields:
+              - { name: line1, label: Street address, type: string }
+              - { name: area, label: Area, type: string }
+              - { name: city, label: City, type: string }
+              - { name: postcode, label: Postcode, type: string }
+          - name: hours
+            label: Opening hours
+            type: object
+            list:
+              collapsible: { collapsed: false, summary: "{days}: {times}" }
+            fields:
+              - { name: days, label: Days, type: string, description: 'e.g. "Monday, Tuesday, Thursday"' }
+              - { name: times, label: Times, type: string, description: 'Write as "8am to 6pm", or "Closed".' }
+          - { name: hoursNote, label: Note under opening hours, type: string }
+          - name: gettingHere
+            label: Getting here
+            component: titledList
+          - name: social
+            label: Social media
+            type: object
+            fields:
+              - { name: instagram, label: Instagram link, type: string }
+              - { name: facebook, label: Facebook link, type: string }
+          - { name: directionsUrl, label: Google Maps directions link, type: string }
+          - { name: mapEmbedUrl, label: Google Maps embed link, type: string, description: 'From Google Maps: Share, Embed a map, then copy only the address inside src="...".' }
+          - name: booking
+            label: Booking banner
+            description: The dark banner near the bottom of most pages.
+            type: object
+            fields:
+              - { name: heading, label: Heading, type: string }
+              - { name: text, label: Text, type: text }
+              - { name: buttonLabel, label: Button text, type: string }
+              - { name: image, label: Photo, component: image }
+              - { name: imageAlt, component: imageAlt }
+          - { name: footerNote, label: Footer description, type: text }
+          - { name: tagline, label: Tagline, type: string, hidden: true }
+          - name: seo
+            label: Search engine defaults (advanced)
+            type: object
+            fields:
+              - { name: titleSuffix, label: Text added after every page title, type: string }
+              - { name: defaultDescription, label: Default description, type: text }
+              - { name: shareImage, label: Image shown when a page is shared, component: image }
+
+      - name: navigation
+        label: Menus
+        type: file
+        path: src/content/settings/navigation.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - name: header
+            label: Main menu links
+            description: Shown after the Dental and Aesthetics menus, which are built automatically from your treatments.
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{label}" }
+            fields:
+              - { name: label, label: Link text, type: string }
+              - { name: url, label: Link, type: string, description: 'A page on this site, e.g. /fees' }
+          - name: footer
+            label: Footer links
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{label}" }
+            fields:
+              - { name: label, label: Link text, type: string }
+              - { name: url, label: Link, type: string }
+          - name: legal
+            label: Policy links (bottom of footer)
+            type: object
+            list:
+              collapsible: { collapsed: true, summary: "{label}" }
+            fields:
+              - { name: label, label: Link text, type: string }
+              - { name: url, label: Link, type: string }

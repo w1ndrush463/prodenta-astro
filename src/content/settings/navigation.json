@@ -1,0 +1,60 @@
+{
+  "header": [
+    {
+      "label": "Team",
+      "url": "/team"
+    },
+    {
+      "label": "Fees",
+      "url": "/fees"
+    },
+    {
+      "label": "Reviews",
+      "url": "/reviews"
+    },
+    {
+      "label": "About",
+      "url": "/about"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "label": "New patients",
+      "url": "/dental/new-patients"
+    },
+    {
+      "label": "Emergency dentist",
+      "url": "/dental/emergency"
+    },
+    {
+      "label": "Fees and membership",
+      "url": "/fees"
+    },
+    {
+      "label": "Meet the team",
+      "url": "/team"
+    },
+    {
+      "label": "Patient reviews",
+      "url": "/reviews"
+    },
+    {
+      "label": "About the practice",
+      "url": "/about"
+    }
+  ],
+  "legal": [
+    {
+      "label": "Privacy policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "label": "Complaints",
+      "url": "/complaints"
+    }
+  ]
+}

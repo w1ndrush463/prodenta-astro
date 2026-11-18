@@ -1,0 +1,59 @@
+---
+// Treatments set out like a clinic menu: category, then name, one line and price.
+import { groupedTreatments, urlOf, type TreatmentType } from '../lib/content';
+
+interface Props {
+  type: TreatmentType;
+  /** Compact: names only, for the homepage. */
+  compact?: boolean;
+}
+const { type, compact = false } = Astro.props;
+const groups = await groupedTreatments(type);
+---
+
+{compact ? (
+  <div class="grid gap-x-10 gap-y-8 sm:grid-cols-2">
+    {groups.map((g) => (
+      <div>
+        <h3 class="eyebrow mb-3 !font-sans">{g.title}</h3>
+        <ul>
+          {g.items.map((t) => (
+            <li class="border-b border-line">
+              <a href={urlOf(t)} class="group flex items-baseline justify-between gap-4 py-2.5 text-ink">
+                <span class="font-display text-[1.4rem] leading-snug">{t.data.title}</span>
+                <span class="translate-x-0 text-sm opacity-40 transition group-hover:translate-x-1 group-hover:opacity-100" aria-hidden="true">&rarr;</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+) : (
+  <div class="space-y-20 lg:space-y-28">
+    {groups.map((g) => (
+      <section id={g.id} class="grid gap-8 lg:grid-cols-12 lg:gap-16" aria-labelledby={`cat-${type}-${g.id}`}>
+        <div class="lg:col-span-4" data-reveal>
+          <h2 id={`cat-${type}-${g.id}`} class="text-title">{g.title}</h2>
+          <p class="mt-4 max-w-xs text-muted">{g.text}</p>
+        </div>
+        <ul class="border-t border-ink/80 lg:col-span-8">
+          {g.items.map((t) => (
+            <li class="border-b border-line">
+              <a href={urlOf(t)} class="group grid gap-x-8 gap-y-1 py-6 sm:grid-cols-[1fr_auto] sm:items-baseline">
+                <span>
+                  <span class="block font-display text-[1.75rem] leading-tight text-ink transition-colors group-hover:text-clay">{t.data.title}</span>
+                  <span class="mt-1 block text-muted">{t.data.summary}</span>
+                </span>
+                <span class="flex items-baseline gap-4 text-sm text-ink sm:text-right">
+                  {t.data.price && <span class="tracking-wide">{t.data.price}</span>}
+                  <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+)}

@@ -1,0 +1,492 @@
+{
+  "seo": {
+    "title": "Fees and Membership Plans",
+    "description": "Treatment fees, payment options and membership plans at ProDenta, a private dental practice in Battersea, London."
+  },
+  "heading": "Fees and membership",
+  "intro": "Clear pricing, with flexible ways to pay and membership plans that reward regular care.",
+  "image": "/src/assets/images/stock/clinic-shelves-hallway.jpg",
+  "imageAlt": "A bright clinic hallway",
+  "offersHeading": "Current offers",
+  "offers": [
+    {
+      "title": "New patient special",
+      "price": "£195",
+      "text": "Full examination and hygiene clean"
+    },
+    {
+      "title": "Over 40s special",
+      "price": "Limited time",
+      "text": "Take control of your smile with our special package"
+    },
+    {
+      "title": "£65 OTC teeth whitening",
+      "price": "£65",
+      "text": "Professional at-home whitening kit"
+    }
+  ],
+  "payment": [
+    {
+      "title": "Pay as you go",
+      "text": "Pay for treatment at the time of your appointment. We accept all major credit and debit cards."
+    },
+    {
+      "title": "Spread the cost",
+      "text": "For more extensive treatment we offer payment plans so you can spread the cost over a period that suits you. Ask the team about interest-free and low-cost finance."
+    }
+  ],
+  "plansHeading": "Membership plans",
+  "plansIntro": "Join a plan for routine care, discounted treatment fees and worldwide emergency cover.",
+  "plans": [
+    {
+      "name": "ProDenta Plus",
+      "audience": "Adults",
+      "price": "£36.50",
+      "period": "per month",
+      "features": [
+        "2 dental check-ups per year",
+        "4 hygiene visits per year",
+        "All necessary x-rays included",
+        "15% discount on all treatments",
+        "Worldwide dental emergency cover",
+        "Priority booking"
+      ]
+    },
+    {
+      "name": "ProDenta Care",
+      "audience": "Adults",
+      "price": "£28.50",
+      "period": "per month",
+      "features": [
+        "2 dental check-ups per year",
+        "2 hygiene visits per year",
+        "All necessary x-rays included",
+        "10% discount on all treatments",
+        "Worldwide dental emergency cover"
+      ]
+    },
+    {
+      "name": "ProDenta Teen",
+      "audience": "Ages 7 to 17",
+      "price": "£15.50",
+      "period": "per month",
+      "features": [
+        "2 dental check-ups per year",
+        "2 hygiene visits per year",
+        "All necessary x-rays included",
+        "10% discount on all treatments",
+        "Worldwide dental emergency cover",
+        "Oral health education"
+      ]
+    },
+    {
+      "name": "ProDenta Junior",
+      "audience": "Ages 0 to 6",
+      "price": "£10.50",
+      "period": "per month",
+      "features": [
+        "2 dental check-ups per year",
+        "All necessary x-rays included",
+        "Fluoride varnish application",
+        "10% discount on all treatments",
+        "Worldwide dental emergency cover"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "heading": "Adult treatment costs",
+      "intro": "View our full list of treatment fees. Membership plan holders enjoy discounted rates on all treatments.",
+      "groups": [
+        {
+          "name": "Maintain",
+          "rows": [
+            {
+              "treatment": "Adult check-up",
+              "price": "£60",
+              "memberPrice": "Included"
+            },
+            {
+              "treatment": "Hygiene clean (40 mins)",
+              "price": "£95 - £135",
+              "memberPrice": "Included"
+            },
+            {
+              "treatment": "Emergency appointment",
+              "price": "£95",
+              "memberPrice": "£85.50"
+            },
+            {
+              "treatment": "Digital 3D scan",
+              "price": "£65",
+              "memberPrice": "£58.50"
+            },
+            {
+              "treatment": "Small X-ray",
+              "price": "£14",
+              "memberPrice": "Included"
+            },
+            {
+              "treatment": "Large X-ray (OPG)",
+              "price": "£65",
+              "memberPrice": "Included"
+            }
+          ]
+        },
+        {
+          "name": "Enhance",
+          "rows": [
+            {
+              "treatment": "Composite bonding (per tooth)",
+              "price": "£120 - £350",
+              "memberPrice": "£102 - £297.50"
+            },
+            {
+              "treatment": "Direct composite veneer",
+              "price": "From £300",
+              "memberPrice": "From £255"
+            },
+            {
+              "treatment": "Porcelain veneer",
+              "price": "From £800",
+              "memberPrice": "From £680"
+            },
+            {
+              "treatment": "Home teeth whitening",
+              "price": "£395",
+              "memberPrice": "£335.75"
+            },
+            {
+              "treatment": "In-surgery teeth whitening",
+              "price": "£450",
+              "memberPrice": "£382.50"
+            },
+            {
+              "treatment": "Internal whitening (per tooth)",
+              "price": "£195",
+              "memberPrice": "£165.75"
+            }
+          ]
+        },
+        {
+          "name": "Repair",
+          "rows": [
+            {
+              "treatment": "Small composite filling",
+              "price": "£210",
+              "memberPrice": "£178.50"
+            },
+            {
+              "treatment": "Medium composite filling",
+              "price": "£265",
+              "memberPrice": "£225.25"
+            },
+            {
+              "treatment": "Large composite filling",
+              "price": "£345",
+              "memberPrice": "£293.25"
+            },
+            {
+              "treatment": "Root canal - front tooth",
+              "price": "£550",
+              "memberPrice": "£467.50"
+            },
+            {
+              "treatment": "Root canal - premolar",
+              "price": "£750",
+              "memberPrice": "£637.50"
+            },
+            {
+              "treatment": "Root canal - molar",
+              "price": "£1050",
+              "memberPrice": "£892.50"
+            },
+            {
+              "treatment": "Simple extraction",
+              "price": "£95",
+              "memberPrice": "£80.75"
+            },
+            {
+              "treatment": "Surgical extraction",
+              "price": "£295 - £400",
+              "memberPrice": "£250.75 - £340"
+            }
+          ]
+        },
+        {
+          "name": "Straighten",
+          "rows": [
+            {
+              "treatment": "Orthodontic consultation",
+              "price": "£100",
+              "memberPrice": "£85"
+            },
+            {
+              "treatment": "Invisalign treatment",
+              "price": "From £3000",
+              "memberPrice": "From £2550"
+            },
+            {
+              "treatment": "Fixed metal braces",
+              "price": "From £4000",
+              "memberPrice": "From £3400"
+            },
+            {
+              "treatment": "Clear fixed braces",
+              "price": "From £4500",
+              "memberPrice": "From £3825"
+            },
+            {
+              "treatment": "Retainers (per arch)",
+              "price": "£250",
+              "memberPrice": "£212.50"
+            }
+          ]
+        },
+        {
+          "name": "Restore",
+          "rows": [
+            {
+              "treatment": "Porcelain crown",
+              "price": "From £750",
+              "memberPrice": "From £637.50"
+            },
+            {
+              "treatment": "Dental implant (including crown)",
+              "price": "From £2450",
+              "memberPrice": "From £2082.50"
+            },
+            {
+              "treatment": "Implant consultation",
+              "price": "£100",
+              "memberPrice": "£85"
+            },
+            {
+              "treatment": "Denture - partial acrylic",
+              "price": "From £650",
+              "memberPrice": "From £552.50"
+            },
+            {
+              "treatment": "Denture - full acrylic",
+              "price": "From £950",
+              "memberPrice": "From £807.50"
+            },
+            {
+              "treatment": "Denture - chrome cobalt",
+              "price": "From £1450",
+              "memberPrice": "From £1232.50"
+            },
+            {
+              "treatment": "Grinding splint / night guard",
+              "price": "£750",
+              "memberPrice": "£637.50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Children's treatment costs",
+      "intro": "Affordable dental care for children of all ages, with membership discounts available.",
+      "groups": [
+        {
+          "name": "Maintain",
+          "rows": [
+            {
+              "treatment": "Under 3 check-up",
+              "price": "£25",
+              "memberPrice": "Included"
+            },
+            {
+              "treatment": "Child exam (3 - 11)",
+              "price": "£60",
+              "memberPrice": "Included"
+            },
+            {
+              "treatment": "Teen exam (12 - 17)",
+              "price": "£90",
+              "memberPrice": "Included"
+            },
+            {
+              "treatment": "Fluoride varnish",
+              "price": "£35",
+              "memberPrice": "Included"
+            },
+            {
+              "treatment": "Fissure sealants",
+              "price": "£45",
+              "memberPrice": "£40.50"
+            }
+          ]
+        },
+        {
+          "name": "Repair",
+          "rows": [
+            {
+              "treatment": "Small filling",
+              "price": "£120",
+              "memberPrice": "£108"
+            },
+            {
+              "treatment": "Medium filling",
+              "price": "£180",
+              "memberPrice": "£162"
+            },
+            {
+              "treatment": "Baby tooth extraction",
+              "price": "£65",
+              "memberPrice": "£58.50"
+            },
+            {
+              "treatment": "Pulpotomy",
+              "price": "£250",
+              "memberPrice": "£225"
+            }
+          ]
+        },
+        {
+          "name": "Straighten",
+          "rows": [
+            {
+              "treatment": "Orthodontic assessment",
+              "price": "£100",
+              "memberPrice": "£90"
+            },
+            {
+              "treatment": "Early interceptive treatment",
+              "price": "From £1500",
+              "memberPrice": "From £1350"
+            },
+            {
+              "treatment": "Teen Invisalign",
+              "price": "From £3500",
+              "memberPrice": "From £3150"
+            },
+            {
+              "treatment": "Fixed braces",
+              "price": "From £4000",
+              "memberPrice": "From £3600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Facial aesthetics pricing",
+      "intro": "Professional facial aesthetic treatments carried out by our experienced dental practitioners.",
+      "groups": [
+        {
+          "name": "Enhance",
+          "rows": [
+            {
+              "treatment": "1 area",
+              "price": "£245",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "2 areas",
+              "price": "£295",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "3 areas",
+              "price": "£350",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Lip filler 0.5ml",
+              "price": "£250",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Lip filler 1ml",
+              "price": "£350",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Cheek filler",
+              "price": "From £400",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Nasolabial filler",
+              "price": "From £350",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Aqualyx - single session",
+              "price": "£350",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Aqualyx - multiple sessions",
+              "price": "From £500",
+              "memberPrice": ""
+            }
+          ]
+        },
+        {
+          "name": "Maintain",
+          "rows": [
+            {
+              "treatment": "Profhilo",
+              "price": "£350",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Sunekos",
+              "price": "£300",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Light Peel",
+              "price": "£100",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Medium Peel",
+              "price": "£200",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Deep Peel",
+              "price": "£350",
+              "memberPrice": ""
+            }
+          ]
+        },
+        {
+          "name": "Restore",
+          "rows": [
+            {
+              "treatment": "Microneedling - single session",
+              "price": "£250",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Microneedling - course of 3",
+              "price": "£650",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Skincare consultation",
+              "price": "£50",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Hair loss consultation",
+              "price": "£75",
+              "memberPrice": ""
+            },
+            {
+              "treatment": "Hair loss treatment session",
+              "price": "£250",
+              "memberPrice": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "Fees are a guide. You will always receive a written treatment plan and estimate before any treatment begins."
+}

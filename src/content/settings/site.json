@@ -1,0 +1,65 @@
+{
+  "name": "ProDenta",
+  "tagline": "Private dental and facial aesthetics practice in Battersea",
+  "phone": "0207 223 2244",
+  "whatsapp": "07407 422 443",
+  "email": "enqs@prodenta.co.uk",
+  "address": {
+    "line1": "Unit 1, 227 St. John's Hill",
+    "area": "Battersea",
+    "city": "London",
+    "postcode": "SW11 1TH"
+  },
+  "directionsUrl": "https://maps.google.com/?q=ProDenta+Battersea",
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.8491786!2d-0.1713876!3d51.4605474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760567da95de25%3A0x5c0d4fb19d65b1e6!2sProDenta%20Battersea!5e0!3m2!1sen!2suk!4v1234567890",
+  "hours": [
+    {
+      "days": "Monday, Tuesday, Thursday",
+      "times": "8am to 8pm"
+    },
+    {
+      "days": "Wednesday, Friday",
+      "times": "8am to 6pm"
+    },
+    {
+      "days": "Saturday",
+      "times": "9am to 3pm"
+    },
+    {
+      "days": "Sunday",
+      "times": "Closed"
+    }
+  ],
+  "hoursNote": "Appointments outside these hours by arrangement.",
+  "gettingHere": [
+    {
+      "title": "By train",
+      "text": "A 10 minute walk from Clapham Junction or Wandsworth Town stations."
+    },
+    {
+      "title": "By bus",
+      "text": "Routes 35, 37, 39, 87, 156, 170 and 337 stop nearby."
+    },
+    {
+      "title": "By car",
+      "text": "Limited street parking on St. John's Hill and the surrounding streets."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/prodentabattersea",
+    "facebook": "https://www.facebook.com/prodentabattersea"
+  },
+  "booking": {
+    "heading": "Ready when you are",
+    "text": "Book an appointment or a free consultation and we will take care of the rest. New patients are always welcome.",
+    "buttonLabel": "Book an appointment",
+    "image": "/src/assets/images/stock/smile-soft-portrait.jpg",
+    "imageAlt": "A woman smiling softly"
+  },
+  "footerNote": "ProDenta is a private dental practice in Battersea, London, caring for families and individuals with general, cosmetic and specialist dentistry alongside facial aesthetics.",
+  "seo": {
+    "titleSuffix": "ProDenta Battersea",
+    "defaultDescription": "ProDenta is a boutique private dental practice in Battersea, London, offering general and cosmetic dentistry, Invisalign, teeth whitening, implants and facial aesthetics.",
+    "shareImage": "/src/assets/images/stock/smile-warm-closeup.jpg"
+  }
+}
